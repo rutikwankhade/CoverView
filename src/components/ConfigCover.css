@@ -1,0 +1,12 @@
+.container{
+    margin:20px;
+    display:flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+label{margin:5px;}
+.input-sm{width:60px;}
+input{margin:4px;}

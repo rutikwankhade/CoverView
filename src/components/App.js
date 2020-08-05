@@ -1,17 +1,19 @@
 import React from 'react';
-import CoverImage from './CoverImage';
+import ConfigCover from './ConfigCover';
 
 
-class App extends React.Component{
-    
-    
-    render(){
+class App extends React.Component {
+
+
+    render() {
         return (
-        
-            <CoverImage/>
-            
-            
-            );
+            <div>
+                <ConfigCover />
+            </div>
+
+
+
+        );
 
     }
 }

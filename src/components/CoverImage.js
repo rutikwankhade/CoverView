@@ -2,15 +2,19 @@ import React from 'react';
 import './CoverImage.css';
 
 
-class CoverImage extends React.Component{
+class CoverImage extends React.Component {
 
 
-    render(){
+
+
+    render() {
         return (
-            <div className="cover img-fluid">
-             <div className="card">
-             <h2>5 Simple apps I built while learning JavaScript</h2>
-            </div>
+            <div className="cover container"
+                style={{ backgroundColor: this.props.bgcolor, height: this.props.height, width: this.props.width }}>
+                <div className="card"
+                    style={{ boxShadow: `15px 15px ${this.props.bxshadow}` }}>
+                    <h1>{this.props.title}</h1>
+                </div>
             </div>
         );
     }
