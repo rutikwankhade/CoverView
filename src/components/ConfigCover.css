@@ -1,12 +1,20 @@
 .container{
-    margin:20px;
+    width:auto;
     display:flex;
     flex-direction: column;
     
     justify-content: center;
     align-items: center;
 }
-
+.inputData{
+    margin:60px 0px 20px 0px;
+}
 label{margin:5px;}
-.input-sm{width:60px;}
 input{margin:4px;}
+
+.inputTitle{
+    height:40px;
+    width:300px;
+    border-radius:4px;
+    padding-left:20px;
+}
