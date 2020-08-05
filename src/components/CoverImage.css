@@ -1,0 +1,27 @@
+.cover{
+    margin:auto;
+    width:auto;
+    height:auto;
+    background-color: #c5a8ff;
+    text-align: center;
+    
+}
+
+.card{
+   height:150px;
+   min-width:400px;
+   border-radius: 10px;
+   margin:50px;
+   background-color: #ffffff; 
+   display:inline-block;
+   box-shadow: 10px 10px #8c52ff;
+   text-align: center;
+   color:#676683;
+   border:none;
+   justify-content: center;
+   align-items: center;
+   vertical-align: middle;
+   padding:50px;
+   
+}
+h1{height:auto;}
