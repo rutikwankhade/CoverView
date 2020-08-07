@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfigCover from './ConfigCover';
 import Navbar from './Navbar';
+import ComponentToImg from './ComponentToImg';
 
 class App extends React.Component {
 
@@ -9,7 +10,6 @@ class App extends React.Component {
         return (
             <div>
                 <Navbar />
-
                 <ConfigCover />
             </div>
 

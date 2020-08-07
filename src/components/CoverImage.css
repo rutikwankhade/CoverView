@@ -3,13 +3,15 @@
     margin:auto;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
 }
 .cover{
-    
-    width:800px;
-    height:420px;
+    /* width:800px;
+    height:420px; */
     background-color: #c5a8ff;
     text-align: center;
+    position:relative;
     
 }
 
@@ -20,8 +22,8 @@
    margin:50px;
    background-color: #ffffff; 
    display:inline-block;
-   box-shadow: 10px 10px  #8c52ff;
-
+   /* box-shadow: 10px 10px  #8c52ff; */
+position:relative;
    text-align: center;
    color:#676683;
    border:none;

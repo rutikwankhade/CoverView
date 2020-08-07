@@ -1,12 +1,16 @@
 import React from 'react';
 import './ConfigCover.css'
 import CoverImage from './CoverImage';
+import ComponentToImg from './ComponentToImg';
+
 class ConfigCover extends React.Component {
 
     state = {
         title: 'How I built my first project with react',
         bgcolor: '',
-        bxshadow: ''
+        bxshadow: '',
+        height:null,
+        width:null
     };
 
     render() {
@@ -17,14 +21,14 @@ class ConfigCover extends React.Component {
                     <input type="text" placeholder="Enter title here" className="inputTitle"
                         onChange={e => this.setState({ title: e.target.value })}></input>
 
-                    {/* <div className="d-flex flex-row">
+                    <div className="d-flex flex-row">
                         <label >width</label>
-                        <input type="number" name="width" className="input-sm"
-                        onChange={e=>this.setState({width:e.target.value})}></input>
+                        <input type="number"  className="input-sm"
+                        onChange={e=>this.setState({width: e.target.value})}></input>
                         <label >height</label>
-                        <input type="number" name="height" className="input-sm"
-                        onChange={e=>this.setState({height:e.target.value})}></input>
-                    </div> */}
+                        <input type="number"  className="input-sm"
+                        onChange={e=>this.setState({height: e.target.value})}></input>
+                    </div>
 
 
                     <label>Background</label>
@@ -38,13 +42,22 @@ class ConfigCover extends React.Component {
 
                 </div>
 
+<ComponentToImg>
+<CoverImage
 
-                <CoverImage
-                    title={this.state.title}
-                    bgcolor={this.state.bgcolor}
-                    bxshadow={this.state.bxshadow}
-                    
-                />
+title={this.state.title}
+bgcolor={this.state.bgcolor}
+bxshadow={this.state.bxshadow}
+height={this.state.height}
+width={this.state.width}
+
+    
+/>
+</ComponentToImg>
+
+
+
+                
 
 
 
