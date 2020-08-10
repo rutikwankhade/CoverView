@@ -1,7 +1,7 @@
 import React from 'react';
 import { exportComponentAsJPEG, exportComponentAsPNG } from "react-component-export-image";
 // import CoverImage from './CoverImage'
-
+import './CoverImage.css'
 
 
 class ComponentToImg extends React.Component {
@@ -11,6 +11,8 @@ class ComponentToImg extends React.Component {
     }
 
     render() {
+        console.log(this.props.children);
+
         return (
             <React.Fragment>
 
@@ -18,12 +20,12 @@ class ComponentToImg extends React.Component {
                     {this.props.children}
                 </div>
 
-                <button onClick={() => exportComponentAsJPEG(this.componentRef)}>
+                {/* <button onClick={() => exportComponentAsJPEG(this.componentRef)}>
                     Export As JPEG
-            </button>
+            </button> */}
 
                 <button onClick={() => exportComponentAsPNG(this.componentRef)}>
-                    Export As PNG
+                    Download
             </button>
             </React.Fragment>);
     }

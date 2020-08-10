@@ -1,38 +1,33 @@
 
-.container{
-    margin:auto;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-}
 .cover{
-    /* width:800px;
-    height:420px; */
     background-color: #c5a8ff;
     text-align: center;
-    position:relative;
+    justify-content: center;
+    align-items: center;
+    height:420px;
+    width:800px;
+    padding:90px;
     
 }
 
 .card{
-   height:auto;
-   width:auto;
+
    border-radius: 10px;
-   margin:50px;
    background-color: #ffffff; 
-   display:inline-block;
-   /* box-shadow: 10px 10px  #8c52ff; */
-position:relative;
    text-align: center;
    color:#676683;
-   border:none;
    justify-content: center;
    align-items: center;
    vertical-align: middle;
    padding:50px;
    
+   
 }
 h1{height:auto;}
 
-
+button{background-color: #8c52ff;
+color:#ffffff;
+border:none;
+border-radius:4px;
+padding:10px;
+margin:20px;}

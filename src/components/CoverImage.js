@@ -7,15 +7,14 @@ class CoverImage extends React.Component {
 
     render() {
         return (
-           <div className="img-fluid">
-            <div className="cover container "
-                style={{ backgroundColor:this.props.bgcolor, height: this.props.height, width: this.props.width }}>
+            <div className="cover"
+                style={{ backgroundColor:this.props.bgcolor }}>
                 <div className="card"
-                    style={{ border: `15px ${this.props.bxshadow}` }}>
+                    style={{ borderTop: `15px solid ${this.props.border}`}}>
                     <h1>{this.props.title}</h1>
                 </div>
             </div>
-            </div>
+            
             
         );
     }
