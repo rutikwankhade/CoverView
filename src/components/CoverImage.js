@@ -10,7 +10,7 @@ class CoverImage extends React.Component {
             <div className={` cover ${this.props.pattern}`}
                 style={{ backgroundColor:this.props.bgcolor }}>
                     <div className={`${this.props.pattern}`}>
-                <div className="card"
+                <div className="title-card"
                     style={{ borderTop: `15px solid ${this.props.border}`}}>
                     <h1>{this.props.title}</h1>
                 </div>

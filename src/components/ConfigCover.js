@@ -15,9 +15,12 @@ class ConfigCover extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="main-container">
 
-                <div className="inputData">
+                <div className="inputData card">
+
+                    <h1>CoverView</h1>
+                    <p>Create blog covers for your next blog post</p>
                     <input type="text" placeholder="Enter title here" className="inputTitle form-control"
                         onChange={e => this.setState({ title: e.target.value })}></input>
 
@@ -30,7 +33,7 @@ class ConfigCover extends React.Component {
                         onChange={e=>this.setState({height: e.target.value})}></input>
                     </div> */}
 
-
+<div>
                     <label>Background</label>
                     <input type="color" defaultValue="#c5a8ff"
                         onChange={e => this.setState({ bgcolor: e.target.value })} />
@@ -38,11 +41,11 @@ class ConfigCover extends React.Component {
                     <label>border</label>
                     <input type="color" defaultValue="#8c52ff"
                         onChange={e => this.setState({ border: e.target.value })} />
-
+</div>
                     <label>Background Pattern</label>
                     <select onChange={e => this.setState({ pattern: e.target.value })}
                         className="form-control">
-                        <option>none</option>
+                        <option>None</option>
 
                         <option>pattern-grid-md</option>
                         <option>pattern-grid-lg</option>
@@ -66,7 +69,7 @@ class ConfigCover extends React.Component {
 
                     </select>
                 </div>
-
+                <div className="blog-cover">
                 <ComponentToImg>
                     <CoverImage
 
@@ -80,7 +83,7 @@ class ConfigCover extends React.Component {
                     />
                 </ComponentToImg>
 
-
+                </div>
 
 
 
