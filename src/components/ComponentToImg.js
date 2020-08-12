@@ -16,7 +16,7 @@ class ComponentToImg extends React.Component {
         return (
             <React.Fragment>
 
-                <div ref={this.componentRef} style={{height:this.props.children.height}}>
+                <div ref={this.componentRef} className=" img img-fluid">
                     {this.props.children}
                 </div>
 

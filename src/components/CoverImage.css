@@ -22,7 +22,8 @@
    align-items: center;
    vertical-align: middle;
    padding:50px;
-   
+   font-size:40px;
+   font-weight: 600;
    
 }
 .card{margin:20px;
@@ -43,3 +44,16 @@ padding:10px;
 margin:auto;
 width:100px;
 text-align: center;}
+
+
+@media screen and (max-width:600px){
+    .cover{
+        width:100vw;
+        height:45vh;
+        padding:9vh 4vh 8vh 4vh;
+    }
+    .title-card{
+        padding:2.5vw 3vw 2.5vw 3vw;
+        font-size: 1.7rem;
+    }
+}
