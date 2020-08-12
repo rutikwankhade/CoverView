@@ -30,10 +30,12 @@
     text-align: center;
     color:#676683;
 
-padding:50px 25px 50px 25px;}
+padding:50px 25px 50px 25px;
+border:4px solid #676683;
+}
 h1{height:auto;}
 
-button{background-color: #282a36;
+button{background-color: #676683;
 color:#ffffff;
 border:none;
 border-radius:4px;
