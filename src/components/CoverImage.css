@@ -1,6 +1,6 @@
 
 .cover{
-    background-color: #c5a8ff;
+    background-color:  #00ff99;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
 
 .title-card{
 
-   border-radius: 10px;
+   border-radius: 2px 2px 20px 20px;
    background-color: #ffffff; 
    text-align: center;
    color:#676683;
@@ -24,6 +24,7 @@
    padding:50px;
    font-size:40px;
    font-weight: 600;
+   border:none;
    
 }
 .card{margin:20px;
@@ -50,10 +51,10 @@ text-align: center;}
     .cover{
         width:100vw;
         height:45vh;
-        padding:9vh 4vh 8vh 4vh;
+        padding:9vh;
     }
     .title-card{
         padding:2.5vw 3vw 2.5vw 3vw;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 }

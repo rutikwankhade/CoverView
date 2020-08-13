@@ -35,7 +35,7 @@ class ConfigCover extends React.Component {
 
 <div>
                     <label>Background</label>
-                    <input type="color" defaultValue="#c5a8ff"
+                    <input type="color" defaultValue="#00ff99"
                         onChange={e => this.setState({ bgcolor: e.target.value })} />
 
                     <label>border</label>
