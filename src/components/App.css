@@ -7,3 +7,13 @@
 .logo{height:25px;
 width:25px;
 margin-right:10px;}
+
+
+footer{
+    height:40px;
+    text-align: center;
+    background-color:#ffffff;
+    margin-top:20px;
+    padding:10px;
+    font-size: 14px;
+}

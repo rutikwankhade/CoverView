@@ -31,9 +31,8 @@
     border-radius: 8px;
     text-align: center;
     color:#676683;
-
-padding:50px 25px 50px 25px;
-border:4px solid #676683;
+    padding:50px 25px 50px 25px;
+    border:4px solid #676683;
 }
 h1{height:auto;}
 
@@ -50,8 +49,8 @@ text-align: center;}
 @media screen and (max-width:600px){
     .cover{
         width:100vw;
-        height:45vh;
-        padding:9vh;
+        height:auto;
+        padding:8vh;
     }
     .title-card{
         padding:2.5vw 3vw 2.5vw 3vw;
