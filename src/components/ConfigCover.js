@@ -2,7 +2,7 @@ import React from 'react';
 import './ConfigCover.css'
 import CoverImage from './CoverImage';
 import ComponentToImg from './ComponentToImg';
-
+import '../assets/css/patterns.css'
 class ConfigCover extends React.Component {
 
     state = {
@@ -24,7 +24,7 @@ class ConfigCover extends React.Component {
                     <input type="text" placeholder="Enter title here" className="inputTitle form-control"
                         onChange={e => this.setState({ title: e.target.value })}></input>
 
-                  
+
 
                     <div>
                         <label>Background</label>
@@ -39,22 +39,21 @@ class ConfigCover extends React.Component {
                     <select onChange={e => this.setState({ pattern: e.target.value })}
                         className="form-control">
                         <option>None</option>
-
-                        <option>pattern-grid-md</option>
-                        <option>pattern-grid-lg</option>
-                        <option>pattern-grid-xl</option>
-                        <option>pattern-cross-dots-xl</option>
-                        <option>pattern-dots-lg</option>
-                        <option>pattern-diagonal-lines-md</option>
-                        <option>pattern-diagonal-lines-lg</option>
-                        <option>pattern-diagonal-lines-xl</option>
-                        <option>pattern-vertical-lines-md</option>
-                        <option>pattern-vertical-lines-lg</option>
-                        <option>pattern-vertical-lines-xl</option>
-                        <option>pattern-horizontal-lines-md</option>
-                        <option>pattern-horizontal-lines-lg</option>
-                        <option>pattern-horizontal-lines-xl</option>
-
+                        <option>graph-paper</option>
+                        <option>jigsaw</option>
+                        <option>hideout</option>
+                        <option>dots</option>
+                        <option>falling-triangles</option>
+                        <option>circuit-board</option>
+                        <option>temple</option>
+                        <option>anchors</option>
+                        <option>brickwall</option>
+                        <option>overlapping-circles</option>
+                        <option>wiggle</option>
+                        <option>tic-tac-toe</option>
+                        <option>leaf</option>
+                        <option>bubbles</option>
+                        <option>squares</option>
 
                     </select>
 
