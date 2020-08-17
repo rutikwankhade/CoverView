@@ -3,6 +3,7 @@ import { exportComponentAsJPEG, exportComponentAsPNG } from "react-component-exp
 import './CoverImage.css'
 
 
+
 class ComponentToImg extends React.Component {
     constructor(props) {
         super(props);
@@ -19,13 +20,14 @@ class ComponentToImg extends React.Component {
                     {this.props.children}
                 </div>
 
-                {/* <button onClick={() => exportComponentAsJPEG(this.componentRef)}>
-                    Export As JPEG
-            </button> */}
+                    {/* <button onClick={() => exportComponentAsJPEG(this.componentRef)}>
+                        Export As JPEG
+                    </button> */}
 
-                <button onClick={() => exportComponentAsPNG(this.componentRef)}>
-                    Download
-                </button>
+                    <button onClick={() => exportComponentAsPNG(this.componentRef)}>
+                        Download
+                     </button>
+                
             </React.Fragment>);
     }
 

@@ -41,9 +41,10 @@ button{
     border:none;
     border-radius:4px;
     padding:10px;
-    margin:auto;
+    margin:auto ;
     width:100px;
     text-align: center;
+    box-shadow: 4px 4px #cccccc;
 }
 
 
@@ -55,6 +56,6 @@ button{
     }
     .title-card{
         padding:2.5vw 3vw 2.5vw 3vw;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
