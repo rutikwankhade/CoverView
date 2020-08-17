@@ -20,7 +20,7 @@ class ConfigCover extends React.Component {
                 <div className="inputData card">
 
                     <h1>CoverView</h1>
-                    <p>🛠 Create awesome cover images for your blog posts quickly</p>
+                    <p className="tagline">🛠 Create awesome cover images for your blog posts quickly</p>
                     <input type="text" placeholder="Enter title here" className="inputTitle form-control"
                         onChange={e => this.setState({ title: e.target.value })}></input>
 

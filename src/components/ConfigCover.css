@@ -7,7 +7,7 @@ body{background-color: #f2f2f2;}
     display:flex;
     flex-direction: row;
 }
-
+.tagline{max-width: 300px;}
 .inputData{
     display:flex;
     flex-direction: column;
