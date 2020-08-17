@@ -1,6 +1,5 @@
 import React from 'react';
 import { exportComponentAsJPEG, exportComponentAsPNG } from "react-component-export-image";
-// import CoverImage from './CoverImage'
 import './CoverImage.css'
 
 
@@ -26,7 +25,7 @@ class ComponentToImg extends React.Component {
 
                 <button onClick={() => exportComponentAsPNG(this.componentRef)}>
                     Download
-            </button>
+                </button>
             </React.Fragment>);
     }
 

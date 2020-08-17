@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import logo from '../assets/favicon.png';
-import githubIcon from '../assets/github.png';
+import logo from '../assets/icons/favicon.png';
+import githubIcon from '../assets/icons/github.png';
 const Navbar = () => {
 
     return (
@@ -16,6 +16,5 @@ const Navbar = () => {
 
 
 };
-
 
 export default Navbar;

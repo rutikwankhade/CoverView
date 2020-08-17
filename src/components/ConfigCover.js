@@ -25,7 +25,6 @@ class ConfigCover extends React.Component {
                         onChange={e => this.setState({ title: e.target.value })}></input>
 
 
-
                     <div>
                         <label>Background</label>
                         <input type="color" defaultValue="#00ff99"
@@ -35,6 +34,7 @@ class ConfigCover extends React.Component {
                         <input type="color" defaultValue="#8c52ff"
                             onChange={e => this.setState({ border: e.target.value })} />
                     </div>
+
                     <label>Background Pattern</label>
                     <select onChange={e => this.setState({ pattern: e.target.value })}
                         className="form-control">
@@ -68,22 +68,11 @@ class ConfigCover extends React.Component {
                             border={this.state.border}
                             pattern={this.state.pattern}
 
-
-
                         />
                     </ComponentToImg>
 
                 </div>
-
-
-
-
-
             </div>
-
-
-
-
         );
     }
 }
