@@ -12,7 +12,7 @@
 
  <p align="center">🛠 Create awesome cover images for your blog posts quickly.</p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/47467468/90472913-36650200-e13f-11ea-9e8a-bef4bb14dc84.gif" height="auto" width="400px"  margin="20px">
+<img src="https://user-images.githubusercontent.com/47467468/90472913-36650200-e13f-11ea-9e8a-bef4bb14dc84.gif" height="auto" width="800px"  margin="20px">
 </p>
 </p>
  
