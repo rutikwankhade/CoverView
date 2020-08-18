@@ -50,6 +50,7 @@ class ConfigCover extends React.Component {
 						<input
 							type="color"
 							value={this.state.foregroundColor}
+							className="mr-4"
 							onChange={(e) => this.setState({ foregroundColor: e.target.value })}
 						/>
 						<label>Text</label>
@@ -114,7 +115,7 @@ class ConfigCover extends React.Component {
 
 					<div className="d-flex flex-row mt-2">
 						<label>Dowload As</label>
-						<select onChange={(e) => this.setState({ download: e.target.value })} className="form-control input-md" value={this.state.download}>
+						<select onChange={(e) => this.setState({ download: e.target.value })} className="form-control input-md ml-2" value={this.state.download}>
 							<option>PNG</option>
 							<option>JPEG</option>
 						</select>
