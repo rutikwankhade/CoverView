@@ -11,6 +11,7 @@ class ComponentToImg extends React.Component {
 	render() {
 		console.log(this.props.children);
 		let downloadButton;
+		// eslint-disable-next-line default-case
 		switch (this.props.downloadAs) {
 			case "PNG":
 				downloadButton = <button onClick={() => exportComponentAsPNG(this.componentRef)}>Download</button>;

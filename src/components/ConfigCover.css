@@ -29,16 +29,29 @@ input {
 	margin: 4px;
 }
 
+input[type=number]{
+	width:40px;
+}
+
+.custom-range::-webkit-slider-thumb{	
+	background-color: #00cc7a;
+}
+.input-sm{
+	width:80px;
+}
+.input-md{
+	width:120px;
+}
 .inputTitle {
-	height: 40px;
-	width: auto;
 	border-radius: 4px;
 	padding-left: 20px;
 }
 
 .reset-btn {
-	background-color: #fc5c65;
+	background-color: #00e68a;
 	margin-top: 10px;
+	box-shadow: 4px 4px #676683;
+
 }
 
 @media screen and (max-width: 600px) {
