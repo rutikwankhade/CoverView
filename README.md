@@ -19,10 +19,10 @@
 
 
 ## ⚡ Features
-- 🛠 Create cover images for your blogs quick and easily
-- 🌈 Choose different background-color
-- ✨ Choose from 15 different background patterns
-- 💾 Download cover images in `.png` format
+- 🛠 Create cover images for your blogs quickly and easily
+- 🌈 Choose different colors for background, foreground, border and text 
+- ✨ Choose from 15+ different background patterns
+- 💾 Download cover images in `.png` as well as `.jpeg` format
 
 ## 👩‍💻 Developing
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -30,7 +30,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ```shell
-git clone https://github.com/your/awesome-project.git
+git clone https://github.com/rutikwankhade/CoverView.git
 cd CoverView/
 npm start
 ```
