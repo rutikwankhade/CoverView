@@ -3,11 +3,12 @@ body {
 }
 
 .main-container {
-	width: auto;
-	justify-content: center;
-	align-items: center;
+	/* width: auto;*/
+	/* justify-content: center;
+	align-items: center;  */
 	display: flex;
 	flex-direction: row;
+
 }
 .tagline {
 	max-width: 300px;
@@ -16,11 +17,18 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 30px;
+	padding:35px;
+	
+    
 }
+.inputdata::-webkit-scrollbar {
+	display: none;
+  }
 .blog-cover {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	margin:30px;
 }
 label {
 	margin: 5px;
@@ -60,4 +68,7 @@ input[type=number]{
 		display: flex;
 		flex-direction: column;
 	}
+	.blog-cover{margin:0px;}
+	
+	
 }
