@@ -122,7 +122,7 @@ class ConfigCover extends React.Component {
 					</select>
 
 					<div className="d-flex flex-row mt-2">
-						<label>Dowload As</label>
+						<label>Download As</label>
 						<select onChange={(e) => this.setState({ download: e.target.value })} className="form-control input-md ml-2" value={this.state.download}>
 							<option>PNG</option>
 							<option>JPEG</option>
