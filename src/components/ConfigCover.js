@@ -14,6 +14,7 @@ const defaultSettings = {
 	foregroundColor: "#ffffff",
 	textColor: "#676683",
 	opacity: 1,
+	author: 'Rutik Wankhade'
 };
 
 class ConfigCover extends React.Component {
@@ -34,6 +35,13 @@ class ConfigCover extends React.Component {
 						placeholder="Enter title here"
 						className="inputTitle form-control"
 						onChange={(e) => this.setState({ title: e.target.value })}
+					></input>
+
+					<input
+						type="text"
+						placeholder="Author"
+						className="inputTitle form-control"
+						onChange={(e) => this.setState({ author: e.target.value })}
 					></input>
 
 					<div>

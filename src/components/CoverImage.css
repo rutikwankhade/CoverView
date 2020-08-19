@@ -4,10 +4,9 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    height:420px;
+    height:380px;
     width:800px;
     padding:90px;
-    margin:00px 0px 15px 0px;
 }
 
 .title-card{
@@ -31,6 +30,17 @@
     color:#676683;
     padding:50px 25px 50px 25px;
     border:4px solid #676683;
+}
+
+.author{
+    float:bottom;
+    background-color: #676683;
+    color:#ffffff;
+    height:40px;
+    margin-bottom:20px;
+    padding :4px;
+    text-align:center;
+    font-weight: 500;
 }
 
 h1{height:auto;}

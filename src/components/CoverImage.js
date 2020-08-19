@@ -17,19 +17,23 @@ class CoverImage extends React.Component {
 	}
 
 	render() {
-		const { title, bgColor, borderColor, borderSize, borderType, pattern, foregroundColor, textColor, opacity } = this.props;
+		const { title, bgColor, borderColor, borderSize, borderType, pattern, foregroundColor, textColor, opacity, author } = this.props;
 		const styleToApply = {
 			borderTop: `${borderSize}px ${borderType} ${borderColor}`,
 			backgroundColor: `${this.hexToRgbA(foregroundColor, opacity)}`,
 			color: `${textColor}`,
 		};
 		return (
-			<div className={` cover ${pattern} `} style={{ backgroundColor: bgColor }}>
-				<div className={`${pattern}`}>
-					<div className="title-card" style={styleToApply}>
-						<p>{title}</p>
+			<div>
+				<div className={` cover ${pattern} `} style={{ backgroundColor: bgColor }}>
+					<div className={`${pattern}`}>
+						<div className="title-card" style={styleToApply}>
+							<p>{title}</p>
+						</div>
+
 					</div>
 				</div>
+				<div className="author" style={{ backgroundColor: borderColor }}>A blog by {author}</div>
 			</div>
 		);
 	}
