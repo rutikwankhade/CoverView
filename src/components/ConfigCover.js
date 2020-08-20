@@ -14,7 +14,8 @@ const defaultSettings = {
 	foregroundColor: "#ffffff",
 	textColor: "#676683",
 	opacity: 1,
-	author: 'Rutik Wankhade'
+	author: 'Rutik Wankhade',
+	icon: 'react'
 };
 
 class ConfigCover extends React.Component {
@@ -120,6 +121,29 @@ class ConfigCover extends React.Component {
 						<option>jupiter</option>
 						<option>sun</option>
 					</select>
+
+						<label>Dev Icon</label>
+						<select onChange={(e) => this.setState({ icon: e.target.value })} className="form-control" value={this.state.icon}>
+							<option>None</option>
+							<option>javascript</option>
+							<option>react</option>
+							<option>angularjs</option>
+							<option>vuejs</option>
+							<option>typescript</option>
+							<option>nodejs</option>
+							<option>mongodb</option>
+							<option>docker</option>
+							<option>html5</option>
+							<option>css3</option>
+							<option>sass</option>
+							<option>git</option>
+							<option>github</option>
+							<option>visualstudio</option>
+							<option>cplusplus</option>
+							<option>java</option>
+							<option>android</option>
+						</select>
+					
 
 					<div className="d-flex flex-row mt-2">
 						<label>Download As</label>
