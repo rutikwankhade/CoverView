@@ -17,7 +17,7 @@ class CoverImage extends React.Component {
 	}
 
 	render() {
-		const { title, bgColor, borderColor, borderSize, borderType, pattern, foregroundColor, textColor, opacity, author,icon } = this.props;
+		const { title, bgColor, borderColor, borderSize, borderType, pattern, foregroundColor, textColor, opacity, author, icon } = this.props;
 		const styleToApply = {
 			borderTop: `${borderSize}px ${borderType} ${borderColor}`,
 			backgroundColor: `${this.hexToRgbA(foregroundColor, opacity)}`,
@@ -34,7 +34,7 @@ class CoverImage extends React.Component {
 					</div>
 				</div>
 				<div className="meta" style={{ backgroundColor: borderColor }}>
-					<i className={`devicon-${icon}-plain icon`}></i>
+					<i className={`devicon-${icon}-plain dev-icon`}></i>
 					<span className="author">A blog by  ⚡ {author}</span></div>
 			</div>
 		);

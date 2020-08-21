@@ -5,20 +5,26 @@
     padding:5px 5px 5px 35px;
     font-family:segoe ui;
 }
-
 .logo{
    height:30px;
    width:30px;
-    margin-right:10px;
+   margin-right:10px;
 }
-
-
+a {
+   color:inherit;
+}
+a i:hover{
+   color:#f2f2f2;
+}
 footer{
     height:40px;
     text-align: center;
     background-color:#ffffff;
-    margin-top:40px;
     padding:10px;
     font-size: 14px;
     border-top:1px solid  #cccccc;
+}
+
+@media screen and (max-width:600px){
+    footer{margin-top:40px;}
 }

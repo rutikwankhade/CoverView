@@ -25,14 +25,6 @@
    vertical-align: middle; 
 }
 
-.card{
-    
-    border-radius: 8px;
-    text-align: center;
-    color:#676683;
-    margin:10px;
-    /* border:1px solid #676683; */
-}
 i{
     font-size: 32px;
     float:left;
@@ -49,8 +41,7 @@ i{
     height:42px;
     padding :4px;
     font-weight: 500;
-    vertical-align: middle;
-    
+    vertical-align: middle;    
 }
 
 h1{
@@ -69,19 +60,16 @@ button{
     box-shadow: 4px 4px #cccccc;
 }
 
-
 @media screen and (max-width:600px){
     .cover{
         width:100vw;
         height:auto;
         padding:8vh;
-
     }
     .title-card{
         padding:2.5vw 3vw 2.5vw 3vw;
         font-size: 1.2rem;
     }
-    
     .meta{
         height:5vh;
         font-size: 2vh;
