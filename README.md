@@ -12,7 +12,9 @@
 
  <p align="center">🛠 Create awesome cover images for your blog posts quickly.</p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/47467468/90472913-36650200-e13f-11ea-9e8a-bef4bb14dc84.gif" height="auto" width="800px"  margin="20px">
+<kbd>
+<img src="https://user-images.githubusercontent.com/47467468/91587246-1f5eb500-e974-11ea-8455-9cc8b6c990c3.gif" height="auto" width="800px"  margin="20px">
+</kbd>
 </p>
 </p>
  
@@ -50,6 +52,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## 🙏 Acknowledgments
 - [react-component-export-image](https://www.npmjs.com/package/react-component-export-image)
 - [Hero Patterns](https://www.heropatterns.com/)
+- [Devicons](https://github.com/devicons/devicon)
 
 Don't forget to leave a ⭐ if you found this useful.
 
