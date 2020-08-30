@@ -3,6 +3,7 @@ import "./ConfigCover.css";
 import CoverImage from "./CoverImage";
 import ComponentToImg from "./ComponentToImg";
 import ChevronDown from './ChevronDown';
+import Select from 'react-select';
 
 const defaultSettings = {
 	title: "How I built my first project with react",
@@ -16,17 +17,26 @@ const defaultSettings = {
 	textColor: "#676683",
 	opacity: 1,
 	author: 'Rutik Wankhade',
-	icon: 'react'
+	icon: {'label':'react','value':'react'},
+	devIconOptions: {},
 };
-
-
+const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/devicon.json"
+// const devIconOptions = [
+// 	{ value: 'None', label: 'None' },
+// 	{ value: 'javascript', label: 'Javascript' },
+// 	{ value: 'python', label: 'Python' },
 class ConfigCover extends React.Component {
 	state = defaultSettings;
-
+	componentDidMount(){
+		console.log("Mount")
+		fetch(devIconsUrl).then(r=>r.json()).then(data=>{
+			this.setState({devIconOptions: data.map(item=>({'value':item.name,'label':item.name}))})
+		})
+	}
 	handleReset = () => {
 		this.setState(defaultSettings);
 	};
-
+	
 	render() {
 		return (
 			<div className="main-container">
@@ -168,8 +178,8 @@ class ConfigCover extends React.Component {
 							<label>Dev Icon</label>
 							<ChevronDown />
 						</summary>
-
-						<select onChange={(e) => this.setState({ icon: e.target.value })} className="form-control" value={this.state.icon}>
+						<Select value={this.state.icon} onChange={(selectedOption) => this.setState({ icon: selectedOption })} options={this.state.devIconOptions} />
+						{/* <select onChange={(e) => this.setState({ icon: e.target.value })} className="form-control" value={this.state.icon}>
 							<option>None</option>
 							<option>javascript</option>
 							<option>react</option>
@@ -188,7 +198,7 @@ class ConfigCover extends React.Component {
 							<option>cplusplus</option>
 							<option>java</option>
 							<option>android</option>
-						</select>
+						</select> */}
 					</details>
 
 
