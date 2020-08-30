@@ -9,7 +9,7 @@ class ComponentToImg extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.children);
+		// console.log(this.props.children);
 		let downloadButton;
 		// eslint-disable-next-line default-case
 		switch (this.props.downloadAs) {
@@ -19,12 +19,11 @@ class ComponentToImg extends React.Component {
 			case "JPEG":
 				downloadButton = <button onClick={() => exportComponentAsJPEG(this.componentRef)}>Download</button>;
 		}
-		console.log(downloadButton);
+		// console.log(downloadButton);
 
 		return (
 			<React.Fragment>
 				<div ref={this.componentRef}>{this.props.children}</div>
-				{/* <button onClick={() => exportComponentAsPNG(this.componentRef)}>Download</button> */}
 				{downloadButton}
 			</React.Fragment>
 		);

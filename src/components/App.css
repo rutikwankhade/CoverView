@@ -8,22 +8,19 @@ body,
   padding-left: 40px;
   background-color: #6272a4;
   padding: 5px 5px 5px 35px;
-  font-family: segoe ui;
+
 }
-.navbar h4 {
-    margin-bottom: 0;
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .logo {
   height: 30px;
   width: 30px;
   margin-right: 10px;
 }
-.outerContainer {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-}
+
 a {
   color: inherit;
 }
