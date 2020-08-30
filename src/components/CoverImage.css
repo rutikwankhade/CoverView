@@ -31,7 +31,6 @@ i{
     margin-left:2vw;
 }
 .author{
-    float:right;
     margin-right:3vw;
 }
 .meta{
@@ -41,7 +40,9 @@ i{
     height:42px;
     padding :4px;
     font-weight: 500;
-    vertical-align: middle;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between  
 }
 
 h1{
