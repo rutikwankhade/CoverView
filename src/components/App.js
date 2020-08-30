@@ -6,7 +6,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={"outerContainer"}>
                 <Navbar />
                 <ConfigCover />
                 <Footer />
