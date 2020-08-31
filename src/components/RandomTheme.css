@@ -1,0 +1,28 @@
+.random-btn{
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 2px solid #ccccff;
+    
+}
+.random-btn:active{
+    transform: rotate(360deg);
+    transition: all 0.2s ease-out;
+}
+.bi-shuffle{
+    height: 25px;
+    width: 25px;
+    opacity: 0.6;
+}
+
+@media screen and(max-width:600px){
+.random-btn{
+    margin: 20px;
+}
+}

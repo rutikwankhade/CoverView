@@ -4,6 +4,7 @@ import CoverImage from "./CoverImage";
 import ComponentToImg from "./ComponentToImg";
 import ChevronDown from './ChevronDown';
 import Select from 'react-select';
+import RandomTheme from './RandomTheme';
 
 const defaultSettings = {
 	title: "How I built my first project with react",
@@ -17,7 +18,7 @@ const defaultSettings = {
 	textColor: "#676683",
 	opacity: 1,
 	author: 'Rutik Wankhade',
-	icon: {'label':'react','value':'react'},
+	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
 };
 const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/devicon.json"
@@ -27,16 +28,20 @@ const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/d
 // 	{ value: 'python', label: 'Python' },
 class ConfigCover extends React.Component {
 	state = defaultSettings;
-	componentDidMount(){
+	componentDidMount() {
 		console.log("Mount")
-		fetch(devIconsUrl).then(r=>r.json()).then(data=>{
-			this.setState({devIconOptions: data.map(item=>({'value':item.name,'label':item.name}))})
+		fetch(devIconsUrl).then(r => r.json()).then(data => {
+			this.setState({ devIconOptions: data.map(item => ({ 'value': item.name, 'label': item.name })) })
 		})
 	}
 	handleReset = () => {
 		this.setState(defaultSettings);
 	};
-	
+
+	getRandomTheme = (theme, Pattern) => {
+		this.setState({ bgColor: theme.bgColor, borderColor: theme.bdColor, pattern: Pattern });
+	}
+
 	render() {
 		return (
 			<div className="main-container">
@@ -214,11 +219,16 @@ class ConfigCover extends React.Component {
 					</button>
 				</div>
 
+				<div className="d-flex flex-column">
+					<RandomTheme onThemeChange={this.getRandomTheme} />
+				</div>
+
 				<div className="blog-cover">
 					<ComponentToImg downloadAs={this.state.download}>
 						<CoverImage {...this.state} />
 					</ComponentToImg>
 				</div>
+
 			</div>
 		);
 	}
