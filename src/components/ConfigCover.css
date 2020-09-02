@@ -1,7 +1,11 @@
 body {
 	background-color: #f2f2f2;
 }
+.div{
+	display:flex;
+	flex-direction: column;
 
+}
 .main-container {
 	/* width: auto;
 	justify-content: center;

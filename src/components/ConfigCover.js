@@ -59,6 +59,7 @@ class ConfigCover extends React.Component {
 						type="text"
 						placeholder="Author"
 						className="inputTitle form-control"
+						maxLength="75"
 						onChange={(e) => this.setState({ author: e.target.value })}
 					></input>
 
@@ -72,13 +73,13 @@ class ConfigCover extends React.Component {
 							<label>Colors</label>
 							<ChevronDown />
 						</summary>
-						<div>
-							<label>Background</label>
-							<input type="color" value={this.state.bgColor} onChange={(e) => this.setState({ bgColor: e.target.value })} />
-
-							<label>Border</label>
-							<input type="color" value={this.state.borderColor} onChange={(e) => this.setState({ borderColor: e.target.value })} />
-						</div>
+						<div className='div'>
+							<div><label>Background</label>
+							<input  type="color" value={this.state.bgColor} onChange={(e) => this.setState({ bgColor: e.target.value })} /></div>
+							<div><label>Border</label>
+					
+							<input type="color" value={this.state.borderColor} onChange={(e) => this.setState({ borderColor: e.target.value })} /></div>
+						
 
 						<div>
 							<label>Foreground</label>
@@ -87,12 +88,12 @@ class ConfigCover extends React.Component {
 								value={this.state.foregroundColor}
 								className="mr-4"
 								onChange={(e) => this.setState({ foregroundColor: e.target.value })}
-							/>
-
+							/></div>
+							<div>	
 							<label>Text</label>
 							<input type="color" value={this.state.textColor} onChange={(e) => this.setState({ textColor: e.target.value })} />
 						</div>
-
+						<div>
 						<label>Opacity</label>
 						<input
 							type="range"
@@ -102,8 +103,9 @@ class ConfigCover extends React.Component {
 							value={this.state.opacity}
 							className="custom-range"
 							onChange={(e) => this.setState({ opacity: e.target.value })}
-						></input>
-
+						></input >
+						</div>
+					</div>						
 					</details>
 
 					<details>

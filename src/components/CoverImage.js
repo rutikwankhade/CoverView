@@ -22,7 +22,7 @@ class CoverImage extends React.Component {
 			borderTop: `${borderSize}px ${borderType} ${borderColor}`,
 			backgroundColor: `${this.hexToRgbA(foregroundColor, opacity)}`,
 			color: `${textColor}`,
-		};
+		}; 
 		return (
 			<div>
 				<div className={` cover ${pattern} `} style={{ backgroundColor: bgColor }}>

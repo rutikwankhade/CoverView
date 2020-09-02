@@ -24,7 +24,8 @@
    font-size:35px;
    font-weight: 600;
    border:none;  
-   vertical-align: middle; 
+   vertical-align: middle;
+   overflow-wrap: break-word; 
 }
 
 i{
@@ -44,7 +45,7 @@ i{
     font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: space-between  
+    justify-content: space-between;  
 }
 
 h1{
