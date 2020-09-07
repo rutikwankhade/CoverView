@@ -4,7 +4,6 @@ body {
 .div{
 	display:flex;
 	flex-direction: column;
-
 }
 .main-container {
 	/* width: auto;
@@ -15,6 +14,17 @@ body {
 }
 .tagline {
 	max-width: 300px;
+}
+.parentColor{
+	display: flex;
+	justify-content: space-around;
+}
+input[type="color"] {
+	position: absolute;
+	right: 5%;
+	width: 3em;
+	padding: .25em;
+	border: none;
 }
 .inputData {
 	display: flex;

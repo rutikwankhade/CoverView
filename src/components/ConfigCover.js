@@ -74,22 +74,21 @@ class ConfigCover extends React.Component {
 							<ChevronDown />
 						</summary>
 						<div className='div'>
-							<div><label>Background</label>
+							<div className='parentColor'><label>Background</label>
 							<input  type="color" value={this.state.bgColor} onChange={(e) => this.setState({ bgColor: e.target.value })} /></div>
-							<div><label>Border</label>
+							<div className='parentColor'><label>Border</label>
 					
 							<input type="color" value={this.state.borderColor} onChange={(e) => this.setState({ borderColor: e.target.value })} /></div>
 						
 
-						<div>
+						<div className='parentColor'>
 							<label>Foreground</label>
 							<input
 								type="color"
 								value={this.state.foregroundColor}
-								className="mr-4"
 								onChange={(e) => this.setState({ foregroundColor: e.target.value })}
 							/></div>
-							<div>	
+							<div className='parentColor'>	
 							<label>Text</label>
 							<input type="color" value={this.state.textColor} onChange={(e) => this.setState({ textColor: e.target.value })} />
 						</div>
