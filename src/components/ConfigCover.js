@@ -41,7 +41,12 @@ class ConfigCover extends React.Component {
 	getRandomTheme = (theme, Pattern) => {
 		this.setState({ bgColor: theme.bgColor, borderColor: theme.bdColor, pattern: Pattern });
 	}
-
+	//this function will set the max border value to 50 if user types a value greater than 50
+	maxBorderValidationCheck = (e) => {
+		if(e.target.value > 50) {
+			e.target.value = 50;
+		}
+	}
 	render() {
 		return (
 			<div className="main-container">
@@ -118,7 +123,7 @@ class ConfigCover extends React.Component {
 						<div className="d-flex flex-row">
 							<div className="input-sm">
 								<label>Size</label>
-								<input type="number" max="200" className="form-control " value={this.state.borderSize} onChange={(e) => this.setState({ borderSize: e.target.value })} />
+								<input type="number" max="50" onInput = {this.maxBorderValidationCheck} className="form-control " value={this.state.borderSize} onChange={(e) => this.setState({ borderSize: e.target.value })} />
 							</div>
 
 							<div className="input-sm">
