@@ -118,7 +118,7 @@ class ConfigCover extends React.Component {
 						<div className="d-flex flex-row">
 							<div className="input-sm">
 								<label>Size</label>
-								<input type="number" className="form-control " value={this.state.borderSize} onChange={(e) => this.setState({ borderSize: e.target.value })} />
+								<input type="number" max="200" className="form-control " value={this.state.borderSize} onChange={(e) => this.setState({ borderSize: e.target.value })} />
 							</div>
 
 							<div className="input-sm">
