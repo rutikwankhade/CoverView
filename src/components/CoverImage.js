@@ -35,7 +35,7 @@ class CoverImage extends React.Component {
 				</div>
 				<div className="meta" style={{ backgroundColor: borderColor }}>
 					<i className={`devicon-${icon.value}-plain dev-icon`}></i>
-					<span className="author">A blog by  ⚡ {author}</span></div>
+					<span className="author">A blog by  <span role="img" aria-label="bolt">⚡</span> {author}</span></div>
 			</div>
 		);
 	}

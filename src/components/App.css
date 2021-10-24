@@ -6,11 +6,11 @@ body,
 .navbar {
   color: #ffffff;
   padding-left: 40px;
-  background-color: #6272a4;
-  padding: 5px 5px 5px 35px;
+  background-color: #54436B;
+  padding: 10px 10px 10px 35px;
 
 }
-.outerContainer {
+.content {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -21,19 +21,18 @@ body,
   margin-right: 10px;
 }
 
-a {
-  color: inherit;
+a:hover{
+  text-decoration: none;
 }
-a i:hover {
-  color: #f2f2f2;
-}
-footer {
-  height: 40px;
-  text-align: center;
-  background-color: #ffffff;
-  padding: 10px;
-  font-size: 14px;
-  border-top: 1px solid #cccccc;
+
+.star-btn{
+    background-color: #262626;
+    padding:5px 10px 5px 10px;
+    color:#ffffff;
+    border-radius:5px;
+    font-weight:600;
+    margin-left:auto;
+    margin-right:10px;
 }
 
 @media screen and (max-width: 600px) {

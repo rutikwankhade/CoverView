@@ -15,6 +15,9 @@
     transform: rotate(360deg);
     transition: all 0.2s ease-out;
 }
+.random-btn:hover{
+    border-color:  #66ff99;
+}
 .bi-shuffle{
     height: 25px;
     width: 25px;

@@ -50,9 +50,8 @@ class ConfigCover extends React.Component {
 	render() {
 		return (
 			<div className="main-container">
-				<div className="inputData card">
-					<h1>CoverView</h1>
-					<p className="tagline">🛠 Creating cover images for your blogs is now super easy</p>
+				<div className="config-container card ">
+					<p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> 
 					<input
 						type="text"
 						placeholder="Enter title here"

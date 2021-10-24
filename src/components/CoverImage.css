@@ -52,7 +52,8 @@ h1{
 }
 
 button{
-    background-color: #676683;
+  background-color:  #634f7d;
+font-weight: 600;
     color:#ffffff;
     border:none;
     border-radius:4px;
@@ -63,8 +64,8 @@ button{
     box-shadow: 4px 4px #cccccc;
 
 }
-button:active{   
-     transform:scale(1.1);
+button:hover{   
+     background-color: #54466b;
 }
 
 @media screen and (max-width:600px){

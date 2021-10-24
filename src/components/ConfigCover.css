@@ -2,29 +2,31 @@ body {
 	background-color: #f2f2f2;
 }
 
-.main-container {
-	/* width: auto;
-	justify-content: center;
-	align-items: center;  */
+.main-container {	
 	display: flex;
 	flex-direction: row;
 }
 .tagline {
 	max-width: 300px;
+	font-weight: 600;
+	font-size: 18px;
 }
-.inputData {
+.config-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding:35px;
+	width: 600px;
+	background-color: #ffffff;
+	margin-right:10px;
+	justify-items: center;
+	justify-content: center;
+	
 }
 .card{
-    border-radius: 8px;
     text-align: center;
     color:#676683;
-	margin:10px 10px 10px 20px;
-	box-shadow: 6px  #e6e6e6;
-
+	
 }
 
 details{
@@ -40,12 +42,15 @@ details{
 	margin:4px;
 	justify-content: center;
 	align-items: center;
+
 	
 }
 
 summary{
 	align-items: center;
 	justify-content: center;
+	  list-style: none;
+
 
 }
 summary:focus{
@@ -116,9 +121,7 @@ input {
 }
 
 .reset-btn {
-	background-color: #00e68a;
-	margin-top: 10px;
-	box-shadow: 4px 4px #676683;
+	margin-top: 20px;
 	font-size: 18px;
 	padding:6px;
 
@@ -129,6 +132,7 @@ input {
 		display: flex;
 		flex-direction: column;
 	}
+	.config-container{width:auto;}
 	.blog-cover{margin:0px;}
 	.card{margin:10px;}	
 	
