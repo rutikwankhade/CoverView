@@ -51,6 +51,10 @@ i {
     font-size: 22px;
     font-weight: 600;
     margin-top: 20px;
+    border-top: solid 4px  #d4d4dd
+; 
+    width:max-content;
+    padding-top:10px;
 }
 
 
