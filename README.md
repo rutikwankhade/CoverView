@@ -13,7 +13,7 @@
  <p align="center">🛠 Create awesome cover images for your blog posts quickly.</p>
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/47467468/138584874-34311571-5fc7-40db-93f2-759edb68635d.png" height="auto" width="800px"  margin="20px">
+<img src="https://user-images.githubusercontent.com/47467468/148546132-2b608b8c-ab27-4888-9898-e0b489142c47.png" height="auto" width="800px"  margin="20px">
 
 </p>
 </p>
@@ -22,8 +22,7 @@
 
 ## ⚡ Features
 - 🛠 Create cover images for your blogs quickly and easily
-- 🌈 Choose different colors for background, foreground, border and text 
-- ✨ Choose from 15+ different background patterns
+- ✨ 15+ different background patterns
 - 💾 Download cover images in `.png` as well as `.jpeg` format
 
 ## 👩‍💻 Developing
