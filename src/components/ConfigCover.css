@@ -14,7 +14,6 @@ body {
 .config-container {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	padding:35px;
 	width: 600px;
 	background-color: #ffffff;
@@ -46,45 +45,15 @@ details{
 	
 }
 
-summary{
-	align-items: center;
+
+.flex-card{
+	display: flex;
+	flex-direction:row;
 	justify-content: center;
-	  list-style: none;
+	align-items: center;
 
-
-}
-summary:focus{
-	outline:none;
-}
-summary::-webkit-details-marker {
-	display: none;
 }
 
-summary:hover {
-	cursor: pointer;
-}
-.bi-chevron-down {
-	pointer-events: none;
-	position: absolute;
-	top:1em;
-	right:0.5em;
-	background: #ffffff;
-	opacity:0.5;
-}
-.bi-chevron-down:hover{
-	opacity:1;
-}
-
-svg {
-	display: block;
-	}
-.icon{
-	width:20px;
-	height:20px;
-	left:1em;
-	position:absolute;
-	top:0.7em;
-}
 
 .blog-cover {
 	display: flex;
@@ -100,25 +69,12 @@ input {
 	text-align: center;
 }
 
-.custom-range{
-	max-width:170px;
-	vertical-align: middle;
-	margin-left:15px;
-}
-.custom-range::-webkit-slider-thumb{	
-	background-color: #00cc7a;
-}
-.input-sm{
-	width:120px;
-	margin:auto;
-}
+
+
 .input-md{
-	width:120px;
+	width:100px;
 }
-.inputTitle {
-	border-radius: 4px;
-	padding-left: 20px;
-}
+
 
 .reset-btn {
 	margin-top: 20px;

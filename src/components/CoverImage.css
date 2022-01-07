@@ -32,7 +32,7 @@
     padding: 40px;
     font-family: inter;
     margin: auto;
-    box-shadow: 13px 10px 36px 2px rgba(0,0,0,0.22);
+    box-shadow: 13px 10px 36px 2px rgba(0, 0, 0, 0.22);
 
 }
 
@@ -53,16 +53,6 @@ i {
     margin-top: 20px;
 }
 
-.meta {
-    float: bottom;
-    background-color: #676683;
-    color: #ffffff;
-    padding: 20px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between
-}
 
 h1 {
     height: auto;
@@ -89,22 +79,20 @@ button:hover {
 @media screen and (max-width:600px) {
     .cover {
         width: 100vw;
-        height: auto;
-        padding: 8vh;
+        height: 50vh;
+        padding: 4vh;
     }
 
-    .title-card {
-        padding: 2.5vw 3vw 2.5vw 3vw;
-        font-size: 1.2rem;
+    .title {
+        font-size: 1.5rem;
     }
 
-    .meta {
-        height: 5vh;
-        font-size: 2vh;
+    .author-text {
+        font-size: 12px;
     }
 
     i {
-        font-size: 3.5vh;
+        font-size: 12vh;
     }
 
 }

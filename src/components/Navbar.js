@@ -5,15 +5,13 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
+            <h4><img src={logo} alt="logo" className="logo"/>Coverview</h4>
+            <a href="https://github.com/rutikwankhade/CoverView"
+                target="_blank" rel="noopener  noreferrer" class="star-btn">
+                <span role="img" aria-label="star">⭐</span> Star on Github
+            </a>
 
-            <h4><img src={logo} alt="logo" className="logo"></img>CoverView</h4>
-            <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noopener  noreferrer" class="star-btn"><span role="img" aria-label="star">⭐</span> Star on Github</a>
-
-            
-       
         </nav>);
-
-
 
 };
 
