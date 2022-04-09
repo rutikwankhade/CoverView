@@ -44,17 +44,17 @@ class ConfigCover extends React.Component {
 			<div className="main-container">
 				<div className="config-container card ">
 					<p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p>
-					<input
+					<textarea
 						type="text"
 						placeholder="Enter title here"
-						className="input form-control"
+						className="input-title form-control"
 						onChange={(e) => this.setState({ title: e.target.value })}
-					></input>
+					/>
 
 					<input
 						type="text"
 						placeholder="Author"
-						className="input form-control"
+						className="input-author form-control"
 						onChange={(e) => this.setState({ author: e.target.value })}
 					></input>
 
@@ -114,7 +114,7 @@ class ConfigCover extends React.Component {
 						/>
 					</div>
 
-					<div className="mx-4 my-1">
+					{/* <div className="mx-4 my-1">
 						<h6>Download As</h6>
 						<select onChange={(e) => this.setState({ download: e.target.value })}
 							className="form-control input"
@@ -122,7 +122,7 @@ class ConfigCover extends React.Component {
 							<option>PNG</option>
 							<option>JPEG</option>
 						</select>
-					</div>
+					</div> */}
 
 					<button
 						className="reset-btn mx-auto"
