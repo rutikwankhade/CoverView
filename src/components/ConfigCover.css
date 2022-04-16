@@ -2,31 +2,9 @@ body {
 	background-color: #f2f2f2;
 }
 
-.main-container {	
-	display: flex;
-	flex-direction: row;
-}
-.tagline {
-	max-width: 300px;
-	font-weight: 600;
-	font-size: 18px;
-}
-.config-container {
-	display: flex;
-	flex-direction: column;
-	padding:35px;
-	width: 600px;
-	background-color: #ffffff;
-	margin-right:10px;
-	justify-items: center;
-	justify-content: center;
-	
-}
-.card{
-    text-align: center;
-    color:#676683;
-	
-}
+
+
+
 
 details{
 	font-size: 1rem;
@@ -64,21 +42,11 @@ details{
 label{
 	margin: 5px;
 }
-input {
-	margin: 4px;
-		background-color: #f2f2f2;
 
-}
 
-.input-title{
-	margin:5px;
-	background-color: #f2f2f2;
-}
 
-.input-author{
-		background-color: #f2f2f2;
 
-}
+
 .input-color{
 padding:1px;
 	width:40px;

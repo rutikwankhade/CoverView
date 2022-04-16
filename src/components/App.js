@@ -5,8 +5,8 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="content bg-slate-400">
-                <Navbar />
+            <div className="content ">
+                {/* <Navbar /> */}
                 <ConfigCover />
             </div>
         );
