@@ -14,7 +14,7 @@ const BasicTheme = ({ config }) => {
                 <div className={`${font} bg-white md:w-10/12  m-auto flex flex-col pt-12 rounded-xl`}>
                     <div className="px-12">
                         <div>
-                            <h1 className="text-5xl font-bold text-center">{title}</h1>
+                            <h1 className="text-3xl md:text-5xl font-bold text-center">{title}</h1>
                         </div>
                     </div>
 

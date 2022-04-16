@@ -43,7 +43,7 @@ class Editor extends React.Component {
 
 	render() {
 		return (
-			<div className="flex bg-gray-50 ">
+			<div className="flex md:flex-row flex-col bg-gray-50 ">
 				<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
 					{/* <p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> */}
 

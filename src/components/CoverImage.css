@@ -6,5 +6,10 @@
     overflow-y: hidden;
 }
 
-
-
+@media screen and (max-width:600px) {
+    .cover {
+        width: 90vw;
+        height: 60vh;
+        padding: 4vh;
+    }
+}
