@@ -1,6 +1,7 @@
 import React from "react";
 import "./CoverImage.css";
 import "../assets/css/patterns.css";
+import BasicTheme from "./Themes/BasicTheme";
 
 class CoverImage extends React.Component {
 	// hexToRgbA(hex, opacity) {
@@ -17,27 +18,10 @@ class CoverImage extends React.Component {
 	// }
 
 	render() {
-		const { title, bgColor, pattern, author, icon } = this.props;
+		// const { title, bgColor, pattern, author, icon,font } = this.props;
 	
 		return (
-			<div>
-				<div className={` cover ${pattern} `} style={{ backgroundColor: bgColor }}>
-					<div className={`${pattern}`}>
-
-						<div className="title-card">
-							<div className="flex-row">
-								<i className={`devicon-${icon.value}-plain dev-icon `}></i>
-								<div>
-									<h1 className="title">{title}</h1>
-									<h2 className="author-text"> {author}</h2>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				
-			</div>
+			<BasicTheme config={ this.props}/>
 		);
 	}
 }

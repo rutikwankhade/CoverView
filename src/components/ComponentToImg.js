@@ -1,5 +1,5 @@
 import React from "react";
-import { exportComponentAsJPEG, exportComponentAsPNG } from "react-component-export-image";
+import { exportComponentAsPNG } from "react-component-export-image";
 import "./CoverImage.css";
 
 class ComponentToImg extends React.Component {
@@ -9,22 +9,14 @@ class ComponentToImg extends React.Component {
 	}
 
 	render() {
-		// console.log(this.props.children);
-		let downloadButton;
-		// eslint-disable-next-line default-case
-		switch (this.props.downloadAs) {
-			case "PNG":
-				downloadButton = <button onClick={() => exportComponentAsPNG(this.componentRef,'cover')}>Download</button>;
-				break;
-			case "JPEG":
-				downloadButton = <button onClick={() => exportComponentAsJPEG(this.componentRef,'cover')}>Download</button>;
-		}
-		// console.log(downloadButton);
+
 
 		return (
 			<React.Fragment>
 				<div ref={this.componentRef}>{this.props.children}</div>
-				{downloadButton}
+				<button
+					className="border p-2 bg-gray-700 hover:bg-gray-800 text-white text-xl rounded m-4 px-4"
+					onClick={() => exportComponentAsPNG(this.componentRef, 'cover')}>Download</button>
 			</React.Fragment>
 		);
 	}

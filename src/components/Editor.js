@@ -14,6 +14,7 @@ const defaultSettings = {
 	author: 'Rutik Wankhade',
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
+	font: 'font-sans'
 
 };
 
@@ -43,7 +44,7 @@ class Editor extends React.Component {
 	render() {
 		return (
 			<div className="flex bg-gray-50 ">
-				<div className="bg-white  p-4 flex flex-col md:w-1/4">
+				<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
 					{/* <p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> */}
 
 
@@ -76,10 +77,15 @@ class Editor extends React.Component {
 						<div className="flex flex-col m-2 w-1/2">
 							<span className="font-medium">Font</span>
 
-							<select className=" text-gray-700 text-xl p-2 rounded border">
-								<option>Serif</option>
-								<option>Sans</option>
-								<option>mono</option>
+							<select
+								value={this.state.font}
+
+								onChange={(e) => this.setState({ font: e.target.value })}
+
+								className=" text-gray-700 text-xl p-2 rounded border">
+								<option>font-serif</option>
+								<option>font-sans</option>
+								<option>font-mono</option>
 							</select>
 						</div>
 						<div className="flex flex-col m-2 ">
