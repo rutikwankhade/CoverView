@@ -47,7 +47,16 @@ class Editor extends React.Component {
 				<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
 					{/* <p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> */}
 
+					<div className="flex items-center mb-6 ">
+						<h1 className=" text-gray-800 text-2xl font-bold ">Coverview</h1>
+						<a href="https://github.com/rutikwankhade/CoverView"
+							target="_blank" rel="noopener  noreferrer"
+							className="ml-auto mr-2 cursor-pointer">
+							<i className=" devicon-github-plain dev-icon text-xl"></i>
 
+						</a>
+
+					</div>
 					<div className="m-2 flex flex-col">
 						<span className="font-medium">Blog Title</span>
 						<textarea
@@ -146,6 +155,9 @@ class Editor extends React.Component {
 						</select>
 					</div>
 
+
+					<span className="text-sm mt-4  text-center text-gray-400">Made with 💖 by <a href="https://rutikwankhade.dev"
+						target="_blank" rel="noopener  noreferrer" className="underline hover:text-green-500">Rutik Wankhade</a></span>
 					{/* <div className="flex flex-col m-2 ">
 						<span className="font-medium">Theme</span>
 
