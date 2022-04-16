@@ -59,47 +59,23 @@ class ConfigCover extends React.Component {
 					></input>
 
 
-					<div className="border rounded my-2 ml-2 p-1">
+					<div className=" rounded my-2 ml-2 p-1">
 
-						<h6 className="">Background</h6>
+						{/* <h6 className="">Background</h6> */}
 
 						<div className="flex-card">
-							<div className="mt-3 mx-2">
-								<span>Color</span>
+							<div className=" border rounded p-1 flex-row ">
+								<span>{ this.state.bgColor}</span>
 								<input type="color" value={this.state.bgColor}
 									onChange={(e) => this.setState({ bgColor: e.target.value })}
-									className="input-md form-control"
+									className="input-color form-control"
 								/>
 							</div>
 
-							<div className="mx-2">
-								<label>Pattern</label>
-								<select
-									onChange={(e) => this.setState({ pattern: e.target.value })}
-									className="form-control input-md"
-									value={this.state.pattern}>
-
-									<option>None</option>
-									<option>graph-paper</option>
-									<option>jigsaw</option>
-									<option>hideout</option>
-									<option>dots</option>
-									<option>falling-triangles</option>
-									<option>circuit-board</option>
-									<option>temple</option>
-									<option>anchors</option>
-									<option>brickwall</option>
-									<option>overlapping-circles</option>
-									<option>wiggle</option>
-									<option>tic-tac-toe</option>
-									<option>leaf</option>
-									<option>bubbles</option>
-									<option>squares</option>
-									<option>explorer</option>
-									<option>jupiter</option>
-									<option>sun</option>
-								</select>
-							</div>
+							<div className="flex-row">
+								<span>Font size</span>
+								<input type="number" className="font-size" min="20"/>
+					</div>
 
 						</div>
 					</div>

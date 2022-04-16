@@ -79,6 +79,16 @@ input {
 		background-color: #f2f2f2;
 
 }
+.input-color{
+padding:1px;
+	width:40px;
+	height:40px;
+}
+
+.font-size{
+	padding:2px;
+	width:50px;
+}
 
 .input-md{
 	width:100px;
