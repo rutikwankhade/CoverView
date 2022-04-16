@@ -1,13 +1,12 @@
 import React from 'react';
-import ConfigCover from './ConfigCover';
-import Navbar from './Navbar';
+import Editor from './Editor';
+
 class App extends React.Component {
 
     render() {
         return (
             <div className="content ">
-                {/* <Navbar /> */}
-                <ConfigCover />
+                <Editor />
             </div>
         );
     }

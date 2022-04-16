@@ -1,9 +1,10 @@
 import React from "react";
-import "./ConfigCover.css";
 import CoverImage from "./CoverImage";
 import ComponentToImg from "./ComponentToImg";
 import Select from 'react-select';
 import RandomTheme from './RandomTheme';
+import resetIcon from '../assets/icons/reset.svg'
+
 
 const defaultSettings = {
 	title: "How I built my first project with react",
@@ -22,7 +23,7 @@ const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/d
 // 	{ value: 'javascript', label: 'Javascript' },
 // 	{ value: 'python', label: 'Python' },
 
-class ConfigCover extends React.Component {
+class Editor extends React.Component {
 
 	state = defaultSettings;
 	componentDidMount() {
@@ -41,7 +42,7 @@ class ConfigCover extends React.Component {
 
 	render() {
 		return (
-			<div className="flex ">
+			<div className="flex bg-gray-50 ">
 				<div className="bg-white  p-4 flex flex-col md:w-1/4">
 					{/* <p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> */}
 
@@ -151,8 +152,6 @@ class ConfigCover extends React.Component {
 
 
 
-
-
 					{/* <div className="mx-4 my-1">
 						<h6>Download As</h6>
 						<select onChange={(e) => this.setState({ download: e.target.value })}
@@ -163,18 +162,20 @@ class ConfigCover extends React.Component {
 						</select>
 					</div> */}
 
+					{/* 
 					<button
-						className="reset-btn mx-auto"
+						className="flex items-center mx-auto border p-2 bg-green-400"
 						onClick={this.handleReset}>
-						Reset
-					</button>
+						<img src={resetIcon} />
+						<span>Reset</span>
+					</button> */}
 				</div>
 
 				<div className="m-2 items-center justify-center flex">
 					<RandomTheme onThemeChange={this.getRandomTheme} />
 				</div>
 
-				<div className="blog-cover">
+				<div className="flex flex-col items-center justify-center m-14">
 					<ComponentToImg downloadAs={this.state.download}>
 						<CoverImage {...this.state} />
 					</ComponentToImg>
@@ -185,4 +186,4 @@ class ConfigCover extends React.Component {
 	}
 }
 
-export default ConfigCover;
+export default Editor;
