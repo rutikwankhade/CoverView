@@ -3,7 +3,6 @@ import CoverImage from "./CoverImage";
 import ComponentToImg from "./ComponentToImg";
 import Select from 'react-select';
 import RandomTheme from './RandomTheme';
-// import resetIcon from '../assets/icons/reset.svg'
 
 
 const defaultSettings = {
