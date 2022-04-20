@@ -1,7 +1,7 @@
 import React from "react";
 import "./CoverImage.css";
 import "../assets/css/patterns.css";
-import BasicTheme from "./Themes/BasicTheme";
+import ModernTheme from "./Themes/ModernTheme";
 
 class CoverImage extends React.Component {
 	// hexToRgbA(hex, opacity) {
@@ -21,7 +21,7 @@ class CoverImage extends React.Component {
 		// const { title, bgColor, pattern, author, icon,font } = this.props;
 	
 		return (
-			<BasicTheme config={ this.props}/>
+			<ModernTheme config={ this.props}/>
 		);
 	}
 }
