@@ -2,8 +2,9 @@ import React from "react";
 import "./CoverImage.css";
 import "../assets/css/patterns.css";
 import ModernTheme from "./Themes/ModernTheme";
+import BasicTheme from "./Themes/BasicTheme";
 
-class CoverImage extends React.Component {
+const CoverImage = (props) => {
 	// hexToRgbA(hex, opacity) {
 	// 	var c;
 	// 	if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
@@ -17,13 +18,18 @@ class CoverImage extends React.Component {
 	// 	throw new Error("Bad Hex");
 	// }
 
-	render() {
-		// const { title, bgColor, pattern, author, icon,font } = this.props;
-	
-		return (
-			<ModernTheme config={ this.props}/>
-		);
-	}
+	const { theme } = props;
+
+
+	return (
+		<div>
+			{theme === 'basic' ? <BasicTheme config={props} /> : <ModernTheme config={props} />}
+		</div>
+	);
+
+
+
+
 }
 
 export default CoverImage;

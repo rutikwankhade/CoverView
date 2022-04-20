@@ -14,7 +14,8 @@ const defaultSettings = {
 	author: 'Rutik Wankhade',
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
-	font: 'font-sans'
+	font: 'font-sans',
+	theme: 'basic'
 
 };
 
@@ -41,14 +42,17 @@ class Editor extends React.Component {
 		this.setState({ bgColor: theme.bgColor, borderColor: theme.bdColor, pattern: Pattern });
 	}
 
+
+
+
 	render() {
 		return (
 			<div className="flex md:flex-row flex-col bg-gray-50 ">
 				<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
 					{/* <p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> */}
 
-					<div className="flex items-center mb-6 ">
-						<h1 className=" text-gray-800 text-2xl font-bold ">Coverview</h1>
+					<div className="flex items-center mb-4 ">
+						<h1 className=" text-gray-800 text-xl font-bold ">Coverview</h1>
 						<a href="https://github.com/rutikwankhade/CoverView"
 							target="_blank" rel="noopener  noreferrer"
 							className="ml-auto mr-2 cursor-pointer">
@@ -63,7 +67,7 @@ class Editor extends React.Component {
 							type="text"
 							value={this.state.title}
 							placeholder="Enter title here"
-							className="border text-gray-700 text-xl rounded  p-2 h-24"
+							className="border text-gray-700 text-xl rounded  p-2 h-20"
 							onChange={(e) => this.setState({ title: e.target.value })}
 						/>
 					</div>
@@ -115,6 +119,7 @@ class Editor extends React.Component {
 
 
 
+
 					<div className="flex flex-col m-2 ">
 						<span className="font-medium">Icon</span>
 						<Select value={this.state.icon}
@@ -124,49 +129,57 @@ class Editor extends React.Component {
 						/>
 					</div>
 
+					<div className="flex">
 
 
-					<div className="flex flex-col m-2">
-						<span className="font-medium">Pattern</span>
-						<select
-							onChange={(e) => this.setState({ pattern: e.target.value })}
-							className="border text-xl p-2 rounded"
-							value={this.state.pattern}>
+						<div className="flex flex-col m-2 w-1/2">
+							<span className="font-medium">Pattern</span>
+							<select
+								onChange={(e) => this.setState({ pattern: e.target.value })}
+								className="border text-xl p-2 rounded"
+								value={this.state.pattern}>
 
-							<option>None</option>
-							<option>graph-paper</option>
-							<option>jigsaw</option>
-							<option>hideout</option>
-							<option>dots</option>
-							<option>falling-triangles</option>
-							<option>circuit-board</option>
-							<option>temple</option>
-							<option>anchors</option>
-							<option>brickwall</option>
-							<option>overlapping-circles</option>
-							<option>wiggle</option>
-							<option>tic-tac-toe</option>
-							<option>leaf</option>
-							<option>bubbles</option>
-							<option>squares</option>
-							<option>explorer</option>
-							<option>jupiter</option>
-							<option>sun</option>
-						</select>
+								<option>None</option>
+								<option>graph-paper</option>
+								<option>jigsaw</option>
+								<option>hideout</option>
+								<option>dots</option>
+								<option>falling-triangles</option>
+								<option>circuit-board</option>
+								<option>temple</option>
+								<option>anchors</option>
+								<option>brickwall</option>
+								<option>overlapping-circles</option>
+								<option>wiggle</option>
+								<option>tic-tac-toe</option>
+								<option>leaf</option>
+								<option>bubbles</option>
+								<option>squares</option>
+								<option>explorer</option>
+								<option>jupiter</option>
+								<option>sun</option>
+							</select>
+						</div>
+
+						<div className="flex flex-col m-2 w-1/2">
+							<span className="font-medium">Theme</span>
+
+							<select
+								onChange={(e) => this.setState({ theme: e.target.value })}
+								value={this.state.theme}
+
+								className="text-gray-700 text-xl p-2 rounded border">
+								<option>basic</option>
+								<option>modern</option>
+							</select>
+						</div>
+
 					</div>
 
 
 					<span className="text-sm mt-4  text-center text-gray-400">Made with 💖 by <a href="https://rutikwankhade.dev"
 						target="_blank" rel="noopener  noreferrer" className="underline hover:text-green-500">Rutik Wankhade</a></span>
-					{/* <div className="flex flex-col m-2 ">
-						<span className="font-medium">Theme</span>
 
-						<select className="text-gray-700 text-xl p-2 rounded border">
-							<option>Basic</option>
-							<option>Theme 2</option>
-							<option>Theme 3</option>
-						</select>
-					</div> */}
 
 
 
