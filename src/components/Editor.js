@@ -8,14 +8,14 @@ import RandomTheme from './RandomTheme';
 
 const defaultSettings = {
 	title: "How I built my first project with react",
-	bgColor: "#00ff99",
+	bgColor: "#dcd6f7",
 	pattern: "",
 	download: "PNG",
 	author: 'Rutik Wankhade',
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
 	font: 'font-sans',
-	theme: 'basic'
+	theme: 'modern'
 
 };
 
@@ -52,7 +52,7 @@ class Editor extends React.Component {
 					{/* <p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> */}
 
 					<div className="flex items-center mb-4 ">
-						<h1 className=" text-gray-800 text-xl font-bold ">Coverview</h1>
+						<h1 className=" text-gray-800 text-2xl font-bold ">Coverview</h1>
 						<a href="https://github.com/rutikwankhade/CoverView"
 							target="_blank" rel="noopener  noreferrer"
 							className="ml-auto mr-2 cursor-pointer">
