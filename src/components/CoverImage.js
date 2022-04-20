@@ -3,6 +3,7 @@ import "./CoverImage.css";
 import "../assets/css/patterns.css";
 import ModernTheme from "./Themes/ModernTheme";
 import BasicTheme from "./Themes/BasicTheme";
+import OutlineTheme from "./Themes/OutlineTheme";
 
 const CoverImage = (props) => {
 	// hexToRgbA(hex, opacity) {
@@ -20,11 +21,19 @@ const CoverImage = (props) => {
 
 	const { theme } = props;
 
+	const selectTheme = (theme) => {
+		switch (theme) {
+			case 'basic': return <BasicTheme config={props} />
+			case 'modern': return <ModernTheme config={props} />
+			case 'outline': return <OutlineTheme config={props} />
+			default: return <BasicTheme config={props} />
+		}
+	}
+
 
 	return (
 		<div>
-			{theme === 'basic' ? <BasicTheme config={props} /> : <ModernTheme config={props} />}
-		</div>
+			{selectTheme(theme)}		</div>
 	);
 
 

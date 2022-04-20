@@ -171,6 +171,7 @@ class Editor extends React.Component {
 								className="text-gray-700 text-xl p-2 rounded border">
 								<option>basic</option>
 								<option>modern</option>
+								<option>outline</option>
 							</select>
 						</div>
 
