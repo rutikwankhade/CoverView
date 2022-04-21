@@ -171,6 +171,8 @@ class Editor extends React.Component {
 								<option>basic</option>
 								<option>modern</option>
 								<option>outline</option>
+								<option>preview</option>
+
 							</select>
 						</div>
 

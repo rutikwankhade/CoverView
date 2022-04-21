@@ -4,6 +4,7 @@ import "../assets/css/patterns.css";
 import ModernTheme from "./Themes/ModernTheme";
 import BasicTheme from "./Themes/BasicTheme";
 import OutlineTheme from "./Themes/OutlineTheme";
+import PreviewTheme from "./Themes/PreviewTheme";
 
 const CoverImage = (props) => {
 	// hexToRgbA(hex, opacity) {
@@ -26,6 +27,8 @@ const CoverImage = (props) => {
 			case 'basic': return <BasicTheme config={props} />
 			case 'modern': return <ModernTheme config={props} />
 			case 'outline': return <OutlineTheme config={props} />
+			case 'preview': return <PreviewTheme config={props} />
+
 			default: return <BasicTheme config={props} />
 		}
 	}
