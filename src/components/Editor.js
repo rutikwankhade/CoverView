@@ -66,7 +66,7 @@ class Editor extends React.Component {
 							type="text"
 							value={this.state.title}
 							placeholder="Enter title here"
-							className="border text-gray-700 text-xl rounded  p-2 h-20"
+							className="border text-gray-700 text-xl rounded  p-2 h-24"
 							onChange={(e) => this.setState({ title: e.target.value })}
 						/>
 					</div>
