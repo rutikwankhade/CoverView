@@ -3,7 +3,7 @@ import CoverImage from "./CoverImage";
 import ComponentToImg from "./ComponentToImg";
 import Select from 'react-select';
 import RandomTheme from './RandomTheme';
-
+// import resetIcon from '../assets/icons/reset.svg'
 
 const defaultSettings = {
 	title: "How I built my first project with react",
@@ -195,17 +195,17 @@ class Editor extends React.Component {
 						</select>
 					</div> */}
 
-					{/* 
-					<button
-						className="flex items-center mx-auto border p-2 bg-green-400"
-						onClick={this.handleReset}>
-						<img src={resetIcon} />
-						<span>Reset</span>
-					</button> */}
+					
+					
 				</div>
 
-				<div className="m-2 items-center justify-center flex">
+				<div className="m-2 items-center justify-center flex flex-col">
 					<RandomTheme onThemeChange={this.getRandomTheme} />
+					{/* <button
+						className="flex items-center mx-auto border"
+						onClick={this.handleReset}>
+						<img src={resetIcon} className="shuffle-btn border bg-white p-2 rounded cursor-pointer"/>
+					</button> */}
 				</div>
 
 				<div className="flex flex-col items-center justify-center m-14">

@@ -25,11 +25,12 @@ const PreviewTheme = ({ config }) => {
                             <img src={image && image} className="object-cover " alt="preview" />
                         </div>
                         :
-                        <div className="flex p-20 py-32 bg-white items-center justify-center">
+                        <div className="flex flex-col p-20 py-28 bg-white items-center justify-center">
                             <input type="file"
-                                className="text-xl bg-white"
+                                className="text-xl cursor-pointer mb-2 bg-white rounded border"
                                 onChange={(e) => setImage(URL.createObjectURL(e.target.files[0]))}
                             />
+                            <span className=" text-center italic">Upload a screenshot of your app</span>
                         </div>
 
                     }
