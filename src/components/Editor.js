@@ -14,7 +14,8 @@ const defaultSettings = {
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
 	font: 'font-sans',
-	theme: 'modern'
+	theme: 'modern',
+	customIcon: ''
 
 };
 
@@ -30,6 +31,7 @@ class Editor extends React.Component {
 	componentDidMount() {
 		console.log("Mount")
 		fetch(devIconsUrl).then(r => r.json()).then(data => {
+			data.push({ name: 'custom' })
 			this.setState({ devIconOptions: data.map(item => ({ 'value': item.name, 'label': item.name })) })
 		})
 	}
@@ -49,6 +51,24 @@ class Editor extends React.Component {
 			</div>
 		</div>
 	);
+
+
+	// customOption = props => {
+	// 	const { data, innerRef, innerProps } = props;
+
+	// 	return data.name === 'custom' ? (
+	// 		<div ref={innerRef} {...innerProps}>
+	// 			<input type="file"
+	// 				className="text-xl cursor-pointer mb-2 bg-white rounded border"
+	// 				onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
+	// 			/>
+	// 		</div>
+	// 	) : (
+	// 		<components.Option {...props} />
+	// 	);
+
+
+	// };
 
 
 	render() {
@@ -135,6 +155,17 @@ class Editor extends React.Component {
 							className="text-xl text-gray-700"
 						/>
 					</div>
+
+					{this.state.icon.label === 'custom' ?
+						<div className="flex items-center justify-center m-2">
+							<input type="file"
+								className="text-lg cursor-pointer bg-white rounded border"
+								onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
+							/>
+						</div>
+						:
+						<div></div>
+					}
 
 					<div className="flex">
 

@@ -1,6 +1,6 @@
 import React from 'react';
 const OutlineTheme = ({ config }) => {
-    const { title, bgColor, pattern, author, icon, font } = config;
+    const { title, bgColor, pattern, author, icon, font, customIcon } = config;
 
     return (
         <div className="p-4 bg-white border">
@@ -22,7 +22,16 @@ const OutlineTheme = ({ config }) => {
                 </div>
 
                 <div className={`${font} w-full border-gray-800 border-t-4 flex  mt-10 p-2 px-6  items-center bg-white`}>
-                    <i className={`devicon-${icon.value}-plain dev-icon text-4xl`}></i>
+                    {
+                        customIcon ?
+                            <div className="w-12 h-12  ">
+                                <img src={customIcon} alt="img" className="rounded-full bg-white p-1 border-white" />
+                            </div>
+                            :
+                            <div className=" rounded-full p-6 w-32 h-32 bg-white mx-auto items-center justify-center flex">
+                                <i className={`devicon-${icon.value}-plain  p-4 dev-icon text-7xl`}></i>
+                            </div>
+                    }
                     <h2 className="text-xl ml-auto mr-2 font-semibold">{author}</h2>
 
                 </div>
