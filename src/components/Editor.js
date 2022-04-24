@@ -208,7 +208,12 @@ class Editor extends React.Component {
 					</button> */}
 				</div>
 
-				<div className="flex flex-col items-center justify-center m-14">
+				<div className="flex flex-col items-center justify-center ">
+					<div className="flex mb-4 items-center bg-white p-2 mt-2 rounded justify-center w-full">
+						<span className="mx-4 text-md font-semibold">Coverview is live on Product Hunt today.</span>
+					<a href="https://www.producthunt.com/posts/coverview-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-coverview&#0045;2" target="_blank" rel="noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=343671&theme=light" alt="Coverview - Creating&#0032;cover&#0032;images&#0032;for&#0032;your&#0032;blog&#0032;is&#0032;now&#0032;super&#0032;easy | Product Hunt" className="w-2/3" /></a>
+
+					</div>
 					<ComponentToImg downloadAs={this.state.download}>
 						<CoverImage {...this.state} />
 					</ComponentToImg>
