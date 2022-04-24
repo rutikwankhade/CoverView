@@ -23,7 +23,7 @@ const OutlineTheme = ({ config }) => {
 
                 <div className={`${font} w-full border-gray-800 border-t-4 flex  mt-10 p-2 px-6  items-center bg-white`}>
                     <i className={`devicon-${icon.value}-plain dev-icon text-4xl`}></i>
-                    <h2 className="text-xl ml-auto mr-2 font-semibold"> - {author}</h2>
+                    <h2 className="text-xl ml-auto mr-2 font-semibold">{author}</h2>
 
                 </div>
 

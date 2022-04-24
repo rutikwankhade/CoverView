@@ -20,7 +20,7 @@ const BasicTheme = ({ config }) => {
 
                     <div className=" flex mx-4 mt-10 p-4 rounded-xl items-center bg-white">
                         <i className={`devicon-${icon.value}-plain dev-icon text-4xl`}></i>
-                        <h2 className="text-xl ml-auto mr-2 font-semibold"> - {author}</h2>
+                        <h2 className="text-xl ml-auto mr-2 font-semibold">{author}</h2>
 
                     </div>
                 </div>
