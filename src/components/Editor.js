@@ -5,14 +5,16 @@ import Select from 'react-select';
 import RandomTheme from './RandomTheme';
 // import resetIcon from '../assets/icons/reset.svg'
 
+const defaultIcon = { 'label': 'react', 'value': 'react' }
+
 const defaultSettings = {
 	title: "How I built my first project with react",
 	bgColor: "#dcd6f7",
 	pattern: "",
 	download: "PNG",
 	author: 'Rutik Wankhade',
-	icon: { 'label': 'react', 'value': 'react' },
-	devIconOptions: {},
+	icon: defaultIcon,
+	devIconOptions: [defaultIcon],
 	font: 'font-sans',
 	theme: 'modern',
 	customIcon: ''
