@@ -75,18 +75,8 @@ class Editor extends React.Component {
 		return (
 			<div className="flex md:flex-row flex-col bg-gray-50 ">
 				<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
-					{/* <p className="tagline"><span role="img" aria-label="tool"> 🛠 </span> Creating cover images for your blogs is now super easy</p> */}
 
-					<div className="flex items-center mb-4 ">
-						<h1 className=" text-gray-800 text-2xl font-bold ">Coverview</h1>
-						<a href="https://github.com/rutikwankhade/CoverView"
-							target="_blank" rel="noopener  noreferrer"
-							className="ml-auto mr-2 cursor-pointer">
-							<i className=" devicon-github-plain dev-icon text-xl"></i>
 
-						</a>
-
-					</div>
 					<div className="m-2 flex flex-col">
 						<span className="font-medium">Blog Title</span>
 						<textarea
@@ -248,9 +238,24 @@ class Editor extends React.Component {
 				</div>
 
 				<div className="flex flex-col items-center justify-center ">
-					<div className="flex mb-4 items-center bg-white p-2 mt-2 rounded justify-center w-full">
-						<span className="mx-4 text-md font-semibold">Coverview is live on Product Hunt Today.</span>
-						<a href="https://www.producthunt.com/posts/coverview-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-coverview&#0045;2" target="_blank" rel="noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=343671&theme=light" alt="Coverview - Creating&#0032;cover&#0032;images&#0032;for&#0032;your&#0032;blog&#0032;is&#0032;now&#0032;super&#0032;easy | Product Hunt" className="w-2/3" /></a>
+
+
+					<div className="w-full  flex items-center  mb-4 ">
+
+							<h1 className="ml-2 mr-auto text-gray-800 text-2xl font-bold ">Coverview</h1>
+
+
+						
+						<div className="flex items-center ml-auto mr-4 ">
+							<a href="https://github.com/rutikwankhade/Coverview" target="_blank" rel="noreferrer" className="p-2 mx-2" >
+								<img src="https://img.shields.io/github/stars/rutikwankhade/Coverview.svg" alt="star" className="w-20" />
+							</a>
+
+							<a className="mx-2 p-2" href="https://github.com/sponsors/rutikwankhade" target="_blank" rel="noreferrer">
+								<img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="sponsor" className="rounded" />
+
+							</a>
+						</div>
 
 					</div>
 					<ComponentToImg downloadAs={this.state.download}>
