@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const PreviewTheme = ({ config }) => {
-    const {bgColor } = config;
+    const {bgColor, platform } = config;
 
     const [image, setImage] = useState()
 
@@ -9,7 +9,7 @@ const PreviewTheme = ({ config }) => {
         <div className="p-4 bg-white border">
 
 
-            <div className={`cover flex flex-col rounded px-4 pt-4 `}
+            <div className={`overflow-y-hidden flex flex-col rounded px-4 pt-4 ${platform}`}
                 style={{ backgroundColor: bgColor }}
             >
 
@@ -30,7 +30,7 @@ const PreviewTheme = ({ config }) => {
                                 className="text-xl cursor-pointer mb-2 bg-white rounded border"
                                 onChange={(e) => setImage(URL.createObjectURL(e.target.files[0]))}
                             />
-                            <span className=" text-center italic">Upload a screenshot of your app</span>
+                            <span className=" text-center italic">click to upload a screenshot</span>
                         </div>
 
                     }

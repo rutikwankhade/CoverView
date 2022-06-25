@@ -2,11 +2,11 @@ import React from 'react';
 
 
 const BasicTheme = ({ config }) => {
-    const { title, bgColor, pattern, author, icon, font, customIcon } = config;
+    const { title, bgColor, pattern, author, icon, font, customIcon,platform } = config;
 
     return (
         <div className="p-4 bg-white border">
-            <div className={`cover flex  text-gray-800 items-center ${pattern} `}
+            <div className={`overflow-y-hidden flex  text-gray-800 items-center ${pattern} ${platform} `}
                 style={{ backgroundColor: bgColor }}
             >
 
@@ -18,7 +18,7 @@ const BasicTheme = ({ config }) => {
                         </div>
                     </div>
 
-                    <div className=" flex mx-4 mt-10 p-4 rounded-xl items-center bg-white">
+                    <div className=" flex mx-4  p-4 rounded-xl items-center bg-white">
                         {
                             customIcon ?
                                 <div className="w-12 h-12  ">

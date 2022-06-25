@@ -13,9 +13,10 @@ const defaultSettings = {
 	author: 'Rutik Wankhade',
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
-	font: 'font-sans',
+	font: 'font-Anek',
 	theme: 'modern',
-	customIcon: ''
+	customIcon: '',
+	platform:'hashnode'
 
 };
 
@@ -24,6 +25,7 @@ const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/d
 // 	{ value: 'None', label: 'None' },
 // 	{ value: 'javascript', label: 'Javascript' },
 // 	{ value: 'python', label: 'Python' },
+// ]
 
 class Editor extends React.Component {
 
@@ -53,22 +55,6 @@ class Editor extends React.Component {
 	);
 
 
-	// customOption = props => {
-	// 	const { data, innerRef, innerProps } = props;
-
-	// 	return data.name === 'custom' ? (
-	// 		<div ref={innerRef} {...innerProps}>
-	// 			<input type="file"
-	// 				className="text-xl cursor-pointer mb-2 bg-white rounded border"
-	// 				onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
-	// 			/>
-	// 		</div>
-	// 	) : (
-	// 		<components.Option {...props} />
-	// 	);
-
-
-	// };
 
 
 	render() {
@@ -83,7 +69,7 @@ class Editor extends React.Component {
 							type="text"
 							value={this.state.title}
 							placeholder="Enter title here"
-							className="border text-gray-700 text-xl rounded  p-2 h-24"
+							className="focus:outline-none border text-gray-700 text-xl rounded  p-2 h-24"
 							onChange={(e) => this.setState({ title: e.target.value })}
 						/>
 					</div>
@@ -94,7 +80,7 @@ class Editor extends React.Component {
 							type="text"
 							value={this.state.author}
 							placeholder="Author"
-							className="border text-gray-700 text-xl rounded bg-white p-2"
+							className="focus:outline-none border text-gray-700 text-xl rounded bg-white p-2"
 							onChange={(e) => this.setState({ author: e.target.value })}
 						></input>
 					</div>
@@ -111,7 +97,7 @@ class Editor extends React.Component {
 
 								onChange={(e) => this.setState({ font: e.target.value })}
 
-								className=" text-gray-700 text-xl p-2 rounded border">
+								className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
 								<option>font-serif</option>
 								<option>font-sans</option>
 								<option>font-mono</option>
@@ -148,14 +134,14 @@ class Editor extends React.Component {
 							onChange={(selectedOption) => this.setState({ icon: selectedOption })}
 							options={this.state.devIconOptions}
 							formatOptionLabel={this.formatOptionLabel}
-							className="text-xl text-gray-700"
+							className="outline-none focus:outline-none text-xl text-gray-700"
 						/>
 					</div>
 
 					{this.state.icon.label === 'custom' ?
 						<div className="flex items-center justify-center m-2">
 							<input type="file"
-								className="text-lg cursor-pointer bg-white rounded border"
+								className="focus:outline-none text-lg cursor-pointer bg-white rounded border"
 								onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
 							/>
 						</div>
@@ -170,7 +156,7 @@ class Editor extends React.Component {
 							<span className="font-medium">Pattern</span>
 							<select
 								onChange={(e) => this.setState({ pattern: e.target.value })}
-								className="border text-xl p-2 rounded"
+								className="focus:outline-none border text-xl p-2 rounded"
 								value={this.state.pattern}>
 
 								<option>None</option>
@@ -202,7 +188,7 @@ class Editor extends React.Component {
 								onChange={(e) => this.setState({ theme: e.target.value })}
 								value={this.state.theme}
 
-								className="text-gray-700 text-xl p-2 rounded border">
+								className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
 								<option>basic</option>
 								<option>modern</option>
 								<option>outline</option>
@@ -214,8 +200,24 @@ class Editor extends React.Component {
 					</div>
 
 
+					<div className="flex flex-col m-2">
+							<span className="font-medium">Platform</span>
+
+							<select
+								onChange={(e) => this.setState({ platform: e.target.value })}
+								value={this.state.platform}
+
+								className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
+								<option>hashnode</option>
+								<option>dev</option>
+								
+
+							</select>
+						</div>
+
+
 					<span className="text-sm mt-4  text-center text-gray-400">Made with 💖 by <a href="https://rutikwankhade.dev"
-						target="_blank" rel="noopener  noreferrer" className="underline hover:text-green-500">Rutik Wankhade</a></span>
+						target="_blank" rel="noopener  noreferrer" className="underline hover:text-purple-400">Rutik Wankhade</a></span>
 
 
 

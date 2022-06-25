@@ -3,19 +3,19 @@ import React from 'react';
 
 const ModernTheme = ({ config }) => {
 
-    const { title, bgColor, pattern, author, icon, font, customIcon } = config;
+    const { title, bgColor, pattern, author, icon, font, customIcon, platform } = config;
 
     return (
-        <div className="p-4 bg-white border">
-            <div className=" cover  flex  items-center">
-                <div className={`  h-full rounded-xl  p-4 text-gray-800 flex  items-center ${pattern} `}
+        <div className="w-full p-4 bg-white border">
+            <div className=" overflow-y-hidden w-full flex  items-center">
+                <div className={`  h-full w-full rounded-xl  p-4 text-gray-800 flex  items-center ${pattern} ${platform}`}
                     style={{ backgroundColor: bgColor }}
                 >
 
                     {
                         customIcon ?
-                            <div className="w-28 h-28  mx-auto items-center justify-center flex">
-                                <img src={customIcon} alt="img" className="rounded-full bg-white p-1 border-white" />
+                            <div className="  mx-auto items-center justify-center flex">
+                                <img src={customIcon} alt="img" className="w-28 h-28 rounded-full bg-white border-4 border-white" />
                             </div>
                             :
                             <div className=" rounded-full p-6 w-32 h-32 bg-white mx-auto items-center justify-center flex">

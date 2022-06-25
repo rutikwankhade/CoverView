@@ -1,14 +1,10 @@
-.cover {
-    display: flex;
-    height: 420px;
-    width: 800px;
-    overflow-y: hidden;
+.dev {
+    height: 340px;
+    width: 860px;
 }
 
-@media screen and (max-width:600px) {
-    .cover {
-        width: 90vw;
-        height: 60vh;
-        padding: 4vh;
-    }
+.hashnode {
+    height: 420px;
+    width: 800px;
+
 }

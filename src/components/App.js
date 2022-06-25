@@ -5,7 +5,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="content ">
+            <div className="">
                 <Editor />
                 <Info/>
             </div>
