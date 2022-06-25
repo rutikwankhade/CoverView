@@ -7,7 +7,7 @@ import RandomTheme from './RandomTheme';
 
 const defaultSettings = {
 	title: "How I built my first project with react",
-	bgColor: "#dcd6f7",
+	bgColor: "#fee856",
 	pattern: "",
 	download: "PNG",
 	author: 'Rutik Wankhade',
@@ -115,6 +115,12 @@ class Editor extends React.Component {
 								<option>font-serif</option>
 								<option>font-sans</option>
 								<option>font-mono</option>
+								<option>font-Inter</option>
+								<option>font-Poppins</option>
+								<option>font-Anek</option>
+								<option>font-Nunito</option>
+
+
 							</select>
 						</div>
 						<div className="flex flex-col m-2 ">
@@ -242,10 +248,10 @@ class Editor extends React.Component {
 
 					<div className="w-full  flex items-center  mb-4 ">
 
-							<h1 className="ml-2 mr-auto text-gray-800 text-2xl font-bold ">Coverview</h1>
+						<h1 className="ml-2 mr-auto text-gray-800 text-2xl font-bold ">Coverview</h1>
 
 
-						
+
 						<div className="flex items-center ml-auto mr-4 ">
 							<a href="https://github.com/rutikwankhade/Coverview" target="_blank" rel="noreferrer" className="p-2 mx-2" >
 								<img src="https://img.shields.io/github/stars/rutikwankhade/Coverview.svg" alt="star" className="w-20" />

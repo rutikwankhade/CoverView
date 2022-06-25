@@ -14,7 +14,7 @@ const BasicTheme = ({ config }) => {
                 <div className={`${font} bg-white md:w-10/12  m-auto flex flex-col pt-12 rounded-xl`}>
                     <div className="px-12">
                         <div>
-                            <h1 className="text-3xl md:text-5xl font-bold text-center">{title}</h1>
+                            <h1 className="text-3xl md:text-5xl text-gray-800 font-bold text-center">{title}</h1>
                         </div>
                     </div>
 
@@ -25,8 +25,8 @@ const BasicTheme = ({ config }) => {
                                     <img src={customIcon} alt="img" className="rounded-full bg-white p-1 border-white" />
                                 </div>
                                 :
-                                <div className=" rounded-full p-6 w-32 h-32 bg-white mx-auto items-center justify-center flex">
-                                    <i className={`devicon-${icon.value}-plain  p-4 dev-icon text-7xl`}></i>
+                                <div className="mr-auto ml-2 items-center justify-center flex">
+                                    <i className={`devicon-${icon.value}-plain  p-4 dev-icon text-5xl`}></i>
                                 </div>
                         }
 

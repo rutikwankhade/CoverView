@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import { exportComponentAsPNG } from "react-component-export-image";
 import "./CoverImage.css";
 

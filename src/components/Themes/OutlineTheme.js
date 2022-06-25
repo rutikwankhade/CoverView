@@ -11,25 +11,25 @@ const OutlineTheme = ({ config }) => {
             >
 
 
-                <div className={`${font} bg-white rounded md:w-10/12 border-4 border-gray-800 m-auto flex flex-col py-12 px-6 `}>
+                <div className={`${font} bg-white rounded-2xl md:w-10/12   m-auto flex flex-col py-12 px-6 `}>
                     <div className="px-12">
                         <div>
-                            <h1 className="text-3xl md:text-5xl font-bold text-center">{title}</h1>
+                            <h1 className="text-3xl text-gray-800 md:text-5xl font-bold text-center">{title}</h1>
                         </div>
                     </div>
 
 
                 </div>
 
-                <div className={`${font} w-full border-gray-800 border-t-4 flex  mt-10 p-2 px-6  items-center bg-white`}>
+                <div className={`${font} w-full  h-16 border-gray-800 border-t-4 flex  mt-10 p-2 px-6  items-center bg-white`}>
                     {
                         customIcon ?
                             <div className="w-12 h-12  ">
                                 <img src={customIcon} alt="img" className="rounded-full bg-white p-1 border-white" />
                             </div>
                             :
-                            <div className=" rounded-full p-6 w-32 h-32 bg-white mx-auto items-center justify-center flex">
-                                <i className={`devicon-${icon.value}-plain  p-4 dev-icon text-7xl`}></i>
+                            <div className="  mr-auto ml-2 items-center justify-center flex">
+                                <i className={`devicon-${icon.value}-plain  p-4 dev-icon text-5xl`}></i>
                             </div>
                     }
                     <h2 className="text-xl ml-auto mr-2 font-semibold">{author}</h2>
