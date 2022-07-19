@@ -7,16 +7,16 @@ import RandomTheme from './RandomTheme';
 
 const defaultSettings = {
 	title: "How I built my first project with react",
-	bgColor: "#fee856",
+	bgColor: "#ffe9e3",
 	pattern: "",
 	download: "PNG",
 	author: 'Rutik Wankhade',
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
 	font: 'font-Anek',
-	theme: 'modern',
+	theme: 'stylish',
 	customIcon: '',
-	platform:'hashnode'
+	platform: 'hashnode'
 
 };
 
@@ -28,6 +28,8 @@ const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/d
 // ]
 
 class Editor extends React.Component {
+
+
 
 	state = defaultSettings;
 	componentDidMount() {
@@ -53,7 +55,6 @@ class Editor extends React.Component {
 			</div>
 		</div>
 	);
-
 
 
 
@@ -189,10 +190,13 @@ class Editor extends React.Component {
 								value={this.state.theme}
 
 								className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
-								<option>basic</option>
+								<option>stylish</option>
 								<option>modern</option>
-								<option>outline</option>
+								<option>basic</option>
 								<option>preview</option>
+								<option>outline</option>
+
+
 
 							</select>
 						</div>
@@ -201,19 +205,19 @@ class Editor extends React.Component {
 
 
 					<div className="flex flex-col m-2">
-							<span className="font-medium">Platform</span>
+						<span className="font-medium">Platform</span>
 
-							<select
-								onChange={(e) => this.setState({ platform: e.target.value })}
-								value={this.state.platform}
+						<select
+							onChange={(e) => this.setState({ platform: e.target.value })}
+							value={this.state.platform}
 
-								className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
-								<option>hashnode</option>
-								<option>dev</option>
-								
+							className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
+							<option>hashnode</option>
+							<option>dev</option>
 
-							</select>
-						</div>
+
+						</select>
+					</div>
 
 
 					<span className="text-sm mt-4  text-center text-gray-400">Made with 💖 by <a href="https://rutikwankhade.dev"

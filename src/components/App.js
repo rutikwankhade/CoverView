@@ -1,17 +1,19 @@
 import React from 'react';
 import Editor from './Editor';
 import Info from './Info'
-class App extends React.Component {
+import { ImgProvider } from '../utils/ImgContext'
 
-    render() {
-        return (
-            <div className="">
+const App = () => {
+
+    return (
+        <ImgProvider>
+            <div>
                 <Editor />
-                <Info/>
+                <Info />
             </div>
-        );
-    }
-}
+        </ImgProvider>
+    );
 
+}
 
 export default App;
