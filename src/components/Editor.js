@@ -4,6 +4,9 @@ import ComponentToImg from "./ComponentToImg";
 import Select from 'react-select';
 import RandomTheme from './RandomTheme';
 // import resetIcon from '../assets/icons/reset.svg'
+import { ImgProvider } from '../utils/ImgContext'
+import logo from '../assets/icons/logo.png'
+import { Link } from "react-router-dom";
 
 const defaultSettings = {
 	title: "How I built my first project with react",
@@ -60,7 +63,22 @@ class Editor extends React.Component {
 
 	render() {
 		return (
-			<div className="flex md:flex-row flex-col bg-gray-50 ">
+			<div>
+				<div className="text-xl bg-white flex border-b border-gray-100 shadow-xl p-2">
+					<Link to="/" className="flex items-center">
+						<img src={logo} alt="logo" className="w-8 h-8 mx-2"/>
+					<h1 className="font-semibold">Coverview</h1>
+
+					</Link>
+
+					<a href="a" className="ml-auto mr-4 bg-blue-400 text-sm rounded-full px-4 font-semibold text-white p-1">Share on Twitter</a>
+				</div>
+
+			<ImgProvider>
+				
+
+				<div className="flex md:flex-row flex-col bg-gray-50 ">
+
 				<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
 
 
@@ -70,7 +88,7 @@ class Editor extends React.Component {
 							type="text"
 							value={this.state.title}
 							placeholder="Enter title here"
-							className="focus:outline-none border text-gray-700 text-xl rounded  p-2 h-24"
+							className="focus:outline-none border text-gray-700 text-xl rounded p-2 h-24"
 							onChange={(e) => this.setState({ title: e.target.value })}
 						/>
 					</div>
@@ -220,7 +238,7 @@ class Editor extends React.Component {
 					</div>
 
 
-					<span className="text-sm mt-4  text-center text-gray-400">Made with 💖 by <a href="https://rutikwankhade.dev"
+					<span className="text-sm mt-4  text-center text-gray-400">Made with 💖 by <a href="https://twitter.com/WankhadeRutik"
 						target="_blank" rel="noopener  noreferrer" className="underline hover:text-purple-400">Rutik Wankhade</a></span>
 
 
@@ -252,7 +270,7 @@ class Editor extends React.Component {
 				<div className="flex flex-col items-center justify-center ">
 
 
-					<div className="w-full  flex items-center  mb-4 ">
+					{/* <div className="w-full  flex items-center  mb-4 ">
 
 						<h1 className="ml-2 mr-auto text-gray-800 text-2xl font-bold ">Coverview</h1>
 
@@ -263,19 +281,25 @@ class Editor extends React.Component {
 								<img src="https://img.shields.io/github/stars/rutikwankhade/Coverview.svg" alt="star" className="w-20" />
 							</a>
 
+
+
 							<a className="mx-2 p-2" href="https://github.com/sponsors/rutikwankhade" target="_blank" rel="noreferrer">
+								
 								<img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="sponsor" className="rounded" />
 
 							</a>
 						</div>
 
-					</div>
+					</div> */}
 					<ComponentToImg downloadAs={this.state.download}>
 						<CoverImage {...this.state} />
 					</ComponentToImg>
 				</div>
 
-			</div>
+				</div>
+				</ImgProvider>
+							</div>
+
 		);
 	}
 }

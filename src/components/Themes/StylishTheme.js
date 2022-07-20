@@ -74,8 +74,8 @@ const StylishTheme = ({ config }) => {
                             <div className="flex items-center mt-10 text-left">
                                 {
                                     customIcon ?
-                                        <div className="w-12 h-12  ">
-                                            <img src={customIcon} alt="img" className="rounded-full bg-white p-1 border-white" />
+                                        <div className=" ">
+                                            <img src={customIcon} alt="img" className="w-12 h-12 mr-2 rounded-full bg-white border border-white" />
                                         </div>
                                         :
                                         <div className="mr-2 items-center justify-center flex">

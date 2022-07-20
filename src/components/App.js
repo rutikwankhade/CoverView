@@ -1,17 +1,18 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Editor from './Editor';
-import Info from './Info'
-import { ImgProvider } from '../utils/ImgContext'
+import Home from './Home'
 
 const App = () => {
 
     return (
-        <ImgProvider>
-            <div>
-                <Editor />
-                <Info />
-            </div>
-        </ImgProvider>
+        <BrowserRouter>
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/editor" element={<Editor />} />
+            </Routes>
+        </BrowserRouter>
     );
 
 }
