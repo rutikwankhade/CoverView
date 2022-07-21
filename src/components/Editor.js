@@ -5,8 +5,7 @@ import Select from 'react-select';
 import RandomTheme from './RandomTheme';
 // import resetIcon from '../assets/icons/reset.svg'
 import { ImgProvider } from '../utils/ImgContext'
-import logo from '../assets/icons/logo.png'
-import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const defaultSettings = {
 	title: "How I built my first project with react",
@@ -29,7 +28,6 @@ const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/d
 // 	{ value: 'javascript', label: 'Javascript' },
 // 	{ value: 'python', label: 'Python' },
 // ]
-const     tweetText = encodeURIComponent(`type your thoughts here, Try https://coverview.vercel.app by @WankhadeRutik`)
 
 
 class Editor extends React.Component {
@@ -66,23 +64,7 @@ class Editor extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="text-xl bg-white flex border-b border-gray-100 shadow-xl p-2">
-					<Link to="/" className="flex items-center">
-						<img src={logo} alt="logo" className="w-8 h-8 mx-4" />
-						<h1 className="font-semibold">Coverview</h1>
-
-					</Link>
-
-					<div className="ml-auto mr-4 ">
-						<Link to="/faq" className="text-gray-700 hover:text-gray-800 text-base font-Nunito mx-4">How to use</Link>
-
-						<a href="https://www.buymeacoffee.com/rutikwankhade" target="_blank" rel="noreferrer" className="text-base mx-2 font-Nunito">🥤 Buy me a coffee</a>
-						
-						<a   href={`https://twitter.com/intent/tweet?text=${tweetText}`} className="mx-2 bg-blue-400 text-sm rounded-full px-4 font-semibold text-white p-1">Share on Twitter</a>
-
-					</div>
-
-				</div>
+				<Header />
 
 				<ImgProvider>
 
