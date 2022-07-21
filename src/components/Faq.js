@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 const Faq = () => {
+
+    const [showMsg, setShowMsg] = useState(false)
+
     return (
         <div>
             <Header />
@@ -43,6 +46,23 @@ const Faq = () => {
                     </div>
 
                 </div>
+
+                <div className="w-1/2 mx-auto text-center mt-20">
+                    <button
+                        onClick={() => setShowMsg(!showMsg)}
+                        className="text-6xl text-center m-2">💡</button>
+                    <p className="text-xl font-Anek font-semibold text-gray-800">Want to know a secret? Click me</p>
+
+                </div>
+
+                {
+                    showMsg ?
+                        <div>
+                            <h2 className="md:w-7/12 text-4xl border text-center mx-auto my-10 p-10 rounded-xl shadow-sm font-Nunito">Blog titles with a minimum of 8 words have 21% better click-through</h2>
+                        </div> :
+                        <div></div>
+                }
+
             </div>
         </div>
     );
