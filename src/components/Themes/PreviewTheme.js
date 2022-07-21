@@ -13,11 +13,11 @@ const PreviewTheme = ({ config }) => {
                 style={{ backgroundColor: bgColor }}
             >
 
-                <div className="w-10/12 mx-auto mt-auto mb-0 border-4 rounded-t-xl border-white">
-                    <div className="bg-gray-800 w-full p-3 flex rounded-t-xl">
-                        <div className="bg-red-400 h-4 w-4 rounded-full mx-2"></div>
-                        <div className="bg-yellow-400 h-4 w-4 rounded-full mx-2"></div>
-                        <div className="bg-green-400 h-4 w-4 rounded-full mx-2"></div>
+                <div className="w-10/12 mx-auto mt-auto mb-0 shadow-lg rounded-t-xl border-white">
+                    <div className="bg-gray-800 w-full p-2 flex rounded-t-xl">
+                        <div className="bg-red-400 h-3 w-3 rounded-full mx-2"></div>
+                        <div className="bg-yellow-400 h-3 w-3 rounded-full mx-2"></div>
+                        <div className="bg-green-400 h-3 w-3 rounded-full mx-2"></div>
 
                     </div>
                     {image ?

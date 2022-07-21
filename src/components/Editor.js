@@ -29,6 +29,8 @@ const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/d
 // 	{ value: 'javascript', label: 'Javascript' },
 // 	{ value: 'python', label: 'Python' },
 // ]
+const     tweetText = encodeURIComponent(`type your thoughts here, Try https://coverview.vercel.app by @WankhadeRutik`)
+
 
 class Editor extends React.Component {
 
@@ -72,9 +74,11 @@ class Editor extends React.Component {
 					</Link>
 
 					<div className="ml-auto mr-4 ">
-						<a href="a" className="mx-2 bg-blue-400 text-sm rounded-full px-4 font-semibold text-white p-1">Share on Twitter</a>
+						<Link to="/faq" className="text-gray-700 hover:text-gray-800 text-base font-Nunito mx-4">How to use</Link>
 
 						<a href="https://www.buymeacoffee.com/rutikwankhade" target="_blank" rel="noreferrer" className="text-base mx-2 font-Nunito">🥤 Buy me a coffee</a>
+						
+						<a   href={`https://twitter.com/intent/tweet?text=${tweetText}`} className="mx-2 bg-blue-400 text-sm rounded-full px-4 font-semibold text-white p-1">Share on Twitter</a>
 
 					</div>
 
@@ -275,27 +279,7 @@ class Editor extends React.Component {
 						<div className="flex flex-col items-center justify-center ">
 
 
-							{/* <div className="w-full  flex items-center  mb-4 ">
-
-						<h1 className="ml-2 mr-auto text-gray-800 text-2xl font-bold ">Coverview</h1>
-
-
-
-						<div className="flex items-center ml-auto mr-4 ">
-							<a href="https://github.com/rutikwankhade/Coverview" target="_blank" rel="noreferrer" className="p-2 mx-2" >
-								<img src="https://img.shields.io/github/stars/rutikwankhade/Coverview.svg" alt="star" className="w-20" />
-							</a>
-
-
-
-							<a className="mx-2 p-2" href="https://github.com/sponsors/rutikwankhade" target="_blank" rel="noreferrer">
-								
-								<img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="sponsor" className="rounded" />
-
-							</a>
-						</div>
-
-					</div> */}
+			
 							<ComponentToImg downloadAs={this.state.download}>
 								<CoverImage {...this.state} />
 							</ComponentToImg>
