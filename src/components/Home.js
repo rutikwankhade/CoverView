@@ -171,10 +171,9 @@ const Home = () => {
                 </div>
 
 
+                <WallOfLove />
 
-<WallOfLove />
-
-                <div className="md:w-1/2 mx-auto py-20">
+                <div className="md:w-1/2 mx-auto pt-20">
                     <h2 className="text-5xl text-center font-Anek font-bold text-gray-700 mx-auto">Simple, quick, and easy to use</h2>
                     <p className="text-2xl text-center my-2">So you can focus on writing your blog and never worry about those cover images.</p>
                     <Link to="/editor" >
@@ -185,6 +184,20 @@ const Home = () => {
             </div>
 
 
+
+
+            <footer className="bg-white p-10 flex font-Inter md:px-20 justify-center items-center">
+                <div className="w-1/2 flex flex-col">
+                    <span className="text-lg">Made with 💛 by <a href="https://twitter.com/WankhadeRutik" className="font-semibold" target="_blank" rel="noreferrer">Rutik Wankhade</a></span>
+                    <span className="text-lg font-Nunito">checkout <a href="https://rutikwankhade.dev" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-pink-400">more cool stuff</a> I built</span>
+                </div>
+
+                <div className="text-lg flex ">
+                    <Link to="/faq" className="m-2 hover:font-semibold">📌 How to use</Link>
+                    <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="m-2 hover:font-semibold">⭐ Star on Github</a>
+                    <a href="https://www.buymeacoffee.com/rutikwankhade" target="_blank" rel="noreferrer" className="m-2 hover:font-semibold">🥤 Buy me a coffee</a>
+                </div>
+            </footer>
 
         </div>
     );

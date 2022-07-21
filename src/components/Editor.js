@@ -66,185 +66,190 @@ class Editor extends React.Component {
 			<div>
 				<div className="text-xl bg-white flex border-b border-gray-100 shadow-xl p-2">
 					<Link to="/" className="flex items-center">
-						<img src={logo} alt="logo" className="w-8 h-8 mx-2"/>
-					<h1 className="font-semibold">Coverview</h1>
+						<img src={logo} alt="logo" className="w-8 h-8 mx-4" />
+						<h1 className="font-semibold">Coverview</h1>
 
 					</Link>
 
-					<a href="a" className="ml-auto mr-4 bg-blue-400 text-sm rounded-full px-4 font-semibold text-white p-1">Share on Twitter</a>
+					<div className="ml-auto mr-4 ">
+						<a href="a" className="mx-2 bg-blue-400 text-sm rounded-full px-4 font-semibold text-white p-1">Share on Twitter</a>
+
+						<a href="https://www.buymeacoffee.com/rutikwankhade" target="_blank" rel="noreferrer" className="text-base mx-2 font-Nunito">🥤 Buy me a coffee</a>
+
+					</div>
+
 				</div>
 
-			<ImgProvider>
-				
-
-				<div className="flex md:flex-row flex-col bg-gray-50 ">
-
-				<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
+				<ImgProvider>
 
 
-					<div className="m-2 flex flex-col">
-						<span className="font-medium">Blog Title</span>
-						<textarea
-							type="text"
-							value={this.state.title}
-							placeholder="Enter title here"
-							className="focus:outline-none border text-gray-700 text-xl rounded p-2 h-24"
-							onChange={(e) => this.setState({ title: e.target.value })}
-						/>
-					</div>
+					<div className="flex md:flex-row flex-col bg-gray-50 ">
 
-					<div className="flex flex-col m-2 ">
-						<span className="font-medium">Author</span>
-						<input
-							type="text"
-							value={this.state.author}
-							placeholder="Author"
-							className="focus:outline-none border text-gray-700 text-xl rounded bg-white p-2"
-							onChange={(e) => this.setState({ author: e.target.value })}
-						></input>
-					</div>
+						<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
 
 
-
-					<div className="flex items-center">
-
-						<div className="flex flex-col m-2 w-1/2">
-							<span className="font-medium">Font</span>
-
-							<select
-								value={this.state.font}
-
-								onChange={(e) => this.setState({ font: e.target.value })}
-
-								className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
-								<option>font-serif</option>
-								<option>font-sans</option>
-								<option>font-mono</option>
-								<option>font-Inter</option>
-								<option>font-Poppins</option>
-								<option>font-Anek</option>
-								<option>font-Nunito</option>
-
-
-							</select>
-						</div>
-						<div className="flex flex-col m-2 ">
-							<span className="font-medium">Color</span>
-							<div className="border rounded flex items-center p-2">
-
-								<span className="text-sm text-gray-700 font-semibold mx-2">{this.state.bgColor}</span>
-								<input type="color" value={this.state.bgColor}
-									onChange={(e) => this.setState({ bgColor: e.target.value })}
-									className="h-8 w-8  rounded"
+							<div className="m-2 flex flex-col">
+								<span className="font-medium">Blog Title</span>
+								<textarea
+									type="text"
+									value={this.state.title}
+									placeholder="Enter title here"
+									className="focus:outline-none border text-gray-700 text-xl rounded p-2 h-24"
+									onChange={(e) => this.setState({ title: e.target.value })}
 								/>
 							</div>
-						</div>
 
-					</div>
-
-
-
-
-
-
-					<div className="flex flex-col m-2 ">
-						<span className="font-medium">Icon</span>
-						<Select value={this.state.icon}
-							onChange={(selectedOption) => this.setState({ icon: selectedOption })}
-							options={this.state.devIconOptions}
-							formatOptionLabel={this.formatOptionLabel}
-							className="outline-none focus:outline-none text-xl text-gray-700"
-						/>
-					</div>
-
-					{this.state.icon.label === 'custom' ?
-						<div className="flex items-center justify-center m-2">
-							<input type="file"
-								className="focus:outline-none text-lg cursor-pointer bg-white rounded border"
-								onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
-							/>
-						</div>
-						:
-						<div></div>
-					}
-
-					<div className="flex">
-
-
-						<div className="flex flex-col m-2 w-1/2">
-							<span className="font-medium">Pattern</span>
-							<select
-								onChange={(e) => this.setState({ pattern: e.target.value })}
-								className="focus:outline-none border text-xl p-2 rounded"
-								value={this.state.pattern}>
-
-								<option>None</option>
-								<option>graph-paper</option>
-								<option>jigsaw</option>
-								<option>hideout</option>
-								<option>dots</option>
-								<option>falling-triangles</option>
-								<option>circuit-board</option>
-								<option>temple</option>
-								<option>anchors</option>
-								<option>brickwall</option>
-								<option>overlapping-circles</option>
-								<option>wiggle</option>
-								<option>tic-tac-toe</option>
-								<option>leaf</option>
-								<option>bubbles</option>
-								<option>squares</option>
-								<option>explorer</option>
-								<option>jupiter</option>
-								<option>sun</option>
-							</select>
-						</div>
-
-						<div className="flex flex-col m-2 w-1/2">
-							<span className="font-medium">Theme</span>
-
-							<select
-								onChange={(e) => this.setState({ theme: e.target.value })}
-								value={this.state.theme}
-
-								className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
-								<option>stylish</option>
-								<option>modern</option>
-								<option>basic</option>
-								<option>preview</option>
-								<option>outline</option>
+							<div className="flex flex-col m-2 ">
+								<span className="font-medium">Author</span>
+								<input
+									type="text"
+									value={this.state.author}
+									placeholder="Author"
+									className="focus:outline-none border text-gray-700 text-xl rounded bg-white p-2"
+									onChange={(e) => this.setState({ author: e.target.value })}
+								></input>
+							</div>
 
 
 
-							</select>
-						</div>
+							<div className="flex items-center">
 
-					</div>
+								<div className="flex flex-col m-2 w-1/2">
+									<span className="font-medium">Font</span>
 
+									<select
+										value={this.state.font}
 
-					<div className="flex flex-col m-2">
-						<span className="font-medium">Platform</span>
+										onChange={(e) => this.setState({ font: e.target.value })}
 
-						<select
-							onChange={(e) => this.setState({ platform: e.target.value })}
-							value={this.state.platform}
-
-							className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
-							<option>hashnode</option>
-							<option>dev</option>
-
-
-						</select>
-					</div>
+										className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
+										<option>font-serif</option>
+										<option>font-sans</option>
+										<option>font-mono</option>
+										<option>font-Inter</option>
+										<option>font-Poppins</option>
+										<option>font-Anek</option>
+										<option>font-Nunito</option>
 
 
-					<span className="text-sm mt-4  text-center text-gray-400">Made with 💖 by <a href="https://twitter.com/WankhadeRutik"
-						target="_blank" rel="noopener  noreferrer" className="underline hover:text-purple-400">Rutik Wankhade</a></span>
+									</select>
+								</div>
+								<div className="flex flex-col m-2 ">
+									<span className="font-medium">Color</span>
+									<div className="border rounded flex items-center p-2">
+
+										<span className="text-sm text-gray-700 font-semibold mx-2">{this.state.bgColor}</span>
+										<input type="color" value={this.state.bgColor}
+											onChange={(e) => this.setState({ bgColor: e.target.value })}
+											className="h-8 w-8  rounded"
+										/>
+									</div>
+								</div>
+
+							</div>
 
 
 
 
-					{/* <div className="mx-4 my-1">
+
+
+							<div className="flex flex-col m-2 ">
+								<span className="font-medium">Icon</span>
+								<Select value={this.state.icon}
+									onChange={(selectedOption) => this.setState({ icon: selectedOption })}
+									options={this.state.devIconOptions}
+									formatOptionLabel={this.formatOptionLabel}
+									className="outline-none focus:outline-none text-xl text-gray-700"
+								/>
+							</div>
+
+							{this.state.icon.label === 'custom' ?
+								<div className="flex items-center justify-center m-2">
+									<input type="file"
+										className="focus:outline-none text-lg cursor-pointer bg-white rounded border"
+										onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
+									/>
+								</div>
+								:
+								<div></div>
+							}
+
+							<div className="flex">
+
+
+								<div className="flex flex-col m-2 w-1/2">
+									<span className="font-medium">Pattern</span>
+									<select
+										onChange={(e) => this.setState({ pattern: e.target.value })}
+										className="focus:outline-none border text-xl p-2 rounded"
+										value={this.state.pattern}>
+
+										<option>None</option>
+										<option>graph-paper</option>
+										<option>jigsaw</option>
+										<option>hideout</option>
+										<option>dots</option>
+										<option>falling-triangles</option>
+										<option>circuit-board</option>
+										<option>temple</option>
+										<option>anchors</option>
+										<option>brickwall</option>
+										<option>overlapping-circles</option>
+										<option>wiggle</option>
+										<option>tic-tac-toe</option>
+										<option>leaf</option>
+										<option>bubbles</option>
+										<option>squares</option>
+										<option>explorer</option>
+										<option>jupiter</option>
+										<option>sun</option>
+									</select>
+								</div>
+
+								<div className="flex flex-col m-2 w-1/2">
+									<span className="font-medium">Theme</span>
+
+									<select
+										onChange={(e) => this.setState({ theme: e.target.value })}
+										value={this.state.theme}
+
+										className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
+										<option>stylish</option>
+										<option>modern</option>
+										<option>basic</option>
+										<option>preview</option>
+										<option>outline</option>
+
+
+
+									</select>
+								</div>
+
+							</div>
+
+
+							<div className="flex flex-col m-2">
+								<span className="font-medium">Platform</span>
+
+								<select
+									onChange={(e) => this.setState({ platform: e.target.value })}
+									value={this.state.platform}
+
+									className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
+									<option>hashnode</option>
+									<option>dev</option>
+
+
+								</select>
+							</div>
+
+
+
+
+
+
+
+							{/* <div className="mx-4 my-1">
 						<h6>Download As</h6>
 						<select onChange={(e) => this.setState({ download: e.target.value })}
 							className="form-control input"
@@ -256,21 +261,21 @@ class Editor extends React.Component {
 
 
 
-				</div>
+						</div>
 
-				<div className="m-2 items-center justify-center flex flex-col">
-					<RandomTheme onThemeChange={this.getRandomTheme} />
-					{/* <button
+						<div className="m-2 items-center justify-center flex flex-col">
+							<RandomTheme onThemeChange={this.getRandomTheme} />
+							{/* <button
 						className="flex items-center mx-auto border"
 						onClick={this.handleReset}>
 						<img src={resetIcon} className="shuffle-btn border bg-white p-2 rounded cursor-pointer"/>
 					</button> */}
-				</div>
+						</div>
 
-				<div className="flex flex-col items-center justify-center ">
+						<div className="flex flex-col items-center justify-center ">
 
 
-					{/* <div className="w-full  flex items-center  mb-4 ">
+							{/* <div className="w-full  flex items-center  mb-4 ">
 
 						<h1 className="ml-2 mr-auto text-gray-800 text-2xl font-bold ">Coverview</h1>
 
@@ -291,14 +296,14 @@ class Editor extends React.Component {
 						</div>
 
 					</div> */}
-					<ComponentToImg downloadAs={this.state.download}>
-						<CoverImage {...this.state} />
-					</ComponentToImg>
-				</div>
+							<ComponentToImg downloadAs={this.state.download}>
+								<CoverImage {...this.state} />
+							</ComponentToImg>
+						</div>
 
-				</div>
+					</div>
 				</ImgProvider>
-							</div>
+			</div>
 
 		);
 	}
