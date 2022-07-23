@@ -62,11 +62,11 @@ const StylishTheme = ({ config }) => {
         <div className=" bg-white rounded">
 
 
-            <div className={`overflow-y-hidden flex flex-col rounded ${platform}`}
-                style={{ backgroundColor: bgColor }}
+            <div className={`border overflow-y-hidden flex flex-col rounded ${platform}`}
+                // style={{ backgroundColor: bgColor }}
             >
 
-                <div className="flex flex-row items-center justify-center p-4 ">
+                <div className="flex flex-row items-center bg-white justify-center p-4 ">
 
                     <div className="h-full w-1/2  bg-white rounded-l-xl">
                         <div className={`${font} px-12 justify-center text-left rounded-xl h-full p-4 flex flex-col`}>
@@ -93,7 +93,11 @@ const StylishTheme = ({ config }) => {
 
                         {unsplashImage ?
                             <div className='relative group'>
-                                <img src={unsplashImage.url && unsplashImage.url} className=" rounded-r-xl object-cover h-96 w-full" alt="preview" />
+                                
+                                <div className="w-96 h-96 ">
+                                <img src={unsplashImage.url && unsplashImage.url} className=" rounded-xl object-cover h-96 w-96" alt="preview" />
+
+                                </div>
                                 <button
                                     onClick={() => setUnsplashImage('')}
                                     className="absolute  top-4 right-2 cursor-pointer">

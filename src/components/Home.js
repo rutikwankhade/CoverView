@@ -1,9 +1,11 @@
 import React from 'react';
 import logo from '../assets/icons/logo.png'
 import { Link } from 'react-router-dom';
-import cover1 from '../assets/images/cover5.png'
+import cover1 from '../assets/images/cover1.png'
 import cover2 from '../assets/images/cover2.png'
 import cover3 from '../assets/images/cover3.png'
+import cover4 from '../assets/images/cover4.png'
+
 
 
 import step1 from '../assets/images/step1.png'
@@ -42,7 +44,7 @@ const Home = () => {
             <div className=" temple flex flex-row items-center justify-center mx-auto md:w-10/12">
 
                 <div className="m-4 transform -translate-y-20 border animate  rotate-6 duration-100 bg-white p-2 shadow-sm w-1/5 rounded-lg flex flex-col ">
-                    <img src={cover2} className="rounded mb-2" alt="cover1" />
+                    <img src={cover2} className="border border-gray-100 rounded mb-2" alt="cover1" />
                     <p className="animate animate-pulse bg-gray-50 h-5 rounded mb-2"></p>
                     <p className="animate animate-pulse w-8/12 bg-gray-50 h-5 rounded mb-2"></p>
 
@@ -56,7 +58,7 @@ const Home = () => {
                 </div>
 
                 <div className="m-4 transform -translate-y-20 border animate  -rotate-6 duration-100 bg-white p-2 shadow-sm w-1/5 rounded-lg flex flex-col ">
-                    <img src={cover3} className="rounded mb-2" alt="cover3" />
+                    <img src={cover3} className="rounded border border-gray-100 mb-2" alt="cover3" />
                     <p className="animate animate-pulse bg-gray-50 h-5 rounded mb-2"></p>
                     <p className="animate animate-pulse w-8/12 bg-gray-50 h-5 rounded mb-2"></p>
 
@@ -149,7 +151,7 @@ const Home = () => {
 
                         <div className="flex flex-col mt-4">
                             <img src={cover3} alt="preview" className="  m-2 rounded-lg shadow-sm" />
-                            <img src={cover3} alt="preview" className=" m-2 rounded-lg shadow-sm" />
+                            <img src={cover4} alt="preview" className=" m-2 rounded-lg shadow-sm" />
 
                         </div>
 
