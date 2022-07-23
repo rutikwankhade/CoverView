@@ -170,7 +170,7 @@ class Editor extends React.Component {
 										className="focus:outline-none border text-xl p-2 rounded"
 										value={this.state.pattern}>
 
-										<option>None</option>
+										<option>none</option>
 										<option>graph-paper</option>
 										<option>jigsaw</option>
 										<option>hideout</option>

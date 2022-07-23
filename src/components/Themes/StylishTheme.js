@@ -57,16 +57,22 @@ const StylishTheme = ({ config }) => {
 
     }
 
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        searchImages(searchText);
+
+    }
+
 
     return (
         <div className=" bg-white rounded">
 
 
             <div className={`border overflow-y-hidden flex flex-col rounded ${platform}`}
-                // style={{ backgroundColor: bgColor }}
+            // style={{ backgroundColor: bgColor }}
             >
 
-                <div className="flex flex-row items-center bg-white justify-center p-4 ">
+                <div className="flex flex-row border items-center bg-white  justify-center p-4 ">
 
                     <div className="h-full w-1/2  bg-white rounded-l-xl">
                         <div className={`${font} px-12 justify-center text-left rounded-xl h-full p-4 flex flex-col`}>
@@ -88,14 +94,14 @@ const StylishTheme = ({ config }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/2  h-96">
+                    <div className="w-1/2">
 
 
                         {unsplashImage ?
                             <div className='relative group'>
-                                
-                                <div className="w-96 h-96 ">
-                                <img src={unsplashImage.url && unsplashImage.url} className=" rounded-xl object-cover h-96 w-96" alt="preview" />
+
+                                <div className="h-96 ">
+                                    <img src={unsplashImage.url && unsplashImage.url} className=" rounded-xl object-cover h-96 w-full " alt="preview" />
 
                                 </div>
                                 <button
@@ -122,7 +128,7 @@ const StylishTheme = ({ config }) => {
                             :
                             <div className="flex flex-col p-2  bg-white items-center justify-center">
 
-                                <div className="flex bg-gray-50 rounded-full border mb-2">
+                                <form onSubmit={(e) => handleSearchSubmit(e)} className="flex bg-gray-50 rounded-full border mb-2">
                                     <input type="text"
                                         value={searchText}
                                         placeholder="Search image"
@@ -130,10 +136,10 @@ const StylishTheme = ({ config }) => {
                                         onChange={(e) => setSearchText(e.target.value)}
                                     />
 
-                                    <button onClick={() => searchImages(searchText)}>
+                                    <button type="submit" onClick={() => searchImages(searchText)}>
                                         <svg className="w-9 h-9 p-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                     </button>
-                                </div>
+                                </form>
 
 
                                 <div className="overflow-y-scroll overflow-x-hidden h-80">
