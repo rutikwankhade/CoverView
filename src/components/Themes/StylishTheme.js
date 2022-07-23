@@ -3,7 +3,7 @@ import unsplash from "../../utils/unsplashConfig";
 import { ImgContext } from '../../utils/ImgContext';
 
 const StylishTheme = ({ config }) => {
-    const { bgColor, title, author, font, icon, customIcon, platform } = config;
+    const { title, author, font, icon, customIcon, platform } = config;
 
     // const [image, setImage] = useState({})
 
