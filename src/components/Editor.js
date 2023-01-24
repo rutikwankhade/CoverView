@@ -71,7 +71,7 @@ class Editor extends React.Component {
 
 					<div className="flex md:flex-row flex-col bg-gray-50 ">
 
-						<div className="bg-white shadow-sm p-4 flex flex-col md:w-1/4">
+						<div className="bg-white  m-2 rounded-xl shadow-sm p-4 flex flex-col md:w-1/4">
 
 
 							<div className="m-2 flex flex-col">
