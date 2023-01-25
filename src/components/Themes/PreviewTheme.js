@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const PreviewTheme = ({ config }) => {
-    const { bgColor, platform } = config;
+    const { bgColor, platform,title } = config;
 
     const [image, setImage] = useState()
 
@@ -12,6 +12,9 @@ const PreviewTheme = ({ config }) => {
             <div className={`overflow-y-hidden flex flex-col rounded px-4 pt-4 ${platform}`}
                 style={{ backgroundColor: bgColor }}
             >
+
+                
+                                            <h1 className="text-2xl md:text-3xl p-10 text-white font-bold text-center">{title}</h1>
 
                 <div className="w-10/12 group mx-auto mt-auto mb-0 shadow-lg  flex flex-col bg-white rounded-t-xl border-white">
                     <div className="bg-gray-800 h-8 w-full p-2 flex items-center rounded-t-xl">
@@ -25,6 +28,9 @@ const PreviewTheme = ({ config }) => {
 
                         </button>
                     </div>
+
+
+                    
                     {image ?
                         <div className="">
                             <img src={image && image} className="object-cover " alt="preview" />
