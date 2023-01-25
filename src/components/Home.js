@@ -27,15 +27,18 @@ const Home = () => {
                     <h1 className="font-semibold font-Inter">Coverview</h1>
                 </div>
 
-                <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-xl px-6 text-white md:text-lg text-sm ml-auto mr-4 font-Inter font-semibold p-2">
-                    <span className="">Go to editor &rarr;</span>
-                </Link>
+                <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-xl px-6 text-white  text-sm ml-auto mr-4 font-Inter font-semibold p-2">
+                    <span className="">⭐ Star on Github</span>
+                </a>
             </div>
 
             <div className="  mx-auto md:px-20 py-6   flex flex-col items-center">
                 <h1 className="md:w-7/12 m-10 text-center md:text-5xl text-2xl font-extrabold text-gray-700 font-Anek">
                     Creating cover images for your blogs is now super easy
                 </h1>
+            <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-full px-6 text-white md:text-2xl text-sm mx-auto font-Inter font-semibold p-4">
+                    <span className="md:text-2xl text-sm">Open editor &rarr;</span>
+                </Link>
             </div>
 
 
@@ -178,7 +181,7 @@ const Home = () => {
                     <h2 className="text-5xl text-center font-Anek font-bold text-gray-700 mx-auto">Simple, quick, and easy to use</h2>
                     <p className="text-2xl text-center my-2">So you can focus on writing your blog and never worry about those cover images.</p>
                     <Link to="/editor" >
-                        <button className="flex mx-auto my-4 hover:translate-x-2 duration-300 bg-gray-700  rounded-xl px-6 text-white text-xl font-Inter font-semibold p-2">It's Free! Try now &rarr;</button>
+                        <button className="flex mx-auto my-4 hover:translate-x-2 duration-300 bg-gray-700  rounded-full px-6 text-white text-xl font-Inter font-semibold p-4">It's Free! Try now &rarr;</button>
                     </Link>
                 </div>
 
