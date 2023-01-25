@@ -153,7 +153,6 @@ class Editor extends React.Component {
 														<option>font-Inter</option>
 														<option>font-Poppins</option>
 														<option>font-Anek</option>
-														<option>font-Nunito</option>
 													</select>
 												</div>
 												<div className="flex flex-col m-2 w-1/2">

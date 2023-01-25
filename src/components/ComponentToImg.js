@@ -30,7 +30,7 @@ const ComponentToImg = (props) => {
 				height: element.offsetHeight + "px",
 			}
 		})
-			.then((data) => {
+			.then(async (data) => {
 				var a = document.createElement("A");
 				a.href = data;
 				a.download = `cover.png`;
