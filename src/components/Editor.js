@@ -14,7 +14,7 @@ import theme4 from '../assets/images/theme4.webp'
 
 
 const defaultSettings = {
-	title: "How I built my first project with react",
+	title: "A begineers guide to frontend development",
 	bgColor: "#ffe9e3",
 	pattern: "",
 	download: "PNG",
@@ -37,7 +37,6 @@ const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/d
 
 
 class Editor extends React.Component {
-
 
 
 	state = defaultSettings;
@@ -75,18 +74,18 @@ class Editor extends React.Component {
 				<ImgProvider>
 					<div className="flex md:flex-row flex-col bg-gray-50 ">
 
-						<div className="bg-white flex flex-col h-100 w-4/12">
+						<div className="bg-white flex flex-col h-100 md:w-4/12">
 
 							<Tab.Group>
-								<div className="flex">
+								<div className="flex md:flex-row flex-col">
 
-									<Tab.List className=" bg-white p-2 flex flex-col">
+									<Tab.List className=" bg-white p-2 flex flex-row md:flex-col">
 										<Tab className="flex  items-center font-semibold  ">
-											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="text-gray-800 w-12 my-2 h-12 p-2 rounded border" width="24" height="24" viewBox="0 0 24 24" ><path d="M19.045 7.401c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.378-.378-.88-.586-1.414-.586s-1.036.208-1.413.585L4 13.585V18h4.413L19.045 7.401zm-3-3 1.587 1.585-1.59 1.584-1.586-1.585 1.589-1.584zM6 16v-1.585l7.04-7.018 1.586 1.586L7.587 16H6zm-2 4h16v2H4z"></path></svg>
+											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="text-gray- bg-white rounded-xl w-12 m-2 h-12 p-2 rounded border" width="24" height="24" viewBox="0 0 24 24" ><path d="M19.045 7.401c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.378-.378-.88-.586-1.414-.586s-1.036.208-1.413.585L4 13.585V18h4.413L19.045 7.401zm-3-3 1.587 1.585-1.59 1.584-1.586-1.585 1.589-1.584zM6 16v-1.585l7.04-7.018 1.586 1.586L7.587 16H6zm-2 4h16v2H4z"></path></svg>
 										</Tab>
 
 										<Tab className="flex items-center   font-semibold    text-lg">
-											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className=" text-gray-800 w-12 h-12 p-2 my-2 rounded border" width="24" height="24" viewBox="0 0 24 24" ><path d="M11.024 11.536 10 10l-2 3h9l-3.5-5z"></path><circle cx="9.503" cy="7.497" r="1.503"></circle><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.806 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm0 14H5V5c0-.806.55-.988 1-1h13v12z"></path></svg>
+											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className=" text-gray-800 bg-white rounded-xl w-12 h-12 p-2 m-2 rounded border" width="24" height="24" viewBox="0 0 24 24" ><path d="M11.024 11.536 10 10l-2 3h9l-3.5-5z"></path><circle cx="9.503" cy="7.497" r="1.503"></circle><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.806 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm0 14H5V5c0-.806.55-.988 1-1h13v12z"></path></svg>
 										</Tab>
 									</Tab.List>
 
@@ -95,7 +94,7 @@ class Editor extends React.Component {
 										<Tab.Panel>
 
 											<div className="m-2 flex flex-col">
-												<span className="font-medium">Blog Title</span>
+												<span className="font-medium pb-1">Blog Title</span>
 												<textarea
 													type="text"
 													value={this.state.title}
@@ -106,7 +105,7 @@ class Editor extends React.Component {
 											</div>
 
 											<div className="flex flex-col m-2 ">
-												<span className="font-medium">Author</span>
+												<span className="font-medium pb-1">Author</span>
 												<input
 													type="text"
 													value={this.state.author}
@@ -117,7 +116,7 @@ class Editor extends React.Component {
 											</div>
 
 											<div className="flex flex-col m-2 ">
-												<span className="font-medium">Icon</span>
+												<span className="font-medium pb-1">Icon</span>
 												<Select value={this.state.icon}
 													onChange={(selectedOption) => this.setState({ icon: selectedOption })}
 													options={this.state.devIconOptions}
@@ -140,7 +139,7 @@ class Editor extends React.Component {
 											<div className="flex items-center">
 
 												<div className="flex flex-col m-2 w-1/2">
-													<span className="font-medium">Font</span>
+													<span className="font-medium pb-1">Font</span>
 
 													<select
 														value={this.state.font}
@@ -155,14 +154,14 @@ class Editor extends React.Component {
 														<option>font-Nunito</option>
 													</select>
 												</div>
-												<div className="flex flex-col m-2 ">
-													<span className="font-medium">Color</span>
+												<div className="flex flex-col m-2 w-1/2">
+													<span className="font-medium pb-1">Color</span>
 													<div className="border rounded flex items-center p-2">
 
-														<span className="text-sm text-gray-700 font-semibold mx-2">{this.state.bgColor}</span>
+														<span className="text-xl text-gray-700  mx-2">{this.state.bgColor}</span>
 														<input type="color" value={this.state.bgColor}
 															onChange={(e) => this.setState({ bgColor: e.target.value })}
-															className="h-8 w-8  rounded"
+															className="h-8 w-8 ml-auto mr-1 rounded"
 														/>
 													</div>
 												</div>
@@ -172,7 +171,7 @@ class Editor extends React.Component {
 
 											<div className="flex items-center">
 												<div className="flex flex-col m-2 w-1/2">
-													<span className="font-medium">Pattern</span>
+													<span className="font-medium pb-1">Pattern</span>
 													<select
 														onChange={(e) => this.setState({ pattern: e.target.value })}
 														className="focus:outline-none border text-xl p-2 rounded"
@@ -200,8 +199,8 @@ class Editor extends React.Component {
 													</select>
 												</div>
 
-												<div className="flex flex-col m-2">
-													<span className="font-medium">Platform</span>
+												<div className="flex flex-col m-2 w-1/2">
+													<span className="font-medium pb-1">Platform</span>
 
 													<select
 														onChange={(e) => this.setState({ platform: e.target.value })}
