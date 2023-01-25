@@ -1,12 +1,12 @@
 import React from 'react';
 const OutlineTheme = ({ config }) => {
-    const { title, bgColor, pattern, author, icon, font, customIcon, platform } = config;
+    const { title, bgColor, author, icon, font, customIcon, platform } = config;
 
     return (
         <div className="p-4 bg-white ">
 
 
-            <div className={`overflow-y-hidden rounded flex flex-col text-gray-800 px-10  ${pattern} ${platform} `}
+            <div className={`overflow-y-hidden rounded flex flex-col text-gray-800 px-10  ${platform} `}
                 style={{ backgroundColor: bgColor }}
             >
 
@@ -23,15 +23,15 @@ const OutlineTheme = ({ config }) => {
                             </div>
                     }
                     <h1 className="text-3xl p-4 text-white md:text-5xl  font-bold ">{title}</h1>
-                
-                     <div className={`${font} w-full h-16  flex  mt-auto mb-0 p-2 px-6  items-center `}>
-                    
-                    <h2 className="text-xl text-white font-semibold">{author}</h2>
 
-                </div>
+                    <div className={`${font} w-full h-16  flex  mt-auto mb-0 p-2 px-6  items-center `}>
+
+                        <h2 className="text-2xl text-white font-semibold">{author}</h2>
+
+                    </div>
                 </div>
 
-           
+
 
             </div>
 

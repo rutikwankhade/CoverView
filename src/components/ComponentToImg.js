@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { exportComponentAsPNG } from "react-component-export-image";
+// import { exportComponentAsPNG } from "react-component-export-image";
 import "./CoverImage.css";
 import { ImgContext } from "../utils/ImgContext";
 import unsplash from "../utils/unsplashConfig";
@@ -10,17 +10,29 @@ const ComponentToImg = (props) => {
 	const { unsplashImage } = useContext(ImgContext);
 	const componentRef = React.createRef();
 
-	// download image and trigger download on unsplash api
-	const downloadImage = () => {
+
+
+
+	async function saveImage(data) {
+		var a = document.createElement("A");
+		a.href = data;
+		a.download = `cover.png`;
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
+	}
+
+	const downloadImage = async () => {
 		// exportComponentAsPNG(componentRef, 'cover')
-		//  unsplash.photos.trackDownload({ downloadLocation: unsplashImage.downloadLink, });
 		// console.log(unsplashImage.downloadLink)
+
+		unsplash.photos.trackDownload({ downloadLocation: unsplashImage.downloadLink, });
 		const element = componentRef.current; // You can use element's ID or Class here
 
-		console.log(element)
-		console.log(element.offsetHeight)
+		// console.log(element)
+		// console.log(element.offsetHeight)
 
-		domtoimage.toPng(componentRef.current, {
+		let data = await domtoimage.toPng(componentRef.current, {
 			height: element.offsetHeight * 2,
 			width: element.offsetWidth * 2,
 			style: {
@@ -30,14 +42,9 @@ const ComponentToImg = (props) => {
 				height: element.offsetHeight + "px",
 			}
 		})
-			.then(async (data) => {
-				var a = document.createElement("A");
-				a.href = data;
-				a.download = `cover.png`;
-				document.body.appendChild(a);
-				a.click();
-				document.body.removeChild(a);
-			});
+		await saveImage(data)
+
+
 	}
 
 
