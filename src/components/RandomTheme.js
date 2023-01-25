@@ -107,11 +107,8 @@ class RandomTheme extends React.Component {
 
     render() {
         return (
-            <div className="shuffle-btn border bg-white p-2 rounded cursor-pointer" onClick={this.changeTheme}>
-                <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-shuffle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z" />
-                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
-                </svg>
+            <div className="shuffle-btn mx-auto w-14 flex justify-center items-center shadow-xl shadow-gray-100 h-14 p-2  bg-indigo-400  rounded-xl cursor-pointer" onClick={this.changeTheme}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="text-white w-10 h-10" width="24" height="24" viewBox="0 0 24 24" ><path d="M17 17h-1.559l-9.7-10.673A1 1 0 0 0 5.001 6H2v2h2.559l4.09 4.5-4.09 4.501H2v2h3.001a1 1 0 0 0 .74-.327L10 13.987l4.259 4.686a1 1 0 0 0 .74.327H17v3l5-4-5-4v3z"></path><path d="M15.441 8H17v3l5-3.938L17 3v3h-2.001a1 1 0 0 0-.74.327l-3.368 3.707 1.48 1.346L15.441 8z"></path></svg>
             </div>
         );
     }

@@ -88,7 +88,7 @@ class Editor extends React.Component {
 									</Tab.List>
 
 
-									<Tab.Panels className="bg-white border-l ">
+									<Tab.Panels className="bg-white border-l w-full p-4 ">
 										<Tab.Panel>
 
 											<div className="m-2 flex flex-col">
@@ -231,31 +231,26 @@ class Editor extends React.Component {
 
 
 
-										<Tab.Panel>
-											themes
+										<Tab.Panel className=" w-full flex flex-col justify-center">
 
-
-
-
+											<div>
+												<RandomTheme onThemeChange={this.getRandomTheme} />
+											</div>
 
 
 
 
 											<div className="flex flex-col m-2 w-1/2">
-												<span className="font-medium">Theme</span>
 
 												<select
 													onChange={(e) => this.setState({ theme: e.target.value })}
 													value={this.state.theme}
-
 													className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
 													<option>stylish</option>
 													<option>modern</option>
 													<option>basic</option>
 													<option>preview</option>
 													<option>outline</option>
-
-
 
 												</select>
 											</div>
@@ -264,33 +259,6 @@ class Editor extends React.Component {
 
 								</div>
 							</Tab.Group>
-
-
-
-
-
-
-
-
-
-
-
-
-							<div className="flex">
-
-
-
-
-
-							</div>
-
-
-
-
-
-
-
-
 
 
 							{/* <div className="mx-4 my-1">
@@ -317,8 +285,6 @@ class Editor extends React.Component {
 						</div> */}
 
 						<div className="flex m-6 flex-col items-center justify-center ">
-
-
 
 							<ComponentToImg downloadAs={this.state.download}>
 								<CoverImage {...this.state} />
