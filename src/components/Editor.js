@@ -7,6 +7,12 @@ import { ImgProvider } from '../utils/ImgContext'
 import Header from "./Header";
 import { Tab } from '@headlessui/react'
 
+import theme1 from '../assets/images/theme1.webp'
+import theme2 from '../assets/images/theme2.webp'
+import theme3 from '../assets/images/theme3.webp'
+import theme4 from '../assets/images/theme4.webp'
+
+
 const defaultSettings = {
 	title: "How I built my first project with react",
 	bgColor: "#ffe9e3",
@@ -67,14 +73,12 @@ class Editor extends React.Component {
 				<Header />
 
 				<ImgProvider>
-
 					<div className="flex md:flex-row flex-col bg-gray-50 ">
 
-						<div className="bg-white flex flex-col h-100 border w-4/12">
+						<div className="bg-white flex flex-col h-100 w-4/12">
 
 							<Tab.Group>
 								<div className="flex">
-
 
 									<Tab.List className=" bg-white p-2 flex flex-col">
 										<Tab className="flex  items-center font-semibold  ">
@@ -140,9 +144,7 @@ class Editor extends React.Component {
 
 													<select
 														value={this.state.font}
-
 														onChange={(e) => this.setState({ font: e.target.value })}
-
 														className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
 														<option>font-serif</option>
 														<option>font-sans</option>
@@ -151,8 +153,6 @@ class Editor extends React.Component {
 														<option>font-Poppins</option>
 														<option>font-Anek</option>
 														<option>font-Nunito</option>
-
-
 													</select>
 												</div>
 												<div className="flex flex-col m-2 ">
@@ -206,12 +206,9 @@ class Editor extends React.Component {
 													<select
 														onChange={(e) => this.setState({ platform: e.target.value })}
 														value={this.state.platform}
-
 														className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
 														<option>hashnode</option>
 														<option>dev</option>
-
-
 													</select>
 												</div>
 
@@ -223,36 +220,40 @@ class Editor extends React.Component {
 												<span>Reset All</span>
 											</button>
 
-
-
 										</Tab.Panel>
 
 
+										<Tab.Panel className="h-99 w-full flex flex-col justify-center">
 
+											<div className="flex items-center border rounded-xl border-gray-50 px-4">
+												<h2 className="text-lg pl-2 font-inter font-semibold">Themes</h2>
+												<div className="ml-auto mr-1 p-2">
+													<RandomTheme onThemeChange={this.getRandomTheme} />
 
-										<Tab.Panel className=" w-full flex flex-col justify-center">
+												</div>
+											</div>
 
-											<div>
-												<RandomTheme onThemeChange={this.getRandomTheme} />
+											<div className="p-4  flex flex-wrap  overflow-y-scroll ">
+
+												<img src={theme1} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "basic" })}
+													className="opacity-60 cursor-pointer border-gray-100 hover:scale-105 duration-300 hover:border-gray-200 border m-2 "
+												/>
+												<img src={theme2} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "modern" })}
+													className="opacity-60 cursor-pointer border-gray-100 hover:scale-105 hover:border-gray-200 duration-300 border m-2 "
+												/>
+												<img src={theme3} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "stylish" })}
+													className="opacity-60 cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+												/>
+												<img src={theme4} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "preview" })}
+													className="opacity-60 cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+												/>
 											</div>
 
 
-
-
-											<div className="flex flex-col m-2 w-1/2">
-
-												<select
-													onChange={(e) => this.setState({ theme: e.target.value })}
-													value={this.state.theme}
-													className="focus:outline-none text-gray-700 text-xl p-2 rounded border">
-													<option>stylish</option>
-													<option>modern</option>
-													<option>basic</option>
-													<option>preview</option>
-													<option>outline</option>
-
-												</select>
-											</div>
 										</Tab.Panel>
 									</Tab.Panels>
 
@@ -273,15 +274,6 @@ class Editor extends React.Component {
 
 
 						</div>
-
-						{/* <div className="m-2 items-center justify-center flex flex-col">
-							<RandomTheme onThemeChange={this.getRandomTheme} />
-							<button
-						className="flex items-center mx-auto border"
-						onClick={this.handleReset}>
-						<img src={resetIcon} className="shuffle-btn border bg-white p-2 rounded cursor-pointer"/>
-					</button>
-						</div> */}
 
 						<div className="flex m-6 flex-col items-center justify-center ">
 

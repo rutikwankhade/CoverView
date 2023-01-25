@@ -12,3 +12,27 @@
 .h-100{
     height:36rem;
 }
+
+.h-99{
+    height:35rem;
+}
+
+::-webkit-scrollbar {
+  /* width: 8px; */
+  display: none;
+}
+
+Track
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:  #ccccff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:  #b3b3ff;
+}
