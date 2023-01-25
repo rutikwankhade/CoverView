@@ -5,7 +5,7 @@ const BasicTheme = ({ config }) => {
     const { title, bgColor, pattern, author, icon, font, customIcon,platform } = config;
 
     return (
-        <div className="p-4 bg-white border">
+        <div className="p-4 bg-white ">
             <div className={`overflow-y-hidden flex  text-gray-800 items-center ${pattern} ${platform} `}
                 style={{ backgroundColor: bgColor }}
             >

@@ -3,7 +3,7 @@ import unsplash from "../../utils/unsplashConfig";
 import { ImgContext } from '../../utils/ImgContext';
 
 const StylishTheme = ({ config }) => {
-    const { title, author, font, icon, customIcon, platform } = config;
+    const { title, author, font, icon, customIcon, platform,bgColor } = config;
 
     // const [image, setImage] = useState({})
 
@@ -18,7 +18,8 @@ const StylishTheme = ({ config }) => {
             .getPhotos({
                 query: searchText,
                 page: 1,
-                per_page: 25
+                per_page: 25,
+                orientation:'portrait'
 
 
             })
@@ -68,11 +69,11 @@ const StylishTheme = ({ config }) => {
         <div className=" bg-white rounded">
 
 
-            <div className={`border overflow-y-hidden flex flex-col rounded ${platform}`}
-            // style={{ backgroundColor: bgColor }}
+            <div className={` overflow-y-hidden flex flex-col rounded ${platform}`}
+            style={{ backgroundColor: bgColor }}
             >
 
-                <div className="flex flex-row border items-center bg-white  justify-center p-4 ">
+                <div className="flex flex-row  items-center bg-white  justify-center m-4 ">
 
                     <div className="h-full w-1/2  bg-white rounded-l-xl">
                         <div className={`${font} px-12 justify-center text-left rounded-xl h-full p-4 flex flex-col`}>
@@ -98,12 +99,14 @@ const StylishTheme = ({ config }) => {
 
 
                         {unsplashImage ?
-                            <div className='relative group'>
+                            <div className='relative flex group'>
 
-                                <div className="h-96 ">
-                                    <img src={unsplashImage.url && unsplashImage.url} className=" rounded-xl object-cover h-96 w-full " alt="preview" />
-
-                                </div>
+                                <div className="h-96 w-96 ">
+                                    
+                              
+                                    <img src={unsplashImage.url && unsplashImage.url} className=" object-cover h-96 w-96  " alt="preview" />
+ </div>
+                               
                                 <button
                                     onClick={() => setUnsplashImage('')}
                                     className="absolute  top-4 right-2 cursor-pointer">

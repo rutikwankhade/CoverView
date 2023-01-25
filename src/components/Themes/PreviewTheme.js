@@ -6,7 +6,7 @@ const PreviewTheme = ({ config }) => {
     const [image, setImage] = useState()
 
     return (
-        <div className="p-4 bg-white border">
+        <div className="p-4 bg-white">
 
 
             <div className={`overflow-y-hidden flex flex-col rounded px-4 pt-4 ${platform}`}
