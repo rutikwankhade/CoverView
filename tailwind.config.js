@@ -8,7 +8,7 @@ module.exports = {
         Inter: ['Inter', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
         Anek: ['Anek Latin', 'sans-serif'],
-                                Nunito: ['Nunito', 'sans-serif']
+        Nunito: ['Nunito', 'sans-serif']
 
 
 

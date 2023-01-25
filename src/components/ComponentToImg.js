@@ -3,6 +3,7 @@ import { exportComponentAsPNG } from "react-component-export-image";
 import "./CoverImage.css";
 import { ImgContext } from "../utils/ImgContext";
 import unsplash from "../utils/unsplashConfig";
+import domtoimage from "dom-to-image";
 
 const ComponentToImg = (props) => {
 
@@ -11,9 +12,32 @@ const ComponentToImg = (props) => {
 
 	// download image and trigger download on unsplash api
 	const downloadImage = () => {
-		exportComponentAsPNG(componentRef, 'cover')
-		 unsplash.photos.trackDownload({ downloadLocation: unsplashImage.downloadLink, });
-		console.log(unsplashImage.downloadLink)
+		// exportComponentAsPNG(componentRef, 'cover')
+		//  unsplash.photos.trackDownload({ downloadLocation: unsplashImage.downloadLink, });
+		// console.log(unsplashImage.downloadLink)
+		const element = componentRef.current; // You can use element's ID or Class here
+
+		console.log(element)
+		console.log(element.offsetHeight)
+
+		domtoimage.toPng(componentRef.current, {
+			height: element.offsetHeight * 2,
+			width: element.offsetWidth * 2,
+			style: {
+				transform: "scale(" + 2 + ")",
+				transformOrigin: "top left",
+				width: element.offsetWidth + "px",
+				height: element.offsetHeight + "px",
+			}
+		})
+			.then((data) => {
+				var a = document.createElement("A");
+				a.href = data;
+				a.download = `cover.png`;
+				document.body.appendChild(a);
+				a.click();
+				document.body.removeChild(a);
+			});
 	}
 
 

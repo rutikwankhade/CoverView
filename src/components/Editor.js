@@ -14,6 +14,7 @@ import theme4 from '../assets/images/theme4.webp'
 import theme5 from '../assets/images/theme5.webp'
 
 
+
 const defaultSettings = {
 	title: "A begineers guide to frontend development",
 	bgColor: "#ffe9e3",
