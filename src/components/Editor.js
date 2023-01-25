@@ -11,6 +11,7 @@ import theme1 from '../assets/images/theme1.webp'
 import theme2 from '../assets/images/theme2.webp'
 import theme3 from '../assets/images/theme3.webp'
 import theme4 from '../assets/images/theme4.webp'
+import theme5 from '../assets/images/theme5.webp'
 
 
 const defaultSettings = {
@@ -79,7 +80,7 @@ class Editor extends React.Component {
 							<Tab.Group>
 								<div className="flex md:flex-row flex-col">
 
-									<Tab.List className=" bg-white p-2 flex flex-row md:flex-col">
+									<Tab.List className=" bg-white md:p-0 p-2 flex flex-row md:flex-col">
 										<Tab className="flex  items-center font-semibold  ">
 											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="text-gray- bg-white rounded-xl w-12 m-2 h-12 p-2 rounded border" width="24" height="24" viewBox="0 0 24 24" ><path d="M19.045 7.401c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.378-.378-.88-.586-1.414-.586s-1.036.208-1.413.585L4 13.585V18h4.413L19.045 7.401zm-3-3 1.587 1.585-1.59 1.584-1.586-1.585 1.589-1.584zM6 16v-1.585l7.04-7.018 1.586 1.586L7.587 16H6zm-2 4h16v2H4z"></path></svg>
 										</Tab>
@@ -250,6 +251,10 @@ class Editor extends React.Component {
 													onClick={(e) => this.setState({ theme: "preview" })}
 													className="opacity-60 cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
 												/>
+												<img src={theme5} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "outline" })}
+													className="opacity-60 cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+												/>
 											</div>
 
 
@@ -274,7 +279,7 @@ class Editor extends React.Component {
 
 						</div>
 
-						<div className="flex m-6 flex-col items-center justify-center ">
+						<div className=" flex m-6 flex-col items-center justify-center ">
 
 							<ComponentToImg downloadAs={this.state.download}>
 								<CoverImage {...this.state} />
