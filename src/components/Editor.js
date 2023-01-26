@@ -12,6 +12,7 @@ import theme2 from '../assets/images/theme2.webp'
 import theme3 from '../assets/images/theme3.webp'
 import theme4 from '../assets/images/theme4.webp'
 import theme5 from '../assets/images/theme5.webp'
+import theme6 from '../assets/images/theme6.webp'
 
 
 
@@ -24,7 +25,7 @@ const defaultSettings = {
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
 	font: 'font-Anek',
-	theme: 'mobile',
+	theme: 'stylish',
 	customIcon: '',
 	platform: 'hashnode'
 
@@ -237,23 +238,29 @@ class Editor extends React.Component {
 
 												<img src={theme1} alt="basic theme"
 													onClick={(e) => this.setState({ theme: "basic" })}
-													className="opacity-60 cursor-pointer border-gray-100 hover:scale-105 duration-300 hover:border-gray-200 border m-2 "
+													className=" cursor-pointer border-gray-100 hover:scale-105 duration-300 hover:border-gray-200 border m-2 "
 												/>
 												<img src={theme2} alt="basic theme"
 													onClick={(e) => this.setState({ theme: "modern" })}
-													className="opacity-60 cursor-pointer border-gray-100 hover:scale-105 hover:border-gray-200 duration-300 border m-2 "
+													className="cursor-pointer border-gray-100 hover:scale-105 hover:border-gray-200 duration-300 border m-2 "
 												/>
 												<img src={theme3} alt="basic theme"
 													onClick={(e) => this.setState({ theme: "stylish" })}
-													className="opacity-60 cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
 												/>
-												<img src={theme4} alt="basic theme"
-													onClick={(e) => this.setState({ theme: "preview" })}
-													className="opacity-60 cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
-												/>
+												
 												<img src={theme5} alt="basic theme"
 													onClick={(e) => this.setState({ theme: "outline" })}
-													className="opacity-60 cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+												/>
+
+												<img src={theme4} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "preview" })}
+													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+												/>
+												<img src={theme6} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "mobile" })}
+													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
 												/>
 											</div>
 
