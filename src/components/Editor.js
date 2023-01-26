@@ -17,14 +17,14 @@ import theme5 from '../assets/images/theme5.webp'
 
 const defaultSettings = {
 	title: "A begineers guide to frontend development",
-	bgColor: "#ffe9e3",
+	bgColor: "#949ee5",
 	pattern: "",
 	download: "PNG",
 	author: 'Rutik Wankhade',
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
 	font: 'font-Anek',
-	theme: 'stylish',
+	theme: 'mobile',
 	customIcon: '',
 	platform: 'hashnode'
 

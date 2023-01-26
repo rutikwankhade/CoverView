@@ -6,7 +6,7 @@ import BasicTheme from "./Themes/BasicTheme";
 import OutlineTheme from "./Themes/OutlineTheme";
 import PreviewTheme from "./Themes/PreviewTheme";
 import StylishTheme from "./Themes/StylishTheme";
-
+import MobileMockupTheme from "./Themes/MobileMockupTheme";
 
 const CoverImage = (props) => {
 	// hexToRgbA(hex, opacity) {
@@ -31,6 +31,7 @@ const CoverImage = (props) => {
 			case 'outline': return <OutlineTheme config={props} />
 			case 'preview': return <PreviewTheme config={props} />
 			case 'stylish': return <StylishTheme config={props} />
+			case 'mobile': return <MobileMockupTheme config={props} />
 
 			default: return <BasicTheme config={props} />
 		}

@@ -26,7 +26,7 @@ const ComponentToImg = (props) => {
 		// exportComponentAsPNG(componentRef, 'cover')
 		// console.log(unsplashImage.downloadLink)
 
-		unsplash.photos.trackDownload({ downloadLocation: unsplashImage.downloadLink, });
+		// unsplash.photos.trackDownload({ downloadLocation: unsplashImage.downloadLink, });
 		const element = componentRef.current; // You can use element's ID or Class here
 
 		// console.log(element)
@@ -42,7 +42,9 @@ const ComponentToImg = (props) => {
 				height: element.offsetHeight + "px",
 			}
 		})
-		await saveImage(data)
+
+		console.log(data)
+		await saveImage(data);
 
 
 	}
