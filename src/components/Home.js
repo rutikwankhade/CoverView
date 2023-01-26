@@ -24,20 +24,20 @@ const Home = () => {
             <div className="text-xl  flex border-b border-gray-100  p-2 md:w-10/12 mx-auto">
                 <div className="flex items-center">
                     <img src={logo} alt="logo" className="w-8 h-8 mx-2" />
-                    <h1 className="font-semibold font-Inter">Coverview</h1>
+                    <h1 className="font-semibold md:text-xl text-lg font-Inter">Coverview</h1>
                 </div>
 
-                <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-xl px-6 text-white  text-sm ml-auto mr-4 font-Inter font-semibold p-2">
-                    <span className="">⭐ Star on Github</span>
+                <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-xl md:px-4 text-white md:text-sm text-xs ml-auto mr-4 font-Inter font-semibold p-2">
+                    <span className="text-sm">⭐ Star on Github</span>
                 </a>
             </div>
 
             <div className="  mx-auto md:px-20 py-6   flex flex-col items-center">
-                <h1 className="md:w-7/12 m-10 text-center md:text-5xl text-2xl font-extrabold text-gray-700 font-Anek">
+                <h1 className="md:w-7/12 m-10 text-center md:text-5xl text-3xl font-extrabold text-gray-700 font-Anek">
                     Creating cover images for your blogs is now super easy
                 </h1>
-            <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-full px-6 text-white md:text-2xl text-sm mx-auto font-Inter font-semibold p-4">
-                    <span className="md:text-2xl text-sm">Open editor &rarr;</span>
+            <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 hover:bg-gray-800 group rounded-full px-4 md:px-8 text-white md:text-2xl text-lg mx-auto font-Inter font-semibold md:p-4 p-2">
+                    <span className="md:text-2xl text-lg">Open editor &rarr;</span>
                 </Link>
             </div>
 
@@ -76,22 +76,22 @@ const Home = () => {
             <div className="md:my-32  my-10 mx-auto">
 
                 <div className="md:w-10/12 mx-auto flex flex-col ">
-                    <div className="md:w-6/12 text-center mx-auto ">
-                        <h2 className="text-4xl py-4 font-bold font-Anek text-gray-700">Why cover images are more important than you think?</h2>
+                    <div className="md:w-9/12 text-center mx-auto ">
+                        <h2 className="text-5xl py-4 font-bold font-Anek text-gray-700">Why cover images are more important than you think?</h2>
 
                     </div>
 
-                    <div className="flex md:flex-row flex-col my-10 mx-auto">
+                    <div className="flex md:flex-row flex-col mx-auto justify-center my-10 mx-auto">
 
-                        <div className="m-10 flex md:flex-row flex-col  md:w-1/2">
-                            <div className="md:mx-4 mx-auto bg-purple-300 h-24 w-24 p-4 flex justify-center items-center rounded-full">
+                        <div className="m-10 p-10 bg-white rounded-xl shadow-xl shadow-gray-100 flex flex-col  md:w-4/12 ">
+                            <div className=" my-2 bg-purple-300 h-24 w-24 p-4 flex justify-center items-center rounded-full">
                                 <svg className="text-white w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
                             </div>
                             <p className="text-2xl md:text-left text-center text-gray-700">Around <span className="font-bold">7 million</span> blog posts are published daily. And with the rise of new-age blogging tools, it will only go up.</p>
                         </div>
 
-                        <div className="m-10 flex md:flex-row flex-col  md:w-1/2">
-                            <div className="md:mx-4 mx-auto bg-green-300 h-24 w-24 p-4 flex justify-center items-center rounded-full">
+                        <div className="m-10 p-10 bg-white rounded-xl shadow-xl shadow-gray-100 flex  flex-col  md:w-4/12 ">
+                            <div className=" my-2 bg-green-300 h-24 w-24 p-4 flex justify-center items-center rounded-full">
                                 <svg className="text-white w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                             </div>
                             <p className="text-2xl md:text-left text-center text-gray-700">A good cover image can lead to <span className="font-bold">higher conversion rate</span> than a random stock image.</p>
@@ -104,7 +104,7 @@ const Home = () => {
                 </div>
 
 
-                <h2 className="md:text-5xl text-3xl md:w-1/2 mx-auto mt-32 font-bold font-Anek text-center text-gray-700">With coverview, you can create cover images in seconds.</h2>
+                <h2 className="md:text-5xl text-3xl md:w-1/2 mx-auto mt-32 font-bold font-Anek text-center text-gray-700">With coverview, you can create cover images in <span className="text-indigo-400">seconds</span>.</h2>
                 <div className="md:w-8/12 my-20 flex md:flex-row flex-col mx-auto">
 
                     <div className="md:w-1/3 flex flex-col mx-10">
@@ -177,9 +177,9 @@ const Home = () => {
 
                 <WallOfLove />
 
-                <div className="md:w-1/2 mx-auto pt-20 p-4">
-                    <h2 className="text-5xl text-center font-Anek font-bold text-gray-700 mx-auto">Simple, quick, and easy to use</h2>
-                    <p className="text-2xl text-center my-2">So you can focus on writing your blog and never worry about those cover images.</p>
+                <div className="md:w-8/12 mx-auto pt-24 p-4">
+                    <h2 className="text-6xl text-center font-Anek font-bold text-gray-700 mx-auto">Simple, quick, and easy to use</h2>
+                    <p className="text-2xl text-center py-4 md:w-8/12 mx-auto">So you can focus on writing your blog and never worry about those cover images.</p>
                     <Link to="/editor" >
                         <button className="flex mx-auto my-4 hover:translate-x-2 duration-300 bg-gray-700  rounded-full px-6 text-white text-xl font-Inter font-semibold p-4">It's Free! Try now &rarr;</button>
                     </Link>
