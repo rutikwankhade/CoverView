@@ -18,7 +18,7 @@ const StylishTheme = ({ config }) => {
             .getPhotos({
                 query: searchText,
                 page: 1,
-                per_page: 25,
+                per_page: 30,
                 // orientation:'portrait'
 
 
@@ -33,7 +33,7 @@ const StylishTheme = ({ config }) => {
 
         unsplash.search
             .getPhotos({
-                query: 'dev',
+                query: 'setup',
                 page: 1,
                 per_page: 25
 
@@ -54,7 +54,6 @@ const StylishTheme = ({ config }) => {
 
         })
 
-        // unsplash.photos.trackDownload({ downloadLocation: image.links.download_location, });
 
     }
 

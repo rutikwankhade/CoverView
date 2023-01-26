@@ -18,7 +18,7 @@ const BackgroundTheme = ({ config }) => {
             .getPhotos({
                 query: searchText,
                 page: 1,
-                per_page: 25,
+                per_page: 30,
                 // orientation:'portrait'
 
 
@@ -33,9 +33,9 @@ const BackgroundTheme = ({ config }) => {
 
         unsplash.search
             .getPhotos({
-                query: 'dev',
+                query: 'setup',
                 page: 1,
-                per_page: 25
+                per_page: 30
 
             })
             .then(response => {
@@ -82,12 +82,8 @@ const BackgroundTheme = ({ config }) => {
                             <div className='relative flex group'>
 
                                 <div className="h-max w-full ">
-
-
                                     <img src={unsplashImage.url && unsplashImage.url} className=" object-cover h-full w-full  " alt="preview" />
                                 </div>
-
-
 
 
                                 <div className=" backdrop-blur-sm h-full bg-gray-800/60 absolute top-0 right-0 left-0 ">
@@ -106,7 +102,7 @@ const BackgroundTheme = ({ config }) => {
                                             {
                                                 customIcon ?
                                                     <div className=" ">
-                                                        <img src={customIcon} alt="img" className="w-12 h-12 mr-2 rounded-full bg-white border border-white" />
+                                                        <img src={customIcon} alt="img" className="w-12 h-12 m-2 rounded-full bg-white border-2 border-white" />
                                                     </div>
                                                     :
                                                     <div className="mr-2 items-center justify-center flex">
@@ -135,18 +131,22 @@ const BackgroundTheme = ({ config }) => {
                             :
                             <div className="flex flex-col p-2  bg-white items-center justify-center">
 
-                                <form onSubmit={(e) => handleSearchSubmit(e)} className="flex bg-gray-50 rounded-full border mb-2">
+                                <div className="flex items-center w-full px-6 ">
+                                    <div className="text-lg font-semibold text-gray-700">Click on any image to select</div>
+                                <form onSubmit={(e) => handleSearchSubmit(e)} className=" ml-auto mr-2 w-1/2 flex bg-gray-50 rounded-full border mb-2">
                                     <input type="text"
                                         value={searchText}
                                         placeholder="Search image"
-                                        className="focus:outline-none w-max text-lg bg-gray-50  p-1 px-4  rounded-full border border-gray-50"
+                                        className="focus:outline-none w-full text-lg bg-gray-50  p-1 px-4  rounded-full border border-gray-50"
                                         onChange={(e) => setSearchText(e.target.value)}
                                     />
 
                                     <button type="submit" onClick={() => searchImages(searchText)}>
-                                        <svg className="w-9 h-9 p-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                        <svg className="w-9 h-9 ml-auto mr-1 p-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                     </button>
                                 </form>
+
+                                    </div>
 
 
                                 <div className="overflow-y-scroll overflow-x-hidden h-96 justify-center flex flex-wrap">

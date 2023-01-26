@@ -13,6 +13,8 @@ import theme3 from '../assets/images/theme3.webp'
 import theme4 from '../assets/images/theme4.webp'
 import theme5 from '../assets/images/theme5.webp'
 import theme6 from '../assets/images/theme6.webp'
+import theme7 from '../assets/images/theme7.webp'
+
 
 
 
@@ -236,6 +238,10 @@ class Editor extends React.Component {
 
 											<div className="p-4  flex flex-wrap  overflow-y-scroll ">
 
+												<img src={theme7} alt="basic theme"
+													onClick={(e) => this.setState({ theme: "background" })}
+													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
+												/>
 												<img src={theme1} alt="basic theme"
 													onClick={(e) => this.setState({ theme: "basic" })}
 													className=" cursor-pointer border-gray-100 hover:scale-105 duration-300 hover:border-gray-200 border m-2 "
@@ -248,7 +254,7 @@ class Editor extends React.Component {
 													onClick={(e) => this.setState({ theme: "stylish" })}
 													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
 												/>
-												
+
 												<img src={theme5} alt="basic theme"
 													onClick={(e) => this.setState({ theme: "outline" })}
 													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 m-2"
