@@ -19,7 +19,7 @@ const StylishTheme = ({ config }) => {
                 query: searchText,
                 page: 1,
                 per_page: 25,
-                orientation:'portrait'
+                // orientation:'portrait'
 
 
             })
