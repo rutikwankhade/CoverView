@@ -25,7 +25,7 @@ const defaultSettings = {
 	icon: { 'label': 'react', 'value': 'react' },
 	devIconOptions: {},
 	font: 'font-Anek',
-	theme: 'stylish',
+	theme: 'background',
 	customIcon: '',
 	platform: 'hashnode'
 
