@@ -5,6 +5,9 @@ import ModernTheme from "./Themes/ModernTheme";
 import BasicTheme from "./Themes/BasicTheme";
 import OutlineTheme from "./Themes/OutlineTheme";
 import PreviewTheme from "./Themes/PreviewTheme";
+import StylishTheme from "./Themes/StylishTheme";
+import MobileMockupTheme from "./Themes/MobileMockupTheme";
+import BackgroundTheme from "./Themes/BackgroundTheme";
 
 const CoverImage = (props) => {
 	// hexToRgbA(hex, opacity) {
@@ -28,6 +31,9 @@ const CoverImage = (props) => {
 			case 'modern': return <ModernTheme config={props} />
 			case 'outline': return <OutlineTheme config={props} />
 			case 'preview': return <PreviewTheme config={props} />
+			case 'stylish': return <StylishTheme config={props} />
+			case 'mobile': return <MobileMockupTheme config={props} />
+			case 'background': return <BackgroundTheme config={props} />
 
 			default: return <BasicTheme config={props} />
 		}
@@ -35,7 +41,7 @@ const CoverImage = (props) => {
 
 
 	return (
-		<div>
+		<div className="md:w-full md:scale-100 scale-50">
 			{selectTheme(theme)}		</div>
 	);
 

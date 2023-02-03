@@ -1,6 +1,8 @@
-<p align="center">
- <img width="300px" src="https://user-images.githubusercontent.com/47467468/90390293-b8eeb280-e0a8-11ea-82cf-9efa89773094.png" align="center" alt="" />
-<p align="center">
+
+
+## Coverview
+Creating cover images for your blogs is now super easy.
+<p>
 <a href="https://github.com/rutikwankhade/CoverView"><img src="https://img.shields.io/github/stars/rutikwankhade/CoverView.svg?style=social&label=Star"></a>
 <a href="https://github.com/rutikwankhade/CoverView"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
 <a href="https://lbesson.mit-license.org"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
@@ -10,20 +12,21 @@
 </p>
 
 
- <p align="center">🛠 Create awesome cover images for your blog posts quickly.</p>
-<p align="center">
 
-<img src="https://user-images.githubusercontent.com/47467468/148546132-2b608b8c-ab27-4888-9898-e0b489142c47.png" height="auto" width="800px"  margin="20px">
 
-</p>
-</p>
+<img src="https://user-images.githubusercontent.com/47467468/175771056-bf7fa9a0-801b-4887-80b5-169735923d64.png" height="auto" width="800px"  margin="20px">
+
+
+
  
 
 
 ## ⚡ Features
-- 🛠 Create cover images for your blogs quickly and easily
+- 🚀 super fast and easy to use
+- 🌈 4 different themes, multiple fonts
+- 🌠 100+ dev icons with option to upload custom icon
 - ✨ 15+ different background patterns
-- 💾 Download cover images in `.png` as well as `.jpeg` format
+- 💾 Cover size based on blogging platform (i.e hashnode and dev)
 
 ## 👩‍💻 Developing
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
