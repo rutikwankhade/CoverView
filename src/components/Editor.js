@@ -18,19 +18,20 @@ import theme7 from '../assets/images/theme7.webp'
 
 
 
+const defaultIcon = { 'label': 'react', 'value': 'react' }
+
 const defaultSettings = {
 	title: "A begineers guide to frontend development",
 	bgColor: "#949ee5",
 	pattern: "",
 	download: "PNG",
 	author: 'Rutik Wankhade',
-	icon: { 'label': 'react', 'value': 'react' },
-	devIconOptions: [],
+	icon: defaultIcon,
+	devIconOptions: [defaultIcon],
 	font: 'font-Anek',
 	theme: 'background',
 	customIcon: '',
-	platform: 'hashnode'
-
+  platform: 'hashnode'
 };
 
 const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/devicon.json"
