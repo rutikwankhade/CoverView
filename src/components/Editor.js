@@ -25,7 +25,7 @@ const defaultSettings = {
 	download: "PNG",
 	author: 'Rutik Wankhade',
 	icon: { 'label': 'react', 'value': 'react' },
-	devIconOptions: {},
+	devIconOptions: [],
 	font: 'font-Anek',
 	theme: 'background',
 	customIcon: '',
