@@ -175,7 +175,7 @@ class Editor extends React.Component {
 
 
 											<div className="flex items-center">
-												<div className="flex flex-col m-2 w-1/2">
+												{/* <div className="flex flex-col m-2 w-1/2">
 													<span className="font-medium pb-1">Pattern</span>
 													<select
 														onChange={(e) => this.setState({ pattern: e.target.value })}
@@ -202,9 +202,9 @@ class Editor extends React.Component {
 														<option>jupiter</option>
 														<option>sun</option>
 													</select>
-												</div>
+												</div> */}
 
-												<div className="flex flex-col m-2 w-1/2">
+												<div className="flex flex-col m-2 w-full">
 													<span className="font-medium pb-1">Platform</span>
 
 													<select

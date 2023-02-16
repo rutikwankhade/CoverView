@@ -46,7 +46,7 @@ const ComponentToImg = (props) => {
 			}
 		})
 
-		console.log(data)
+		// console.log(data)
 		await saveImage(data);
 
 

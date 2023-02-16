@@ -6,10 +6,9 @@ const BasicTheme = ({ config }) => {
 
     return (
         <div className="p-4 bg-white ">
-            <div className={`overflow-y-hidden flex  text-gray-800 items-center ${pattern} ${platform} `}
+            <div className={`overflow-y-hidden flex  text-gray-800 items-center h-full ${platform} ${pattern} `}
                 style={{ backgroundColor: bgColor }}
             >
-
 
                 <div className={`${font} bg-white md:w-10/12  m-auto flex flex-col pt-12 rounded-xl`}>
                     <div className="px-12">
@@ -34,7 +33,8 @@ const BasicTheme = ({ config }) => {
                         <h2 className="text-xl ml-auto mr-2 font-semibold">{author}</h2>
 
                     </div>
-                </div>
+                    
+                    </div>
 
             </div>
 
