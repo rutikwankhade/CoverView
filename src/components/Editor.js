@@ -31,7 +31,7 @@ const defaultSettings = {
 	font: 'font-Anek',
 	theme: 'background',
 	customIcon: '',
-  platform: 'hashnode'
+	platform: 'hashnode'
 };
 
 const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/devicon.json"
@@ -54,7 +54,10 @@ class Editor extends React.Component {
 		})
 	}
 	handleReset = () => {
-		this.setState(defaultSettings);
+		this.setState({
+			...defaultSettings,
+			devIconOptions: this.state.devIconOptions,
+		});
 	};
 
 	getRandomTheme = (theme, Pattern) => {
