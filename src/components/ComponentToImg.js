@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import "./CoverImage.css";
 import { ImgContext } from "../utils/ImgContext";
 import unsplash from "../utils/unsplashConfig";
-import domtoimage from "dom-to-image";
+import html2canvas from 'html2canvas'
 
 const ComponentToImg = (props) => {
 
@@ -35,16 +35,16 @@ const ComponentToImg = (props) => {
 		// console.log(element)
 		// console.log(element.offsetHeight)
 
-		let data = await domtoimage.toPng(componentRef.current, {
-			height: element.offsetHeight * 2,
-			width: element.offsetWidth * 2,
-			style: {
-				transform: "scale(" + 2 + ")",
-				transformOrigin: "top left",
-				width: element.offsetWidth + "px",
-				height: element.offsetHeight + "px",
-			}
+		let data = await html2canvas(element, {
+			useCORS: true,
+			scale: 2,
+			allowTaint: true,
+			height: element.offsetHeight,
+			width: element.offsetWidth,
 		})
+			.then(canvas => {
+				return canvas.toDataURL('image/png');
+			});
 
 		// console.log(data)
 		await saveImage(data);
