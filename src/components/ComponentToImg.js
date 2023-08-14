@@ -38,6 +38,7 @@ const ComponentToImg = (props) => {
 		let data = await html2canvas(element, {
 			useCORS: true,
 			scale: 2,
+			backgroundColor: null,
 			allowTaint: true,
 			height: element.offsetHeight,
 			width: element.offsetWidth,
