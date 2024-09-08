@@ -13,6 +13,11 @@
     height:36rem;
 }
 
+/* Solve the problem of poor display effect caused by the height of the cover image exceeding the range under the first theme */
+.h-max.w-full {
+    height: 420px;
+}
+
 .h-99{
     height:35rem;
 }
