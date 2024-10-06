@@ -3,7 +3,7 @@ import unsplash from "../../utils/unsplashConfig";
 import { ImgContext } from '../../utils/ImgContext';
 
 const StylishTheme = ({ config }) => {
-    const { title, author, font, icon, customIcon, platform,bgColor } = config;
+    const { title, author, font, icon, customIcon, bgColor } = config;
 
     // const [image, setImage] = useState({})
 
@@ -65,14 +65,14 @@ const StylishTheme = ({ config }) => {
 
 
     return (
-        <div className=" bg-white rounded">
+        <div className=" bg-white w-full h-full">
 
 
-            <div className={` overflow-y-hidden flex flex-col rounded ${platform}`}
-            style={{ backgroundColor: bgColor }}
+            <div className={` overflow-y-hidden flex flex-col`}
+                style={{ backgroundColor: bgColor }}
             >
 
-                <div className="flex flex-row  items-center bg-white  justify-center m-4 ">
+                <div className="flex flex-row  items-center bg-white  justify-center">
 
                     <div className="h-full w-1/2  bg-white rounded-l-xl">
                         <div className={`${font} px-12 justify-center text-left rounded-xl h-full p-4 flex flex-col`}>
@@ -101,11 +101,11 @@ const StylishTheme = ({ config }) => {
                             <div className='relative flex group'>
 
                                 <div className="h-96 w-96 ">
-                                    
-                              
+
+
                                     <img src={unsplashImage.url && unsplashImage.url} className=" object-cover h-96 w-96  " alt="preview" />
- </div>
-                               
+                                </div>
+
                                 <button
                                     onClick={() => setUnsplashImage('')}
                                     className="absolute  top-4 right-2 cursor-pointer">

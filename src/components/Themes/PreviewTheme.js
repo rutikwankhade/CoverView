@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 
 const PreviewTheme = ({ config }) => {
-    const { bgColor, platform, title, font } = config;
+    const { bgColor, title, font } = config;
 
     const [image, setImage] = useState()
 
     return (
-        <div className="p-4 bg-white">
+        <div className="w-full h-full bg-white">
 
 
-            <div className={`overflow-y-hidden flex flex-col rounded px-4 pt-4 ${platform}`}
+            <div className={`overflow-y-hidden flex flex-col px-4 pt-4 w-full h-full`}
                 style={{ backgroundColor: bgColor }}
             >
-
 
                 <h1 className={`${font} text-2xl md:text-3xl p-10 text-white font-bold text-center`}>{title}</h1>
 
@@ -28,7 +27,6 @@ const PreviewTheme = ({ config }) => {
 
                         </button>
                     </div>
-
 
 
                     {image ?
@@ -48,12 +46,7 @@ const PreviewTheme = ({ config }) => {
                     }
                 </div>
 
-
-
-
-
             </div>
-
 
         </div>
     );

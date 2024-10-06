@@ -2,11 +2,11 @@ import React from 'react';
 
 
 const BasicTheme = ({ config }) => {
-    const { title, bgColor, pattern, author, icon, font, customIcon,platform } = config;
+    const { title, bgColor, pattern, author, icon, font, customIcon } = config;
 
     return (
-        <div className="p-4 bg-white ">
-            <div className={`overflow-y-hidden flex  text-gray-800 items-center h-full ${platform} ${pattern} `}
+        <div className=" bg-white w-full h-full ">
+            <div className={`overflow-y-hidden flex  text-gray-800 items-center h-full ${pattern} `}
                 style={{ backgroundColor: bgColor }}
             >
 
@@ -33,8 +33,8 @@ const BasicTheme = ({ config }) => {
                         <h2 className="text-xl ml-auto mr-2 font-semibold">{author}</h2>
 
                     </div>
-                    
-                    </div>
+
+                </div>
 
             </div>
 
