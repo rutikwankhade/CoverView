@@ -115,17 +115,20 @@ class Editor extends React.Component {
 													className="outline-none focus:outline-none items-center text-lg text-gray-700"
 												/>
 											</div>
+											<div className="w-full">
 
-											{this.state.icon.label === 'custom' ?
-												<div className="flex items-center justify-center m-2">
-													<input type="file"
-														className="focus:outline-none text-lg cursor-pointer bg-white rounded border"
-														onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
-													/>
-												</div>
-												:
-												<div></div>
-											}
+												{this.state.icon.label === 'custom' ?
+													<div className="flex items-center justify-center w-72 mx-auto">
+														<input type="file"
+															className="focus:outline-none w-full text-lg cursor-pointer bg-white rounded border"
+															onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
+														/>
+													</div>
+													:
+													<div></div>
+												}
+
+											</div>
 
 											<div className="flex items-center">
 
