@@ -6,14 +6,8 @@ import RandomTheme from './RandomTheme';
 import { ImgProvider } from '../utils/ImgContext'
 import Header from "./Header";
 
-import theme1 from '../assets/images/theme1.webp'
-import theme2 from '../assets/images/theme2.webp'
-import theme3 from '../assets/images/theme3.webp'
-import theme4 from '../assets/images/theme4.webp'
-import theme5 from '../assets/images/theme5.webp'
-import theme6 from '../assets/images/theme6.webp'
-import theme7 from '../assets/images/theme7.webp'
 
+import { THEMES } from "../utils/constants";
 
 const defaultIcon = { 'label': 'react', 'value': 'react' }
 
@@ -38,7 +32,7 @@ class Editor extends React.Component {
 
 	state = defaultSettings;
 	componentDidMount() {
-		console.log("Mount")
+		// console.log("Mount")
 		fetch(devIconsUrl).then(r => r.json()).then(data => {
 			data.push({ name: 'custom' })
 			this.setState({ devIconOptions: data.map(item => ({ 'value': item.name, 'label': item.name })) })
@@ -257,38 +251,21 @@ class Editor extends React.Component {
 									</div>
 								</div>
 
-								<div className="  flex gap-2 flex-wrap  overflow-y-scroll ">
+								<div className="  flex gap-2 flex-wrap justify-center overflow-y-scroll ">
 
-									<img src={theme7} alt="basic theme"
-										onClick={(e) => this.setState({ theme: "background" })}
-										className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 "
-									/>
-									<img src={theme1} alt="basic theme"
-										onClick={(e) => this.setState({ theme: "basic" })}
-										className=" cursor-pointer border-gray-100 hover:scale-105 duration-300 hover:border-gray-200 border"
-									/>
-									<img src={theme2} alt="basic theme"
-										onClick={(e) => this.setState({ theme: "modern" })}
-										className="cursor-pointer border-gray-100 hover:scale-105 hover:border-gray-200 duration-300 border "
-									/>
-									<img src={theme3} alt="basic theme"
-										onClick={(e) => this.setState({ theme: "stylish" })}
-										className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300"
-									/>
+									{
+										THEMES.map(themePlaceholder => (
+											<div className={`${themePlaceholder.label === this.state.theme ? 'border-blue-400 border-2' : ''}`} key={themePlaceholder.label}>
 
-									<img src={theme5} alt="basic theme"
-										onClick={(e) => this.setState({ theme: "outline" })}
-										className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300"
-									/>
 
-									<img src={theme4} alt="basic theme"
-										onClick={(e) => this.setState({ theme: "preview" })}
-										className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300"
-									/>
-									<img src={theme6} alt="basic theme"
-										onClick={(e) => this.setState({ theme: "mobile" })}
-										className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300"
-									/>
+												<img src={themePlaceholder.preview} alt={themePlaceholder.label}
+													onClick={(e) => this.setState({ theme: themePlaceholder.label })}
+													className=" cursor-pointer border border-gray-100 hover:border-gray-200 hover:scale-105 duration-300 "
+												/>
+											</div>
+										))
+									}
+
 								</div>
 
 
