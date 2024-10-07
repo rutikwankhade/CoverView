@@ -27,7 +27,7 @@ const BackgroundTheme = ({ config }) => {
                                 </div>
 
 
-                                <div className=" backdrop-blur-sm h-full bg-gray-800/60 absolute top-0 right-0 left-0 ">
+                                <div className="h-full bg-gray-800/60 absolute top-0 right-0 left-0 ">
                                     <button
                                         onClick={() => setUnsplashImage('')}
                                         className="absolute  top-2 right-2 cursor-pointer">
