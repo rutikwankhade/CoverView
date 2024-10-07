@@ -3,12 +3,12 @@ import React from 'react';
 
 const ModernTheme = ({ config }) => {
 
-    const { title, bgColor, pattern, author, icon, font, customIcon, platform } = config;
+    const { title, bgColor, pattern, author, icon, font, customIcon } = config;
 
     return (
-        <div className="w-full p-4 bg-white ">
-            <div className=" overflow-y-hidden w-full flex  items-center">
-                <div className={`  h-full w-full rounded-xl  p-4 text-gray-800 flex  items-center ${pattern} ${platform}`}
+        <div className="w-full h-full bg-white ">
+            <div className=" overflow-y-hidden w-full h-full flex  items-center">
+                <div className={`  h-full w-full p-4 text-gray-800 flex  items-center ${pattern} `}
                     style={{ backgroundColor: bgColor }}
                 >
 

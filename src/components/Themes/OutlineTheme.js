@@ -1,12 +1,12 @@
 import React from 'react';
 const OutlineTheme = ({ config }) => {
-    const { title, bgColor, author, icon, font, customIcon, platform } = config;
+    const { title, bgColor, author, icon, font, customIcon } = config;
 
     return (
-        <div className="p-4 bg-white ">
+        <div className="w-full h-full bg-white ">
 
 
-            <div className={`overflow-y-hidden rounded flex flex-col text-gray-800 px-10  ${platform} `}
+            <div className={`overflow-y-hidden flex flex-col text-gray-800 px-10 h-full`}
                 style={{ backgroundColor: bgColor }}
             >
 
