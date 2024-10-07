@@ -72,7 +72,7 @@ const BackgroundTheme = ({ config }) => {
                             :
                             <div className="flex flex-col p-2  bg-white items-center justify-center">
 
-                                <UnsplashSearch />
+                                <UnsplashSearch largeImgPreview />
 
                             </div>
 

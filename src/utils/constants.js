@@ -15,16 +15,16 @@ export const THEMES = [
         preview: backgroundThemePlaceholder
     },
     {
+        label: 'stylish',
+        preview: stylishThemePlaceholder
+    },
+    {
         label: 'basic',
         preview: basicThemePlaceholder
     },
     {
         label: 'modern',
         preview: modernThemePlaceholder
-    },
-    {
-        label: 'stylish',
-        preview: stylishThemePlaceholder
     },
     {
         label: 'outline',

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import unsplash from '../utils/unsplashConfig';
 import { ImgContext } from '../utils/ImgContext';
 
-const UnsplashSearch = () => {
+const UnsplashSearch = ({ largeImgPreview }) => {
 
     const [imageList, setImageList] = useState([]);
     const [searchText, setSearchText] = useState('setup');
@@ -85,15 +85,16 @@ const UnsplashSearch = () => {
                 <div className="overflow-y-scroll w-full overflow-x-hidden h-max justify-center flex flex-wrap">
                     {
                         imageList.map(image => {
-                            return <div className="rounded-lg relative cursor-pointer m-1  w-60 "
+                            return <div key={image.id}
+                                className={`rounded-lg relative cursor-pointer m-1 ${largeImgPreview ? ' h-44 w-60' : 'h-24 w-40'
+                                    }`}
                             >
                                 <span className="font-Inter top-2 left-2 absolute text-sm font-semibold text-white opacity-50 ">Click to Select</span>
                                 <img src={image.urls.regular}
-                                    key={image.id}
                                     alt={image.alt_description}
                                     onClick={() => selectImage(image)
                                     }
-                                    className="rounded-lg object-cover h-44 w-full"
+                                    className="rounded-lg object-cover h-full w-full"
                                 />
                             </div>
                         })
