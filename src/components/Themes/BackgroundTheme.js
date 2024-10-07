@@ -1,82 +1,23 @@
-import React, { useState, useEffect, useContext } from 'react';
-import unsplash from "../../utils/unsplashConfig";
+import React, { useContext } from 'react';
 import { ImgContext } from '../../utils/ImgContext';
+import UnsplashSearch from '../UnsplashSearch';
 
 const BackgroundTheme = ({ config }) => {
-    const { title, author, font, icon, customIcon, platform, bgColor } = config;
-
-    // const [image, setImage] = useState({})
-
-    const [imageList, setImageList] = useState([]);
-    const [searchText, setSearchText] = useState('dev');
-
+    const { title, author, font, icon, customIcon, bgColor } = config;
     const { unsplashImage, setUnsplashImage } = useContext(ImgContext);
-
-    const searchImages = () => {
-
-        unsplash.search
-            .getPhotos({
-                query: searchText,
-                page: 1,
-                per_page: 30,
-                // orientation:'portrait'
-
-
-            })
-            .then(response => {
-                // console.log(response.response.results);
-                setImageList(response.response.results)
-            });
-    }
-
-    useEffect(() => {
-
-        unsplash.search
-            .getPhotos({
-                query: 'setup',
-                page: 1,
-                per_page: 30
-
-            })
-            .then(response => {
-                // console.log(response.response.results);
-                setImageList(response.response.results)
-            });
-    }, [])
-
-    const selectImage = (image) => {
-        setUnsplashImage({
-            url: image.urls.regular,
-            name: image.user.name,
-            avatar: image.user.profile_image.small,
-            profile: `${image.user.links.html}?utm_source=https://coverview.vercel.app&utm_medium=referral`,
-            downloadLink: image.links.download_location
-
-        })
-
-
-    }
-
-    const handleSearchSubmit = (e) => {
-        e.preventDefault();
-        searchImages(searchText);
-
-    }
 
 
     return (
-        <div className=" bg-white rounded">
+        <div className=" bg-white ">
 
 
-            <div className={` overflow-y-hidden flex flex-col rounded ${platform}`}
+            <div className={` overflow-y-hidden flex flex-col`}
                 style={{ backgroundColor: bgColor }}
             >
 
-                <div className="flex flex-row  items-center bg-white  justify-center  ">
-
+                <div className="flex flex-row  items-center bg-white  justify-center ">
 
                     <div className="w-full">
-
 
                         {unsplashImage ?
                             <div className='relative flex group'>
@@ -131,37 +72,8 @@ const BackgroundTheme = ({ config }) => {
                             :
                             <div className="flex flex-col p-2  bg-white items-center justify-center">
 
-                                <div className="flex items-center w-full px-6 ">
-                                    <div className="text-lg font-semibold text-gray-700">Click on any image to select</div>
-                                <form onSubmit={(e) => handleSearchSubmit(e)} className=" ml-auto mr-2 w-1/2 flex bg-gray-50 rounded-full border mb-2">
-                                    <input type="text"
-                                        value={searchText}
-                                        placeholder="Search image"
-                                        className="focus:outline-none w-full text-lg bg-gray-50  p-1 px-4  rounded-full border border-gray-50"
-                                        onChange={(e) => setSearchText(e.target.value)}
-                                    />
+                                <UnsplashSearch />
 
-                                    <button type="submit" onClick={() => searchImages(searchText)}>
-                                        <svg className="w-9 h-9 ml-auto mr-1 p-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                                    </button>
-                                </form>
-
-                                    </div>
-
-
-                                <div className="overflow-y-scroll overflow-x-hidden h-96 justify-center flex flex-wrap">
-                                    {
-                                        imageList.map(image => {
-                                            return <img src={image.urls.regular}
-                                                key={image.id}
-                                                alt={image.alt_description}
-                                                className="rounded m-2 cursor-pointer w-5/12 object-cover h-40"
-                                                onClick={() => selectImage(image)
-                                                }
-                                            />
-                                        })
-                                    }
-                                </div>
                             </div>
 
                         }
