@@ -29,7 +29,7 @@ const WallOfLove = () => {
                 scrolling="no"
                 width="100%"
                 height="100%"
-                className="w-9/12 h-screen  mx-auto"
+                className="w-9/12 min-h-screen py-4 mx-auto"
             >
             </iframe>
 

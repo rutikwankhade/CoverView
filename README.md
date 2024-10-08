@@ -14,7 +14,8 @@ Creating cover images for your blogs is now super easy.
 
 
 
-<img src="https://user-images.githubusercontent.com/47467468/175771056-bf7fa9a0-801b-4887-80b5-169735923d64.png" height="auto" width="800px"  margin="20px">
+<img src="https://gist.github.com/user-attachments/assets/5b57a9fb-4791-4681-8982-9e47d7ba8ee1.png
+" height="auto" width="800px"  margin="20px">
 
 
 
@@ -23,9 +24,9 @@ Creating cover images for your blogs is now super easy.
 
 ## ⚡ Features
 - 🚀 super fast and easy to use
-- 🌈 4 different themes, multiple fonts
+- ✨ unsplash integration to search images
+- 🌈 7 different themes, multiple fonts
 - 🌠 100+ dev icons with option to upload custom icon
-- ✨ 15+ different background patterns
 - 💾 Cover size based on blogging platform (i.e hashnode and dev)
 
 ## 👩‍💻 Developing
@@ -52,10 +53,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 
 ## 🙏 Acknowledgments
-- [react-component-export-image](https://www.npmjs.com/package/react-component-export-image)
+- [dom-to-image](https://github.com/tsayen/dom-to-image)
 - [Hero Patterns](https://www.heropatterns.com/)
 - [Devicons](https://github.com/devicons/devicon)
 
-Don't forget to leave a ⭐ if you found this useful.
+Don't forget to leave a ⭐ if you found this useful. Also checkout more products i built at [rutik.dev](https://rutik.dev)
 
 
