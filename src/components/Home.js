@@ -40,7 +40,7 @@ const Home = () => {
                         Creating cover images for your blogs is now super easy
                     </h1>
                     <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 hover:bg-gray-800 group rounded-full px-4 md:px-8 text-white md:text-2xl text-lg mx-auto font-Nunito font-semibold md:p-4 p-2">
-                        <span className="md:text-2xl text-lg">Create Now &rarr;</span>
+                        <span className="md:text-2xl font-bold text-lg">Create Now &rarr;</span>
                     </Link>
                 </div>
 
@@ -78,7 +78,7 @@ const Home = () => {
 
 
 
-            <div className="md:my-32  my-10 mx-auto">
+            <div className="md:mt-32  my-t0 mx-auto">
 
                 <div className=" mx-auto flex flex-col md:w-10/12">
                     <div className="md:w-7/12 text-center mx-auto ">
@@ -184,31 +184,37 @@ const Home = () => {
 
                 <WallOfLove />
 
-                <div className="md:w-8/12 mx-auto pt-24 p-4">
-                    <h2 className="text-6xl text-center font-Anek font-bold text-gray-700 mx-auto">Simple, quick, and easy to use</h2>
-                    <p className="text-2xl text-center py-4 md:w-8/12 mx-auto">So you can focus on writing your blog and never worry about those cover images.</p>
-                    <Link to="/editor" >
-                        <button className="flex mx-auto my-4 hover:translate-x-2 duration-300 bg-gray-700  rounded-full px-6 text-white text-xl font-Inter font-semibold p-4">It's Free! Try now &rarr;</button>
-                    </Link>
+                <div className="bg-indigo-400  text-white">
+                    <div className="md:w-8/12 mx-auto pt-32 p-4">
+                        <h2 className="text-6xl text-center font-Nunito font-bold  mx-auto">Simple, quick, and easy to use</h2>
+                        <p className="text-2xl font-Nunito text-center py-4 md:w-8/12 mx-auto">So you can focus on writing your blog and never worry about those cover images.</p>
+                        <Link to="/editor" >
+                            <button className="flex mx-auto my-4 hover:translate-x-2 duration-300 bg-gray-700  rounded-full  text-white text-xl font-Nunito font-semibold p-4 px-8">It's completely Free! Try Now &rarr;</button>
+                        </Link>
+                    </div>
+
+                    <footer className=" p-10 flex md:flex-row flex-col font-Inter md:px-20 justify-center items-center">
+                        <div className="md:w-1/2 flex flex-col">
+                            <span className="text-lg">Made with 💛 by <a href="https://rutik.dev" className="font-semibold underline decoration-wavy underline-offset-4" target="_blank" rel="noreferrer">Rutik Wankhade</a></span>
+                        </div>
+
+                        <div className="md:text-lg text-sm flex flex-wrap  ">
+                            <Link to="/faq" className="m-2 hover:font-semibold">How to use</Link>
+                            <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="m-2 hover:font-semibold">Star on Github</a>
+                            <a href="https://www.buymeacoffee.com/rutikwankhade" target="_blank" rel="noreferrer" className="m-2 hover:font-semibold">Buy me a coffee</a>
+                        </div>
+                    </footer>
+
                 </div>
+
+
 
             </div>
 
 
 
 
-            <footer className="bg-white p-10 flex md:flex-row flex-col font-Inter md:px-20 justify-center items-center">
-                <div className="md:w-1/2 flex flex-col">
-                    <span className="text-lg">Made with 💛 by <a href="https://twitter.com/WankhadeRutik" className="font-semibold" target="_blank" rel="noreferrer">Rutik Wankhade</a></span>
-                    <span className="text-lg font-Nunito">checkout <a href="https://rutikwankhade.dev" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-pink-400">more cool stuff</a> I built</span>
-                </div>
 
-                <div className="md:text-lg text-sm flex flex-wrap  ">
-                    <Link to="/faq" className="m-2 hover:font-semibold">📌 How to use</Link>
-                    <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="m-2 hover:font-semibold">⭐ Star on Github</a>
-                    <a href="https://www.buymeacoffee.com/rutikwankhade" target="_blank" rel="noreferrer" className="m-2 hover:font-semibold">🥤 Buy me a coffee</a>
-                </div>
-            </footer>
 
         </div>
     );
