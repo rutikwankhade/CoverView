@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from '../assets/icons/logo.png'
 import { Link } from 'react-router-dom';
-import cover1 from '../assets/images/cover1.webp'
-import cover2 from '../assets/images/cover2.webp'
-import cover3 from '../assets/images/cover3.webp'
+import cover1 from '../assets/images/cover1.png'
+import cover2 from '../assets/images/cover2.png'
+import cover3 from '../assets/images/cover3.png'
 import cover4 from '../assets/images/cover4.webp'
 
 
@@ -30,40 +30,41 @@ const Home = () => {
                         <h1 className="font-semibold md:text-xl text-lg font-Inter">Coverview</h1>
                     </div>
 
-                    <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-xl md:px-4 text-white md:text-sm text-xs ml-auto mr-4 font-Inter font-semibold p-2">
+                    <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-xl px-2 md:px-4 text-white md:text-sm text-xs ml-auto mr-4 font-Inter font-semibold p-2">
                         <span className="text-sm">⭐ Star on Github</span>
                     </a>
                 </div>
 
                 <div className="  mx-auto md:px-20 py-6   flex flex-col items-center">
-                    <h1 className="md:w-7/12 m-10 text-center md:text-5xl text-4xl font-extrabold text-gray-700 font-Nunito">
+                    <h1 className="md:w-7/12 m-10 text-center md:text-5xl text-4xl font-extrabold text-gray-700 font-Anek">
                         Creating cover images for your blogs is now super easy
                     </h1>
-                    <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 hover:bg-gray-800 group rounded-full px-4 md:px-8 text-white md:text-2xl text-lg mx-auto font-Nunito font-semibold md:p-4 p-2">
-                        <span className="md:text-2xl font-bold text-lg">Create Now &rarr;</span>
+                    <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 hover:bg-gray-800 group rounded-full border-4 border-gray-100 px-6 md:px-8 text-white md:text-2xl text-base mx-auto font-Poppins font-semibold md:p-4 p-2">
+                        <span className="md:text-2xl font-semibold text-lg">Create Now</span>
                     </Link>
+               
                 </div>
 
 
 
 
-                <div className=" temple flex flex-row items-center justify-center mx-auto md:w-10/12">
+                <div className="  flex flex-row items-center justify-center mx-auto md:w-10/12">
 
-                    <div className="m-4 transform -translate-y-20 border animate hover:scale-105 hover:-rotate-3  rotate-6 duration-100 bg-white p-2 shadow-sm w-1/5 rounded-lg flex flex-col ">
+                    <div className="m-4 transform -translate-y-20 border animate hover:scale-105 hover:-rotate-3  rotate-6 duration-100 bg-white p-2 shadow-lg shadow-gray-50 w-1/5 rounded-lg flex flex-col ">
                         <img src={cover2} className="border border-gray-100 rounded mb-2" alt="cover1" />
                         <p className="animate animate-pulse bg-gray-50 md:h-5 h-2 rounded mb-2"></p>
                         <p className="animate animate-pulse w-8/12 bg-gray-50 md:h-5 h-2 rounded mb-2"></p>
 
                     </div>
 
-                    <div className="m-4 transform hover:scale-105 hover:rotate-3 -rotate-2  duration-300 bg-white p-4 shadow-sm w-1/3 rounded-lg flex flex-col ">
+                    <div className="m-4 transform hover:scale-105 hover:rotate-3 -rotate-2  duration-300 bg-white p-4 shadow-lg shadow-gray-50 w-1/3 rounded-lg flex flex-col ">
                         <img src={cover1} className="rounded border border-gray-100 mb-2" alt="cover-2" />
                         <p className="animate animate-pulse bg-gray-50 md:h-6 h-3 rounded mb-2"></p>
                         <p className="animate animate-pulse w-8/12 bg-gray-50 md:h-6 h-3 rounded mb-2"></p>
 
                     </div>
 
-                    <div className="m-4 transform -translate-y-20 border animate hover:scale-105 hover:rotate-3 -rotate-6 duration-100 bg-white p-2 shadow-sm w-1/5 rounded-lg flex flex-col ">
+                    <div className="m-4 transform -translate-y-20 border animate hover:scale-105 hover:rotate-3 -rotate-6 duration-100 bg-white p-2 sshadow-lg shadow-gray-50 w-1/5 rounded-lg flex flex-col ">
                         <img src={cover3} className="rounded border border-gray-100 mb-2" alt="cover3" />
                         <p className="animate animate-pulse bg-gray-50 md:h-5 h-2 rounded mb-2"></p>
                         <p className="animate animate-pulse w-8/12 bg-gray-50 md:odd:h-5 h-2 rounded mb-2"></p>
