@@ -30,13 +30,13 @@ const Home = () => {
                         <h1 className="font-semibold md:text-xl text-lg font-Inter">Coverview</h1>
                     </div>
 
-                    <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="hover:translate-x-2 duration-300 bg-gray-700 group rounded-xl px-2 md:px-4 text-white md:text-sm text-xs ml-auto mr-4 font-Inter font-semibold p-2">
-                        <span className="text-sm">⭐ Star on Github</span>
+                    <a href="https://github.com/rutikwankhade/CoverView" target="_blank" rel="noreferrer" className="hover:translate-x-2 flex items-center justify-center duration-300 bg-gray-700 group rounded-xl   text-white  ml-auto mr-4 font-Inter font-semibold ">
+                        <span className="md:text-sm text-xs px-2 md:px-4 py-1 md:py-2">⭐ Star on Github</span>
                     </a>
                 </div>
 
                 <div className="  mx-auto md:px-20 py-6   flex flex-col items-center">
-                    <h1 className="md:w-7/12 m-10 text-center md:text-5xl text-4xl font-extrabold text-gray-700 font-Anek">
+                    <h1 className="md:w-7/12 md:mx-10 mx-6 my-10 text-center md:text-5xl text-4xl font-extrabold text-gray-700 font-Anek">
                         Creating cover images for your blogs is now super easy
                     </h1>
                     <Link to="/editor" className="hover:translate-x-2 duration-300 bg-gray-700 hover:bg-gray-800 group rounded-full border-4 border-gray-100 px-6 md:px-8 text-white md:text-2xl text-base mx-auto font-Poppins font-semibold md:p-4 p-2">
@@ -83,11 +83,11 @@ const Home = () => {
 
                 <div className=" mx-auto flex flex-col md:w-10/12">
                     <div className="w-full text-center mx-auto p-10 md:p-4 ">
-                        <h2 className="md:text-5xl md:w-9/12 mx-auto text-2xl px-4 font-bold font-Anek text-gray-700">Why cover images are more important than you think?</h2>
+                        <h2 className="md:text-5xl md:w-9/12 mx-auto text-3xl px-4 font-bold font-Anek text-gray-700">Why cover images are more important than you think?</h2>
 
                     </div>
 
-                    <div className="flex md:flex-row flex-col justify-center gap-6 mx-auto">
+                    <div className="flex md:flex-row flex-col justify-center md:gap-6 gap-2 mx-auto">
 
                         <div className=" p-10  rounded-xl  shadow-gray-100 flex flex-col gap-4 md:w-4/12 ">
                             <div className=" my-2 md:mx-0 mx-auto bg-purple-300 h-24 w-24 p-4 flex justify-center items-center rounded-full">
@@ -190,7 +190,7 @@ const Home = () => {
                         <h2 className="md:text-6xl text-4xl text-center font-Anek font-bold  mx-auto">Simple, quick, and easy to use</h2>
                         <p className="md:text-2xl text-lg font-Inter text-gray-300 text-center py-4 md:w-8/12 mx-auto">So you can focus on writing your blog and never worry about those cover images.</p>
                         <Link to="/editor" >
-                            <button className="flex mx-auto my-4 hover:translate-x-2 duration-300 bg-indigo-500 hover:bg-indigo-600  rounded-full  text-white md:text-xl text-base font-Nunito font-semibold p-4 px-8">It's completely Free! Try Now &rarr;</button>
+                            <button className="flex mx-auto my-4 hover:translate-x-2 duration-300 bg-indigo-500 hover:bg-indigo-600  rounded-full  text-white md:text-xl text-base font-Nunito font-semibold p-4 px-8">It's Free! Try Now &rarr;</button>
                         </Link>
                     </div>
 
