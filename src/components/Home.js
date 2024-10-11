@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from '../assets/icons/logo.png'
 import { Link } from 'react-router-dom';
-import cover1 from '../assets/images/cover1.png'
-import cover2 from '../assets/images/cover2.png'
-import cover3 from '../assets/images/cover3.png'
+import cover1 from '../assets/images/cover1.webp'
+import cover2 from '../assets/images/cover2.webp'
+import cover3 from '../assets/images/cover3.webp'
 import cover4 from '../assets/images/cover4.webp'
 
 
