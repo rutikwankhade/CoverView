@@ -82,7 +82,7 @@ const UnsplashSearch = ({ largeImgPreview }) => {
                 </div>
 
 
-                <div className="overflow-y-scroll w-full overflow-x-hidden h-max justify-center flex flex-wrap">
+                <div className="overflow-y-scroll w-full pb-12 overflow-x-hidden h-max justify-center flex flex-wrap">
                     {
                         imageList.map(image => {
                             return <div key={image.id}
