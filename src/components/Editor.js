@@ -34,7 +34,7 @@ class Editor extends React.Component {
 	componentDidMount() {
 		// console.log("Mount")
 		fetch(devIconsUrl).then(r => r.json()).then(data => {
-			data.push({ name: 'custom' })
+			data.unshift({ name: 'upload your own' })
 			this.setState({ devIconOptions: data.map(item => ({ 'value': item.name, 'label': item.name })) })
 		})
 	}
@@ -111,10 +111,10 @@ class Editor extends React.Component {
 											</div>
 											<div className="w-full">
 
-												{this.state.icon.label === 'custom' ?
-													<div className="flex items-center justify-center w-72 mx-auto">
+												{this.state.icon.label === 'upload your own' ?
+													<div className="flex items-center justify-center w-64 mx-auto">
 														<input type="file"
-															className="focus:outline-none w-full text-lg cursor-pointer bg-white rounded border"
+															className="focus:outline-none w-full text-sm cursor-pointer bg-white rounded border"
 															onChange={(e) => this.setState({ 'customIcon': URL.createObjectURL(e.target.files[0]) })}
 														/>
 													</div>
