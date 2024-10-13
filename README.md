@@ -14,7 +14,7 @@ Creating cover images for your blogs is now super easy.
 
 
 
-<img src="https://gist.github.com/user-attachments/assets/5b57a9fb-4791-4681-8982-9e47d7ba8ee1.png
+<img src="https://gist.github.com/user-attachments/assets/1d1c1833-29bc-45d6-97dd-e26c2d1019cb
 " height="auto" width="800px"  margin="20px">
 
 
