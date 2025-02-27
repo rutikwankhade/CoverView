@@ -3,7 +3,7 @@ const ImgContext = createContext();
 
 const ImgProvider = ({ children }) => {
   const [unsplashImage, setUnsplashImage] = useState();
-    
+
   return (
     <ImgContext.Provider value={{ unsplashImage, setUnsplashImage }}>
       {children}
@@ -11,4 +11,4 @@ const ImgProvider = ({ children }) => {
   );
 };
 
-export {ImgProvider, ImgContext}
+export { ImgProvider, ImgContext };
