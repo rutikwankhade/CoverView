@@ -11,13 +11,13 @@ const StylishTheme = ({ config }) => {
         <div className=" bg-white w-full h-full">
 
 
-            <div className={` overflow-y-hidden flex flex-col`}
+            <div className={`w-full h-full overflow-y-hidden flex flex-col`}
                 style={{ backgroundColor: bgColor }}
             >
 
-                <div className="flex flex-row  items-center bg-white  justify-center">
+                <div className="w-full h-full flex flex-row items-center bg-white justify-center">
 
-                    <div className="h-full w-1/2  bg-white rounded-l-xl">
+                    <div className="h-full w-1/2 bg-white rounded-l-xl">
                         <div className={`${font} px-12 justify-center text-left rounded-xl h-full p-4 flex flex-col`}>
                             <h1 className=" text-4xl font-bold text-gray-800">{title}</h1>
                             <div className="flex items-center mt-10 text-left">
@@ -41,7 +41,7 @@ const StylishTheme = ({ config }) => {
 
 
                         {unsplashImage ?
-                            <div className='relative w-full h-max flex group'>
+                            <div className='relative w-full h-full flex group'>
 
                                 <img src={unsplashImage.url && unsplashImage.url} className=" object-cover w-full h-full  " alt="preview" />
 

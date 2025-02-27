@@ -8,21 +8,21 @@ const BackgroundTheme = ({ config }) => {
 
 
     return (
-        <div className=" bg-white ">
+        <div className="w-full h-full bg-white ">
 
 
-            <div className={` overflow-y-hidden flex flex-col`}
+            <div className={`w-full h-full overflow-y-hidden flex flex-col`}
                 style={{ backgroundColor: bgColor }}
             >
 
-                <div className="flex flex-row  items-center bg-white  justify-center ">
+                <div className="w-full h-full flex flex-row items-center bg-white justify-center ">
 
-                    <div className="w-full">
+                    <div className="w-full h-full">
 
                         {unsplashImage ?
-                            <div className='relative flex group'>
+                            <div className='w-full h-full relative flex group'>
 
-                                <div className="h-max w-full ">
+                                <div className="w-full h-full">
                                     <img src={unsplashImage.url && unsplashImage.url} className=" object-cover h-full w-full  " alt="preview" />
                                 </div>
 
@@ -35,7 +35,7 @@ const BackgroundTheme = ({ config }) => {
 
                                     </button>
 
-                                    <div className={`${font} px-10 pt-32  text-left rounded-xl h-full p-4 flex flex-col`}>
+                                    <div className={`${font} px-[10%] pt-[8%] text-left rounded-xl h-full flex flex-col items-center justify-center`}>
                                         <h1 className=" md:text-5xl text-center text-2xl font-bold text-white">{title}</h1>
                                         <div className="flex flex-col items-center py-10  ">
 

@@ -3,11 +3,11 @@ import CoverImage from "./CoverImage";
 import ComponentToImg from "./ComponentToImg";
 import Select from 'react-select';
 import RandomTheme from './RandomTheme';
-import { ImgProvider } from '../utils/ImgContext'
+import {ImgProvider} from '../utils/ImgContext'
 import Header from "./Header";
 
 
-import { THEMES } from "../utils/constants";
+import {THEMES} from "../utils/constants";
 
 const defaultIcon = { 'label': 'react', 'value': 'react' }
 
@@ -22,7 +22,9 @@ const defaultSettings = {
 	font: 'font-Anek',
 	theme: 'background',
 	customIcon: '',
-	platform: 'hashnode'
+	platform: 'hashnode',
+	CoverImageWidth: '750',
+	CoverImageHeight: '750',
 };
 
 const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/devicon.json"
@@ -195,11 +197,39 @@ class Editor extends React.Component {
 														className="focus:outline-none text-gray-700 text-lg p-2 rounded border">
 														<option>hashnode</option>
 														<option>dev</option>
+														<option>custom</option>
 													</select>
 												</div>
-
 											</div>
-
+											{this.state.platform === 'custom' ? (
+												<div className="flex flex-col m-2 w-full">
+													<span className="font-medium text-sm pb-1">Platform</span>
+													<div>
+														<div>
+															<label>
+																<span
+																	className="font-medium text-sm pb-1">CoverImageWidth</span>
+																<input
+																	type="number"
+																	value={this.state.CoverImageWidth}
+																	className="focus:outline-none border text-gray-700 text-lg rounded bg-white p-2"
+																	onChange={(e) => this.setState({CoverImageWidth: e.target.value})}
+																/>
+															</label>
+															<label>
+																<span
+																	className="font-medium text-sm pb-1">CoverImageHeight</span>
+																<input
+																	type="number"
+																	value={this.state.CoverImageHeight}
+																	className="focus:outline-none border text-gray-700 text-lg rounded bg-white p-2"
+																	onChange={(e) => this.setState({CoverImageHeight: e.target.value})}
+																/>
+															</label>
+														</div>
+													</div>
+												</div>
+											) : null}
 											<button
 												className="flex items-center bg-gray-700 hover:bg-gray-800 text-white rounded-lg mt-6 text-base  p-1 px-4 mx-auto border"
 												onClick={this.handleReset}>

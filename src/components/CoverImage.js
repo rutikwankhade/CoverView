@@ -39,9 +39,13 @@ const CoverImage = (props) => {
 		}
 	}
 
-
+	const {CoverImageWidth, CoverImageHeight, platform} = props
+	const isCustomSize = platform === 'custom'
 	return (
-		<div className={`border-2  border-gray-50 md:scale-100 scale-50 ${props.platform}`}>
+		<div className={`border-2  border-gray-50 md:scale-100 scale-50 ${platform}`} style={{
+			width: isCustomSize ? `${CoverImageWidth}px` : null,
+			height: isCustomSize ? `${CoverImageHeight}px` : null,
+		}}>
 			{selectTheme(theme)}
 		</div>
 	);
