@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "dom-to-image": "^2.6.0",
+    "dom-to-image-more": "^3.6.0",
     "dotenv": "^16.0.1",
     "react": "^16.13.1",
     "react-component-export-image": "^0.1.6",
