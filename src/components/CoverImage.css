@@ -8,3 +8,11 @@
     width: 800px;
 
 }
+
+/* Remove borders when exporting */
+.export-mode * {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
