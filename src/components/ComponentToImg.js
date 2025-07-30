@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import "./CoverImage.css";
 import { ImgContext } from "../utils/ImgContext";
 import unsplash from "../utils/unsplashConfig";
-import domtoimage from "dom-to-image";
+import domtoimage from "dom-to-image-more";
 
 const ComponentToImg = (props) => {
 
@@ -35,6 +35,9 @@ const ComponentToImg = (props) => {
 		// console.log(element)
 		// console.log(element.offsetHeight)
 
+		/* add export-mode class to the element*/
+		element.classList.add("export-mode");
+
 		let data = await domtoimage.toPng(componentRef.current, {
 			height: element.offsetHeight * 2,
 			width: element.offsetWidth * 2,
@@ -43,8 +46,15 @@ const ComponentToImg = (props) => {
 				transformOrigin: "top left",
 				width: element.offsetWidth + "px",
 				height: element.offsetHeight + "px",
+				border: "none",
+				outline: "none",
+				backgroundColor: "transparent",
+				boxShadow: "none",			
 			}
 		})
+
+		/* remove export-mode class from the element */
+		element.classList.remove("export-mode");
 
 		// console.log(data)
 		await saveImage(data);
