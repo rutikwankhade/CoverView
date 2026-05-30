@@ -122,7 +122,9 @@ export const SWAGGER_UI = `<!DOCTYPE html>
       apply(theme);
     });
 
-    SwaggerUIBundle({ url: "./openapi.json", dom_id: "#swagger", deepLinking: true, defaultModelsExpandDepth: -1 });
+    // Absolute path so the spec loads whether the page is opened at /api or /api/
+    // (a relative "./openapi.json" from /api resolves to /openapi.json and hits the SPA).
+    SwaggerUIBundle({ url: "/api/openapi.json", dom_id: "#swagger", deepLinking: true, defaultModelsExpandDepth: -1 });
   })();
 </script>
 </body></html>`;
