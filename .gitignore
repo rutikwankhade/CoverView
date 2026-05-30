@@ -11,6 +11,13 @@
 # production
 /build
 
+# cloudflare / local dev
+/.wrangler
+/.devassets
+
+# playwright mcp scratch / verification screenshots
+/.playwright-mcp
+
 # misc
 .env
 .DS_Store
