@@ -43,9 +43,14 @@ export async function onRequest({ request, env, params }) {
     const url = new URL(request.url);
     const pathname = "/" + ((params.path || []).join("/") || "");
 
+    // OpenAPI spec
+    if (pathname === "/openapi.json" && request.method === "GET") {
+      return new Response(OPENAPI, { headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } });
+    }
+
     // Landing page
     if (pathname === "/" && request.method === "GET") {
-      return new Response(LANDING, { headers: { "Content-Type": "text/html" } });
+      return new Response(SWAGGER_UI, { headers: { "Content-Type": "text/html" } });
     }
 
     // GET /generate?title=Hello&theme=dark
@@ -57,6 +62,11 @@ export async function onRequest({ request, env, params }) {
     if (pathname === "/generate" && request.method === "POST") {
       try { return buildImage(await request.json(), env); }
       catch { return jsonErr("Invalid JSON", 400); }
+    }
+
+    // CORS preflight
+    if (request.method === "OPTIONS") {
+      return new Response(null, { headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, POST, OPTIONS", "Access-Control-Allow-Headers": "Content-Type" } });
     }
 
     return new Response("Not found", { status: 404 });
@@ -146,18 +156,58 @@ function jsonErr(msg, status) {
   return new Response(JSON.stringify({ error: msg }), { status, headers: { "Content-Type": "application/json" } });
 }
 
-const LANDING = `<!DOCTYPE html>
+const OPENAPI = JSON.stringify({
+  openapi: "3.0.3",
+  info: { title: "CoverView API", version: "1.0.0", description: "Generate blog cover images — gradient backgrounds, dev icons, Unsplash photos, platform presets. Powered by Satori. No browser needed." },
+  servers: [{ url: "https://cover.soumendrak.com/api" }],
+  paths: {
+    "/generate": {
+      get: {
+        summary: "Quick cover generation",
+        parameters: [
+          { name: "title", in: "query", required: true, schema: { type: "string" }, description: "Blog post title" },
+          { name: "subtitle", in: "query", schema: { type: "string" }, description: "Optional subtitle" },
+          { name: "theme", in: "query", schema: { type: "string", enum: ["dark", "light", "gradient"] }, description: "Color theme" },
+          { name: "icon", in: "query", schema: { type: "string", enum: Object.keys(ICONS) }, description: "Dev icon name" },
+          { name: "platform", in: "query", schema: { type: "string", enum: Object.keys(PLATFORMS) }, description: "Blogging platform preset" },
+          { name: "authorName", in: "query", schema: { type: "string" }, description: "Author name displayed at bottom" },
+          { name: "font", in: "query", schema: { type: "string", enum: ["inter", "merriweather", "fira-code"] }, description: "Font family" },
+          { name: "width", in: "query", schema: { type: "integer", maximum: 2400 } },
+          { name: "height", in: "query", schema: { type: "integer", maximum: 1800 } },
+        ],
+        responses: { "200": { description: "PNG cover image", content: { "image/png": {} } }, "400": { description: "Missing required parameters" } }
+      },
+      post: {
+        summary: "Full cover generation",
+        requestBody: {
+          required: true,
+          content: { "application/json": { schema: { type: "object", required: ["title"], properties: {
+            title: { type: "string", description: "Blog post title" },
+            subtitle: { type: "string" },
+            theme: { type: "string", enum: ["dark", "light", "gradient"] },
+            icon: { type: "string", enum: Object.keys(ICONS) },
+            platform: { type: "string", enum: Object.keys(PLATFORMS) },
+            authorName: { type: "string" },
+            font: { type: "string", enum: ["inter", "merriweather", "fira-code"] },
+            unsplashQuery: { type: "string", description: "Search Unsplash for background photo" },
+            colors: { type: "object", properties: { bg: { type: "string" }, text: { type: "string" }, accent: { type: "string" } } },
+            format: { type: "string", enum: ["png", "svg"] },
+            width: { type: "integer", maximum: 2400 },
+            height: { type: "integer", maximum: 1800 },
+          } } } }
+        },
+        responses: { "200": { description: "PNG cover image", content: { "image/png": {} } }, "400": { description: "Invalid request" }, "500": { description: "Generation failed" } }
+      }
+    }
+  }
+});
+
+const SWAGGER_UI = `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>CoverView API</title>
-<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,-apple-system,sans-serif;background:#0f0c29;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}.c{max-width:800px;width:100%}h1{font-size:48px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,#e94560,#533483);-webkit-background-clip:text;-webkit-text-fill-color:transparent}p{font-size:18px;opacity:.8;margin-bottom:32px;line-height:1.6}code{background:#1a1a2e;padding:3px 8px;border-radius:4px;font-size:14px}.ex{background:#1a1a2e;border-radius:12px;padding:24px;margin-bottom:16px}.ex h3{font-size:14px;text-transform:uppercase;letter-spacing:.1em;opacity:.6;margin-bottom:12px}.ex pre{background:#0f0c29;padding:16px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.6}.ep{display:inline-block;background:#e94560;color:#fff;padding:4px 10px;border-radius:4px;font-size:13px;font-weight:600;margin-right:8px}.f{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.f span,.f a{background:#0f0c29;padding:4px 10px;border-radius:4px;font-size:12px;opacity:.7;text-decoration:none;color:inherit}a{color:#e94560}</style></head>
-<body><div class="c">
-<h1>CoverView API</h1>
-<p>Generate blog cover images via API. POST JSON, get a PNG.</p>
-<div class="ex"><h3><span class="ep">GET</span> Quick</h3>
-<pre><a href="/generate?title=Hello%20World&theme=dark">/generate?title=Hello%20World&theme=dark</a></pre></div>
-<div class="ex"><h3><span class="ep">POST</span> Full payload</h3>
-<pre>curl -X POST /generate -H "Content-Type: application/json" -d '{"title":"My Post","subtitle":"A deep dive","theme":"gradient","colors":{"bg":"#0f0c29","accent":"#e94560"},"icon":"go","platform":"hashnode","authorName":"Soumendra Sahoo"}' -o cover.png</pre></div>
-<div class="f"><span><strong>title</strong>*</span><span>subtitle</span><span>theme</span><span>colors.bg</span><span>colors.text</span><span>colors.accent</span><span>icon</span><span>platform</span><span>unsplashQuery</span><span>font</span><span>authorName</span><span>format</span><span>width</span><span>height</span></div>
-<p>Icons: <div class="f">${Object.keys(ICONS).map(i=>`<span>${i}</span>`).join("")}</div></p>
-<p style="margin-top:32px;font-size:14px;opacity:.5">Cloudflare Workers + Satori. No browser needed.</p>
-</div></body></html>`;
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
+<style>body{margin:0;background:#0f0c29}.topbar{display:none}.swagger-ui .info .title{color:#fff}.swagger-ui{filter:invert(88%) hue-rotate(180deg)}.swagger-ui .microlight{filter:invert(100%) hue-rotate(180deg)}.swagger-ui .opblock-tag,.swagger-ui .opblock-tag small{color:#fff!important}</style></head>
+<body><div id="swagger"></div>
+<script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+<script>SwaggerUIBundle({url:"./openapi.json",dom_id:"#swagger",deepLinking:true,defaultModelsExpandDepth:-1})</script>
+</body></html>`;
