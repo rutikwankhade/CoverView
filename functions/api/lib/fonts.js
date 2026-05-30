@@ -35,6 +35,9 @@ export function resolveFontFamily(key) {
  * ImageResponse, or [] (workers-og falls back to its bundled Inter) on failure.
  */
 export async function loadFonts(family, text) {
+  // workers-og already bundles Inter as its default font — reloading it just
+  // burns CPU/memory and extra subrequests, so skip the network round trip.
+  if (family === "Inter") return [];
   const sample = (text || "") + " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   try {
     const [regular, bold] = await Promise.all([

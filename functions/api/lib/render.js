@@ -11,16 +11,24 @@ import { jsonErr } from "./util.js";
 const MAX_W = 2400;
 const MAX_H = 1800;
 
-async function unsplashImage(query, env) {
+// Themes that actually render a background photo / screenshot.
+const PHOTO_THEMES = new Set(["background", "stylish"]);
+const IMAGE_THEMES = new Set(["background", "stylish", "preview", "mobile"]);
+
+async function unsplashImage(query, env, targetW) {
   const key = env.UNSPLASH_ACCESS_KEY || env.REACT_APP_API_ACCESS_KEY;
   if (!query || !key) return null;
   try {
     const r = await fetch(
-      `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&orientation=landscape&w=2400`,
+      `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&orientation=landscape`,
       { headers: { Authorization: `Client-ID ${key}` } }
     );
     if (r.ok) {
       const d = await r.json();
+      // Downscale via Unsplash's on-the-fly resizing to keep decode/encode memory
+      // low (full-res photos blow the Worker's memory limit). Fall back to regular.
+      const w = Math.min(targetW || 1200, 1600);
+      if (d.urls?.raw) return `${d.urls.raw}&w=${w}&q=70&fm=jpg&fit=crop`;
       return d.urls?.regular || d.urls?.full || null;
     }
   } catch {}
@@ -45,9 +53,15 @@ export async function buildImage(p, env) {
   // Pattern.
   const patternSvg = p.pattern && PATTERNS[p.pattern] ? PATTERNS[p.pattern] : null;
 
-  // Background / screenshot image: explicit imageUrl, else Unsplash search.
-  let imageUrl = typeof p.imageUrl === "string" && /^https?:\/\//i.test(p.imageUrl) ? p.imageUrl : null;
-  if (!imageUrl && p.unsplashQuery) imageUrl = await unsplashImage(p.unsplashQuery, env);
+  // Background / screenshot image — only when the theme actually renders one,
+  // so e.g. `modern` doesn't pay for an Unsplash fetch it never uses.
+  let imageUrl = null;
+  if (IMAGE_THEMES.has(theme)) {
+    imageUrl = typeof p.imageUrl === "string" && /^https?:\/\//i.test(p.imageUrl) ? p.imageUrl : null;
+    if (!imageUrl && PHOTO_THEMES.has(theme) && p.unsplashQuery) {
+      imageUrl = await unsplashImage(p.unsplashQuery, env, W);
+    }
+  }
 
   // Icon (built-in, custom URL, or devicon).
   // In `modern` the icon sits on an accent-coloured disc, so monochrome built-in
