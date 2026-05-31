@@ -23,7 +23,7 @@ function titleBlock(c, color, maxW = "90%") {
     ? `<div style="display:flex"><p style="font-size:${c.subSize}px;font-weight:400;line-height:1.4;margin:0;opacity:0.85;color:${color};max-width:75%">${esc(c.subtitle)}</p></div>`
     : "";
   return `<div style="display:flex;flex-direction:column;position:relative;z-index:2;flex:1;justify-content:center;gap:20px">
-    <div style="display:flex"><h1 style="font-size:${c.titleSize}px;font-weight:700;line-height:1.15;margin:0;letter-spacing:-0.02em;color:${color};max-width:${maxW}">${esc(c.title)}</h1></div>
+    <div style="display:flex"><h1 style="font-size:${c.titleSize}px;font-weight:700;line-height:1.15;margin:0;letter-spacing:-0.02em;color:${color};max-width:${maxW};white-space:pre-wrap">${esc(c.title)}</h1></div>
     ${sub}
   </div>`;
 }
@@ -48,7 +48,10 @@ function background(c) {
 
 // ── basic: white card centred on a colour (title centred, author bottom-right) ─
 function basic(c) {
-  const cardPad = Math.floor(c.pad * 0.85);
+  const cardW = Math.round(c.W * 0.84);
+  const cardH = Math.round(c.H * 0.78);
+  const cardPad = Math.floor(c.H * 0.07);
+  const titleSize = Math.max(32, Math.floor(c.H * 0.092));
   const icon = c.iconHtml
     ? `<div style="display:flex;align-items:center;justify-content:center">${c.iconHtml}</div>`
     : `<div style="display:flex"></div>`;
@@ -58,11 +61,11 @@ function basic(c) {
   const sub = c.subtitle
     ? `<div style="display:flex;justify-content:center"><p style="font-size:${c.subSize}px;font-weight:400;line-height:1.4;margin:0;text-align:center;opacity:0.7;color:#1a1a2e;max-width:85%">${esc(c.subtitle)}</p></div>`
     : "";
-  return `<div style="display:flex;align-items:center;justify-content:center;width:${c.W}px;height:${c.H}px;${baseBg(c)};font-family:'${c.font}';position:relative;overflow:hidden;padding:${c.pad}px;box-sizing:border-box">
+  return `<div style="display:flex;align-items:center;justify-content:center;width:${c.W}px;height:${c.H}px;${baseBg(c)};font-family:'${c.font}';position:relative;overflow:hidden;box-sizing:border-box">
     ${patternLayer(c.patternSvg)}
-    <div style="display:flex;flex-direction:column;justify-content:center;background:#ffffff;border-radius:24px;padding:${cardPad}px;width:100%;height:100%;box-sizing:border-box;position:relative;z-index:2">
+    <div style="display:flex;flex-direction:column;justify-content:center;background:#ffffff;border-radius:24px;padding:${cardPad}px;width:${cardW}px;height:${cardH}px;box-sizing:border-box;position:relative;z-index:2">
       <div style="display:flex;flex-direction:column;flex:1;justify-content:center;align-items:center;gap:20px">
-        <div style="display:flex;justify-content:center"><h1 style="font-size:${c.titleSize}px;font-weight:700;line-height:1.15;margin:0;text-align:center;letter-spacing:-0.02em;color:#1a1a2e;max-width:100%">${esc(c.title)}</h1></div>
+        <div style="display:flex;justify-content:center"><h1 style="font-size:${titleSize}px;font-weight:700;line-height:1.18;margin:0;text-align:center;letter-spacing:-0.02em;color:#1a1a2e;max-width:100%;white-space:pre-wrap">${esc(c.title)}</h1></div>
         ${sub}
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;width:100%">${icon}${author}</div>
