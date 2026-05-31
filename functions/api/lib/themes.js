@@ -37,21 +37,35 @@ function background(c) {
     ? `<div style="display:flex;position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,${c.bg}e6 0%,${c.bg}99 100%)"></div>`
     : "";
   const color = c.imageUrl ? "#ffffff" : c.onBgText;
+  // Keep the pattern subtle when it sits over a photo.
+  const patternOpacity = c.imageUrl ? 0.2 : 1;
   return `<div style="display:flex;flex-direction:column;justify-content:center;width:${c.W}px;height:${c.H}px;${bgStyle};font-family:'${c.font}';position:relative;overflow:hidden;padding:${c.pad}px;box-sizing:border-box">
-    ${patternLayer(c.patternSvg)}${overlay}
+    ${patternLayer(c.patternSvg, patternOpacity)}${overlay}
     ${titleBlock(c, color)}
     ${authorRow(c, color, "space-between")}
   </div>`;
 }
 
-// ── basic: white card centred on a colour ──────────────────────────────────
+// ── basic: white card centred on a colour (title centred, author bottom-right) ─
 function basic(c) {
   const cardPad = Math.floor(c.pad * 0.85);
+  const icon = c.iconHtml
+    ? `<div style="display:flex;align-items:center;justify-content:center">${c.iconHtml}</div>`
+    : `<div style="display:flex"></div>`;
+  const author = c.author
+    ? `<div style="display:flex;align-items:center"><span style="font-size:${c.authorSize}px;font-weight:700;color:#1a1a2e">${esc(c.author)}</span></div>`
+    : `<div style="display:flex"></div>`;
+  const sub = c.subtitle
+    ? `<div style="display:flex;justify-content:center"><p style="font-size:${c.subSize}px;font-weight:400;line-height:1.4;margin:0;text-align:center;opacity:0.7;color:#1a1a2e;max-width:85%">${esc(c.subtitle)}</p></div>`
+    : "";
   return `<div style="display:flex;align-items:center;justify-content:center;width:${c.W}px;height:${c.H}px;${baseBg(c)};font-family:'${c.font}';position:relative;overflow:hidden;padding:${c.pad}px;box-sizing:border-box">
     ${patternLayer(c.patternSvg)}
     <div style="display:flex;flex-direction:column;justify-content:center;background:#ffffff;border-radius:24px;padding:${cardPad}px;width:100%;height:100%;box-sizing:border-box;position:relative;z-index:2">
-      ${titleBlock(c, "#1a1a2e")}
-      ${authorRow(c, "#1a1a2e", "space-between")}
+      <div style="display:flex;flex-direction:column;flex:1;justify-content:center;align-items:center;gap:20px">
+        <div style="display:flex;justify-content:center"><h1 style="font-size:${c.titleSize}px;font-weight:700;line-height:1.15;margin:0;text-align:center;letter-spacing:-0.02em;color:#1a1a2e;max-width:100%">${esc(c.title)}</h1></div>
+        ${sub}
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;width:100%">${icon}${author}</div>
     </div>
   </div>`;
 }
