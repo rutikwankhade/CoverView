@@ -6,7 +6,7 @@ const UnsplashSearch = ({ largeImgPreview }) => {
 
     const [imageList, setImageList] = useState([]);
     const [searchText, setSearchText] = useState('setup');
-    const { unsplashImage, setUnsplashImage } = useContext(ImgContext);
+    const { setUnsplashImage } = useContext(ImgContext);
 
 
     const searchImages = () => {
